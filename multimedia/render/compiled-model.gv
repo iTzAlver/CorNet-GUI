@@ -1,0 +1,28 @@
+// Fri Sep 30 21:10:11 2022
+digraph "compiled-model" {
+	0 [label="Input mesh
+NonexNone" shape=doubleoctagon]
+	1 [label="Dense:None" shape=box]
+	0 -> 1
+	2 [label="Dense:None" shape=box]
+	1 -> 2
+	3 [label="Dense:None" shape=box]
+	2 -> 3
+	4 [label="Dense:None" shape=box]
+	3 -> 4
+	5 [label="Dense:None" shape=box]
+	4 -> 5
+	6 [label="Dense:None" shape=box]
+	5 -> 6
+	7 [label="Dense:None" shape=box]
+	6 -> 7
+	8 [label="Dense:None" shape=box]
+	7 -> 8
+	9 [label="Dense:None" shape=box]
+	8 -> 9
+	10 [label="Dense:None" shape=box]
+	9 -> 10
+	11 [label="Output mesh
+None" shape=doubleoctagon]
+	10 -> 11
+}
