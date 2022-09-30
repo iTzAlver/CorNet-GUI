@@ -1,0 +1,517 @@
+[Fri Sep 30 18:45:06 2022]		Wellcome to CORNET!
+<Fri Sep 30 18:45:06 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Sep 30 18:45:10 2022]		Finishing the current session.
+
+[Fri Sep 30 18:50:31 2022]		Wellcome to CORNET!
+<Fri Sep 30 18:50:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 18:50:47 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Sep 30 18:50:48 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Train[Fri Sep 30 19:32:33 2022]		Wellcome to CORNET!
+<Fri Sep 30 19:32:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Sep 30 19:32:37 2022]		Finishing the current session.
+
+[Fri Sep 30 19:48:56 2022]		Wellcome to CORNET!
+<Fri Sep 30 19:48:56 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 19:49:00 2022>	[Info]:	Adding new layer to the model:
+		Dense:100
+<Fri Sep 30 19:49:01 2022>	[Info]:	Adding new layer to the model:
+		Dense:100
+<Fri Sep 30 19:49:03 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:100
+<Fri Sep 30 19:49:04 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:100
+		Dense:100
+		Conv2D:100
+		Output:None
+
+<Fri Sep 30 19:49:04 2022>	[Info]:	The model compiled sucessfuly.[Fri Sep 30 19:49:24 2022]		Wellcome to CORNET!
+<Fri Sep 30 19:49:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 19:49:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:49:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:49:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:49:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:49:29 2022>	[Info]:	Adding new layer to the model:
+		Dense:30
+<Fri Sep 30 19:49:29 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Dense:30
+		Output:None
+
+<Fri Sep 30 19:49:29 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 19:49:31 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 19:50:33 2022]		Wellcome to CORNET!
+<Fri Sep 30 19:50:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 19:50:35 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:50:36 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:50:36 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:50:36 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:50:38 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 19:50:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 19:50:39 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Sep 30 19:50:46 2022>	[Info]:	Adding new layer to the model:
+		Dense:100
+<Fri Sep 30 19:50:47 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Dense:100
+		Output:None
+
+<Fri Sep 30 19:50:47 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 19:50:47 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Sep 30 19:54:07 2022>	[Info]:	Adding new layer to the model:
+		Dense:90
+<Fri Sep 30 19:54:08 2022>	[Info]:	Adding new layer to the model:
+		Dense:90
+[Fri Sep 30 19:54:12 2022]		Finishing the current session.
+
+[Fri Sep 30 19:54:14 2022]		Wellcome to CORNET!
+<Fri Sep 30 19:54:14 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 19:55:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:55:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:55:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 19:55:30 2022>	[Info]:	Adding new layer to the model:
+		Dense:90
+<Fri Sep 30 19:55:32 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Dense:90
+		Output:None
+
+<Fri Sep 30 19:55:32 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 19:55:32 2022>	[Info]:	Scheme drawn sucessfuly.
+[Fri Sep 30 19:55:50 2022]		Finishing the current session.
+
+[Fri Sep 30 20:02:16 2022]		Wellcome to CORNET!
+<Fri Sep 30 20:02:16 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 20:02:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:02:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:02:31 2022>	[Info]:	Adding new layer to the model:
+		Dense:90
+<Fri Sep 30 20:02:34 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Dense:90
+		Output:None
+
+<Fri Sep 30 20:02:34 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:02:35 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Sep 30 20:02:52 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Dense:90
+		Output:None
+
+<Fri Sep 30 20:02:52 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:02:52 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 20:04:45 2022]		Wellcome to CORNET!
+<Fri Sep 30 20:04:45 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 20:04:46 2022>	[Info]:	Adding new layer to the model:
+		:None
+<Fri Sep 30 20:04:46 2022>	[Info]:	Adding new layer to the model:
+		:None
+<Fri Sep 30 20:04:46 2022>	[Info]:	Adding new layer to the model:
+		:None
+<Fri Sep 30 20:04:46 2022>	[Info]:	Adding new layer to the model:
+		:None
+<Fri Sep 30 20:04:51 2022>	[Info]:	Removed (':None', ('', [])) from the layer list.
+<Fri Sep 30 20:04:52 2022>	[Info]:	Removed (':None', ('', [])) from the layer list.
+<Fri Sep 30 20:04:52 2022>	[Info]:	Removed (':None', ('', [])) from the layer list.
+<Fri Sep 30 20:04:52 2022>	[Info]:	Removed (':None', ('', [])) from the layer list.
+<Fri Sep 30 20:04:52 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:52 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:53 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:54 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:54 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:54 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Sep 30 20:04:58 2022>	[Info]:	Adding new layer to the model:
+		Dense:100
+<Fri Sep 30 20:05:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:05 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:05 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:08 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:100
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 20:05:08 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:05:09 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 20:05:28 2022]		Wellcome to CORNET!
+<Fri Sep 30 20:05:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 20:05:32 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 20:05:32 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 20:05:32 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 20:05:34 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:34 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:05:35 2022>	[Info]:	Adding new layer to the model:
+		Flatten:None
+<Fri Sep 30 20:05:36 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Conv2D:None
+		Conv2D:None
+		Flatten:None
+		Output:None
+
+<Fri Sep 30 20:05:36 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:05:36 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 20:50:27 2022]		Wellcome to CORNET!
+<Fri Sep 30 20:50:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 20:50:29 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:50:30 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:50:33 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 20:50:33 2022>	[Info]:	The model compiled sucessfuly.[Fri Sep 30 20:53:25 2022]		Wellcome to CORNET!
+<Fri Sep 30 20:53:25 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 20:53:27 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:53:28 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 20:53:28 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:53:38 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 20:53:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 20:53:47 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:53:49 2022>	[Info]:	Removed ('Conv2D:None', ('', [])) from the layer list.
+<Fri Sep 30 20:53:49 2022>	[Info]:	Removed ('Conv2D:None', ('', [])) from the layer list.
+<Fri Sep 30 20:53:50 2022>	[Error]:	Cannot compile the model: it is empty
+<Fri Sep 30 20:53:58 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 20:54:00 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 20:54:00 2022>	[Info]:	The model compiled sucessfuly.[Fri Sep 30 21:00:54 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:00:54 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Sep 30 21:01:28 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:01:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:01:31 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:01:31 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:01:31 2022>	[Info]:	The model compiled sucessfuly.[Fri Sep 30 21:02:16 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:02:16 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:02:19 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:02:19 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:02:19 2022>	[Info]:	The model compiled sucessfuly.[Fri Sep 30 21:02:33 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:02:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:02:35 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:02:36 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:02:36 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:02:36 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:03:15 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:03:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:03:17 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:03:18 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:03:18 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:03:19 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:04:49 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:04:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:04:53 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:04:53 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:04:53 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:04:54 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:05:17 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:05:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:05:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:05:25 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:05:25 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:05:26 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:05:31 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:05:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:05:33 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:05:34 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:05:34 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:05:35 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:06:00 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:06:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:06:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:06:05 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:06:05 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:06:06 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:06:25 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:06:25 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:06:28 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:06:28 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:06:28 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:06:29 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:06:35 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:06:35 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:06:37 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:06:37 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:06:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:06:38 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:06:46 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:06:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:06:49 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:06:50 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:06:50 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:06:50 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:07:05 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:07:05 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:07:07 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:07:08 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:07:08 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:07:08 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:07:27 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:07:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:07:29 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:07:29 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:07:29 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:07:30 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:07:50 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:07:50 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:07:53 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:07:53 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:07:53 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:07:53 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:08:02 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:08:02 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:08:04 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:08:04 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:08:04 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:08:05 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:08:17 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:08:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:08:20 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:08:20 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:08:20 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:08:20 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:08:32 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:08:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:08:34 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Fri Sep 30 21:08:34 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D:None
+		Output:None
+
+<Fri Sep 30 21:08:34 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:08:35 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:08:46 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:08:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:08:48 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:08:48 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:08:48 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:08:48 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:09:41 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:09:41 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:09:43 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:09:44 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:09:44 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:09:44 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Sep 30 21:10:02 2022]		Wellcome to CORNET!
+<Fri Sep 30 21:10:02 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Sep 30 21:10:04 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:04 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:10:04 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:10:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:10 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:11 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:11 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:11 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
+<Fri Sep 30 21:10:11 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Dense:None
+		Output:None
+
+<Fri Sep 30 21:10:11 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Sep 30 21:10:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Sep 30 21:10:45 2022>	[Info]:	Adding new layer to the model:
+		Dense:None
