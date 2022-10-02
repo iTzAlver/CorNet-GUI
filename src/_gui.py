@@ -377,7 +377,7 @@ class MainWindow:
         if shape:
             shape = int(round(float(self.shape_entry.get())))
         else:
-            shape = None
+            shape = ''
         extras = self.extra_name_entry.get()
         if extras:
             extras = extras.split(', ')

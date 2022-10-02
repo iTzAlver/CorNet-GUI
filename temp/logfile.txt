@@ -514,4 +514,132 @@
 <Fri Sep 30 21:10:11 2022>	[Info]:	The model compiled sucessfuly.
 <Fri Sep 30 21:10:12 2022>	[Info]:	Scheme drawn sucessfuly.
 <Fri Sep 30 21:10:45 2022>	[Info]:	Adding new layer to the model:
-		Dense:None
+		Dense:None[Mon Oct  3 00:40:46 2022]		Wellcome to CORNET!
+<Mon Oct  3 00:40:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 00:41:04 2022>	[Info]:	Training the current model.
+<Mon Oct  3 00:41:16 2022>	[Info]:	Training the current model.
+<Mon Oct  3 00:41:29 2022>	[Info]:	Adding new layer to the model:
+		Dense:32
+<Mon Oct  3 00:41:29 2022>	[Info]:	Adding new layer to the model:
+		Dense:32
+<Mon Oct  3 00:41:31 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:32
+		Dense:32
+		Output:None
+
+<Mon Oct  3 00:41:31 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:41:31 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:41:39 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:32
+		Dense:32
+		Output:None
+
+<Mon Oct  3 00:41:39 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:41:39 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:41:42 2022>	[Info]:	Removed ('Dense:32', ('', [])) from the layer list.
+<Mon Oct  3 00:41:42 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:32
+		Output:None
+
+<Mon Oct  3 00:41:42 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:41:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:41:47 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:None
+<Mon Oct  3 00:41:48 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:32
+		Conv2D:None
+		Output:None
+
+<Mon Oct  3 00:41:48 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:41:48 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:42:16 2022>	[Info]:	Adding new layer to the model:
+		Flatten:None
+<Mon Oct  3 00:42:17 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:32
+		Conv2D:None
+		Flatten:None
+		Output:None
+
+<Mon Oct  3 00:42:17 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:42:17 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 00:44:58 2022]		Wellcome to CORNET!
+<Mon Oct  3 00:44:58 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 00:45:01 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 00:45:01 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:01 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:02 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:03 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 00:45:04 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:04 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:05 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 00:45:05 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:05 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:05 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:06 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:06 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:07 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:12 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:12 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:12 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 00:45:13 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Dense:
+		Dense:
+		Output:None
+
+<Mon Oct  3 00:45:13 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:17 2022>	[Info]:	Adding new layer to the model:
+		Dense:9
+<Mon Oct  3 00:45:17 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:
+		Dense:
+		Dense:
+		Dense:9
+		Output:None
+
+<Mon Oct  3 00:45:18 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 00:45:18 2022>	[Info]:	Scheme drawn sucessfuly.
