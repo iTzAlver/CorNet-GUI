@@ -458,7 +458,12 @@ class MainWindow:
         dot.node(f'{idx + 2}', f'Output mesh\n{self.throughput}', shape='doubleoctagon')
         dot.edge(f'{idx + 1}', f'{idx + 2}')
 
-        dot.render(directory=DRAW_MODEL_PATH)
+        try:
+            dot.render(directory=DRAW_MODEL_PATH)
+        except Exception as ex:
+            self.lowrite('Graphviz is not installed on this machine, please install Graphviz in your current'
+                         f'machine and add Graphviz to the PATH system variable: {ex}', cat='Error')
+
 
         png = Image.open(f'{DRAW_MODEL_PATH}/compiled-model.gv.png')
         myfig = plt.figure(figsize=(4.87, 4.32), dpi=75)
