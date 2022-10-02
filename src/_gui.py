@@ -464,7 +464,6 @@ class MainWindow:
             self.lowrite('Graphviz is not installed on this machine, please install Graphviz in your current'
                          f'machine and add Graphviz to the PATH system variable: {ex}', cat='Error')
 
-
         png = Image.open(f'{DRAW_MODEL_PATH}/compiled-model.gv.png')
         myfig = plt.figure(figsize=(4.87, 4.32), dpi=75)
         plt.imshow(png.convert('RGB'))
