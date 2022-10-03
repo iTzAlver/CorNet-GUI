@@ -642,4 +642,1158 @@
 		Output:None
 
 <Mon Oct  3 00:45:18 2022>	[Info]:	The model compiled sucessfuly.
-<Mon Oct  3 00:45:18 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 00:45:18 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 13:00:30 2022]		Wellcome to CORNET!
+<Mon Oct  3 13:00:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 13:00:35 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 13:00:36 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Output:None
+
+<Mon Oct  3 13:00:36 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 13:00:38 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 13:01:20 2022]		Wellcome to CORNET!
+<Mon Oct  3 13:01:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 13:01:23 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 13:01:23 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Output:None
+
+<Mon Oct  3 13:01:23 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 13:01:24 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 13:06:28 2022]		Wellcome to CORNET!
+<Mon Oct  3 13:06:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 13:06:31 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 13:06:34 2022>	[Info]:	Adding new layer to the model:
+		Dense:32
+<Mon Oct  3 13:06:37 2022>	[Info]:	Adding new layer to the model:
+		Dense:32
+<Mon Oct  3 13:06:39 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense:
+		Dense:32
+		Dense:32
+		Output:None
+
+<Mon Oct  3 13:06:39 2022>	[Info]:	The model compiled sucessfuly.[Mon Oct  3 15:46:31 2022]		Wellcome to CORNET!
+<Mon Oct  3 15:46:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 15:46:42 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 15:46:47 2022>	[Info]:	Removed ('Dense:', ('', [])) from the layer list.
+<Mon Oct  3 15:46:50 2022>	[Info]:	Adding new layer to the model:
+		Dense:180
+<Mon Oct  3 15:46:54 2022>	[Info]:	Adding new layer to the model:
+		Flatten:[Mon Oct  3 16:04:19 2022]		Wellcome to CORNET!
+<Mon Oct  3 16:04:19 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 16:06:22 2022>	[Info]:	Adding new layer to the model:
+		Dense:
+<Mon Oct  3 16:06:45 2022>	[Info]:	Adding new layer to the model:
+		Conv2D:[Mon Oct  3 16:07:38 2022]		Wellcome to CORNET!
+<Mon Oct  3 16:07:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 16:16:04 2022>	[Info]:	Adding new layer to the model:
+		Dense:[12]
+<Mon Oct  3 16:55:21 2022>	[Info]:	Adding new layer to the model:
+		Flatten:[Mon Oct  3 16:56:45 2022]		Wellcome to CORNET!
+<Mon Oct  3 16:56:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 16:57:01 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Mon Oct  3 16:57:16 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Mon Oct  3 16:57:20 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 16:57:24 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [128]
+		Conv2D [64, 3]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 16:57:24 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 16:58:36 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 16:59:02 2022]		Wellcome to CORNET!
+<Mon Oct  3 16:59:02 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 16:59:07 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Mon Oct  3 16:59:23 2022>	[Info]:	Adding new layer to the model:
+		Dense [62, 5]
+<Mon Oct  3 16:59:27 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [62, 5]
+<Mon Oct  3 16:59:33 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 16:59:33 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [128]
+		Dense [62, 5]
+		Conv2D [62, 5]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 16:59:33 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 16:59:34 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:00:30 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:00:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:00:33 2022>	[Info]:	Adding new layer to the model:
+		Dense 
+<Mon Oct  3 17:00:34 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense 
+		Output:None
+
+<Mon Oct  3 17:00:34 2022>	[Info]:	The model compiled sucessfuly.[Mon Oct  3 17:01:00 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:01:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:01:19 2022>	[Info]:	Adding new layer to the model:
+		Dense [43]
+<Mon Oct  3 17:01:20 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [43]
+		Output:None
+
+<Mon Oct  3 17:01:20 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:01:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:01:47 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [30]
+<Mon Oct  3 17:01:48 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [43]
+		Conv2D [30]
+		Output:None
+
+<Mon Oct  3 17:01:48 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:01:48 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:02:38 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:02:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 17:02:41 2022]		Finishing the current session.
+
+[Mon Oct  3 17:02:52 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:02:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 17:02:57 2022]		Finishing the current session.
+
+[Mon Oct  3 17:03:15 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:03:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 17:03:23 2022]		Finishing the current session.
+
+[Mon Oct  3 17:03:34 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:03:34 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 17:03:52 2022]		Finishing the current session.
+
+[Mon Oct  3 17:07:47 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:07:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Mon Oct  3 17:08:01 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:08:01 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:08:28 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Mon Oct  3 17:08:40 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Mon Oct  3 17:08:45 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:08:46 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [128]
+		Conv2D [64, 3]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 17:08:46 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:08:47 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:17:33 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:17:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:18:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 17:18:22 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:18:49 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [3, 5]
+<Mon Oct  3 17:18:51 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Flatten 
+		Conv2D [3, 5]
+		Output:None
+
+<Mon Oct  3 17:18:51 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:18:52 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:19:31 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Flatten 
+		Conv2D [3, 5]
+		Output:None
+
+<Mon Oct  3 17:19:31 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:19:32 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:19:48 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Flatten 
+		Conv2D [3, 5]
+		Output:None
+
+<Mon Oct  3 17:19:48 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:19:48 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:20:41 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:20:41 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:21:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 17:21:21 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:21:56 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [3, 8]
+<Mon Oct  3 17:21:58 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Flatten 
+		Conv2D [3, 8]
+		Output:None
+
+<Mon Oct  3 17:21:58 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:21:58 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:27:43 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:27:43 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:30:02 2022>	[Info]:	Adding new layer to the model:
+		Dense [32, 32]
+<Mon Oct  3 17:30:04 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [32, 32]
+		Output:None
+
+<Mon Oct  3 17:30:04 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:30:05 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:31:36 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:31:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:31:44 2022>	[Info]:	Adding new layer to the model:
+		Dense [62, 3]
+<Mon Oct  3 17:31:48 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [62, 3]
+		Output:None
+
+<Mon Oct  3 17:31:48 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:31:48 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:33:08 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:33:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:33:21 2022>	[Info]:	Adding new layer to the model:
+		Dense [62, 3]
+<Mon Oct  3 17:33:22 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [62, 3]
+		Output:None
+
+<Mon Oct  3 17:33:22 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:33:22 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:33:32 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:33:44 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:33:50 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [62, 3]
+		Flatten 
+		Flatten 
+		Output:None
+
+<Mon Oct  3 17:33:50 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:33:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:34:21 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Mon Oct  3 17:34:22 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [62, 3]
+		Flatten 
+		Flatten 
+		Dense [32]
+		Output:None
+
+<Mon Oct  3 17:34:22 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:34:22 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:34:36 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [62, 3]
+		Flatten 
+		Flatten 
+		Dense [32]
+		Output:None
+
+<Mon Oct  3 17:34:36 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:34:36 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 17:41:38 2022]		Wellcome to CORNET!
+<Mon Oct  3 17:41:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 17:41:50 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 17:41:57 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:42:17 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Mon Oct  3 17:42:26 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 17:42:27 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Flatten 
+		Conv2D [64, 3]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 17:42:27 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:42:28 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:43:00 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 17:43:00 2022>	[Info]:	Replaced ('Flatten ', ('', '')) from the layer list.
+<Mon Oct  3 17:43:03 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Dense [180]
+		Conv2D [64, 3]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 17:43:03 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:43:03 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 17:43:13 2022>	[Info]:	Removed ('Dense [180]', (['activation'], ["'softmax'"])) from the layer list.
+<Mon Oct  3 17:43:16 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Conv2D [64, 3]
+		Flatten 
+		Output:None
+
+<Mon Oct  3 17:43:16 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 17:43:16 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 18:03:08 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:03:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:03:19 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 18:03:20 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Output:None
+[Mon Oct  3 18:03:49 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:03:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:03:57 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 18:03:58 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Output:None
+[Mon Oct  3 18:04:15 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:04:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:04:22 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 18:04:24 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [180]
+		Output:None
+[Mon Oct  3 18:06:16 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:06:16 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:06:24 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:06:25 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Dense [120]
+		Output:None
+[Mon Oct  3 18:07:54 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:07:54 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:08:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 18:08:06 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [180]
+		Output:8
+[Mon Oct  3 18:08:58 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:08:58 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:09:54 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:09:56 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 18:09:57 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Flatten 
+		Output:8
+[Mon Oct  3 18:11:50 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:11:50 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:12:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:12:05 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+[Mon Oct  3 18:15:11 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:15:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:15:17 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:15:18 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+[Mon Oct  3 18:16:30 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:16:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:16:35 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:16:35 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+[Mon Oct  3 18:18:46 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:18:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:19:06 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Mon Oct  3 18:19:07 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [80]
+		Output:8
+
+<Mon Oct  3 18:19:07 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 80)          160       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           648       
+                                                                 
+=================================================================
+Total params: 808
+Trainable params: 808
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 18:19:07 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 18:19:08 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 18:20:53 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:20:53 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:20:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [202]
+<Mon Oct  3 18:21:00 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 18:21:01 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [202]
+		Flatten 
+		Output:8
+
+<Mon Oct  3 18:21:01 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 202)         404       
+                                                                 
+ flatten (Flatten)           (None, 12928)             0         
+                                                                 
+ output (Dense)              (None, 8)                 103432    
+                                                                 
+=================================================================
+Total params: 103,836
+Trainable params: 103,836
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 18:21:01 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 18:21:01 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 18:35:11 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:35:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Mon Oct  3 18:41:42 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:41:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 18:42:14 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 18:42:14 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 18:42:14 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 18:42:14 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 18:42:15 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 18:42:33 2022>	[Info]:	Adding new layer to the model:
+		Lambda 
+<Mon Oct  3 18:42:33 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Lambda 
+		Output:8
+
+<Mon Oct  3 18:42:33 2022>	[Error]:	The model has the following errors:
+unsupported callable
+<Mon Oct  3 18:42:33 2022>	[Info]:	The model compiled with errors.
+<Mon Oct  3 18:42:53 2022>	[Info]:	Removed ('Lambda ', ('', '')) from the layer list.
+<Mon Oct  3 18:42:55 2022>	[Info]:	Adding new layer to the model:
+		Conv2D 
+<Mon Oct  3 18:42:56 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Conv2D 
+		Output:8
+
+<Mon Oct  3 18:42:56 2022>	[Error]:	The model has the following errors:
+__init__() missing 1 required positional argument: 'kernel_size'
+<Mon Oct  3 18:42:56 2022>	[Info]:	The model compiled with errors.
+<Mon Oct  3 18:43:01 2022>	[Info]:	Removed ('Conv2D ', ('', '')) from the layer list.
+<Mon Oct  3 18:43:06 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Mon Oct  3 18:43:07 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Conv2D [64, 3]
+		Output:8
+
+<Mon Oct  3 18:43:07 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_3 (Dense)             (None, 8, 8, 120)         240       
+                                                                 
+ conv2d (Conv2D)             (None, 6, 6, 64)          69184     
+                                                                 
+ output (Dense)              (None, 6, 6, 8)           520       
+                                                                 
+=================================================================
+Total params: 69,944
+Trainable params: 69,944
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 18:43:07 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 18:43:07 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 18:44:52 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 18:44:53 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Conv2D [64, 3]
+		Flatten 
+		Output:8
+
+<Mon Oct  3 18:44:53 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_3 (Dense)             (None, 8, 8, 120)         240       
+                                                                 
+ conv2d (Conv2D)             (None, 6, 6, 64)          69184     
+                                                                 
+ output (Dense)              (None, 6, 6, 8)           520       
+                                                                 
+=================================================================
+Total params: 69,944
+Trainable params: 69,944
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_4 (Dense)             (None, 8, 8, 120)         240       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 6, 6, 64)          69184     
+                                                                 
+ flatten (Flatten)           (None, 2304)              0         
+                                                                 
+ output (Dense)              (None, 8)                 18440     
+                                                                 
+=================================================================
+Total params: 87,864
+Trainable params: 87,864
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 18:44:53 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 18:44:53 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 18:58:33 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:58:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 18:58:48 2022]		Finishing the current session.
+
+[Mon Oct  3 18:59:55 2022]		Wellcome to CORNET!
+<Mon Oct  3 18:59:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:00:01 2022]		Finishing the current session.
+
+[Mon Oct  3 19:01:00 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:01:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:01:03 2022]		Finishing the current session.
+
+[Mon Oct  3 19:01:30 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:01:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:01:40 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:01:43 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Mon Oct  3 19:01:49 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Dense [80]
+		Output:8
+
+<Mon Oct  3 19:01:49 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ dense_1 (Dense)             (None, 8, 8, 80)          9680      
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           648       
+                                                                 
+=================================================================
+Total params: 10,568
+Trainable params: 10,568
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:01:49 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:01:50 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:02:09 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:02:09 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Mon Oct  3 19:02:38 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:02:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:02:42 2022]		Finishing the current session.
+
+[Mon Oct  3 19:02:51 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:02:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:03:08 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:03:09 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 19:03:09 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:03:09 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:03:10 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:06:17 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:06:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:06:21 2022]		Finishing the current session.
+
+[Mon Oct  3 19:06:28 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:06:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:06:40 2022]		Finishing the current session.
+
+[Mon Oct  3 19:06:52 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:06:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:07:05 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct  3 19:07:10 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:07:10 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Flatten 
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 19:07:10 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 120)               7800      
+                                                                 
+ output (Dense)              (None, 8)                 968       
+                                                                 
+=================================================================
+Total params: 8,768
+Trainable params: 8,768
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:07:10 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:07:11 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:07:40 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:07:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:07:47 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Mon Oct  3 19:07:50 2022>	[Info]:	Adding new layer to the model:
+		Dense [20]
+<Mon Oct  3 19:07:50 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [80]
+		Dense [20]
+		Output:8
+
+<Mon Oct  3 19:07:51 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 80)          160       
+                                                                 
+ dense_1 (Dense)             (None, 8, 8, 20)          1620      
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           168       
+                                                                 
+=================================================================
+Total params: 1,948
+Trainable params: 1,948
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:07:51 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:07:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 19:08:01 2022>	[Info]:	Adding new layer to the model:
+		Dense [90]
+<Mon Oct  3 19:08:01 2022>	[Info]:	Replaced ('Dense [20]', ('', '')) from the layer list.
+<Mon Oct  3 19:08:02 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [80]
+		Dense [90]
+		Output:8
+
+<Mon Oct  3 19:08:02 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 80)          160       
+                                                                 
+ dense_1 (Dense)             (None, 8, 8, 20)          1620      
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           168       
+                                                                 
+=================================================================
+Total params: 1,948
+Trainable params: 1,948
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_2 (Dense)             (None, 8, 8, 80)          160       
+                                                                 
+ dense_3 (Dense)             (None, 8, 8, 90)          7290      
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           728       
+                                                                 
+=================================================================
+Total params: 8,178
+Trainable params: 8,178
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:08:02 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:08:02 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:11:01 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:11:02 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:11:11 2022>	[Info]:	Training the current model.
+<Mon Oct  3 19:12:41 2022>	[Info]:	Adding new layer to the model:
+		Dense [23]
+<Mon Oct  3 19:12:42 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [23]
+		Output:8
+
+<Mon Oct  3 19:12:42 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 23)          46        
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           192       
+                                                                 
+=================================================================
+Total params: 238
+Trainable params: 238
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:12:42 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:12:42 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:20:30 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:20:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:20:53 2022>	[Info]:	Adding new layer to the model:
+		 
+<Mon Oct  3 19:20:56 2022>	[Info]:	Adding new layer to the model:
+		 
+[Mon Oct  3 19:20:59 2022]		Finishing the current session.
+
+[Mon Oct  3 19:23:26 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:23:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:23:36 2022>	[Info]:	Adding new layer to the model:
+		Dense [26]
+<Mon Oct  3 19:23:37 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [26]
+		Output:8
+
+<Mon Oct  3 19:23:37 2022>	[Error]:	The model has the following errors:
+Unknown optimizer: mse. Please ensure this object is passed to the `custom_objects` argument. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+<Mon Oct  3 19:23:37 2022>	[Info]:	The model compiled with errors.[Mon Oct  3 19:24:27 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:24:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:27:01 2022>	[Info]:	Adding new layer to the model:
+		Conv1D [2]
+<Mon Oct  3 19:27:01 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv1D [2]
+		Output:8
+
+<Mon Oct  3 19:27:01 2022>	[Error]:	The model has the following errors:
+__init__() missing 1 required positional argument: 'kernel_size'
+<Mon Oct  3 19:27:01 2022>	[Info]:	The model compiled with errors.
+<Mon Oct  3 19:27:10 2022>	[Info]:	Removed ('Conv1D [2]', ('', '')) from the layer list.
+<Mon Oct  3 19:27:18 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 19:27:19 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [180]
+		Output:8
+[Mon Oct  3 19:30:08 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:30:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:30:16 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:30:17 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 19:30:18 2022>	[Error]:	The model has the following errors:
+Unknown optimizer: mean_squared_error. Please ensure this object is passed to the `custom_objects` argument. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+<Mon Oct  3 19:30:18 2022>	[Info]:	The model compiled with errors.[Mon Oct  3 19:30:42 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:30:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:30:52 2022>	[Info]:	Adding new layer to the model:
+		Dense [122]
+<Mon Oct  3 19:30:52 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [122]
+		Output:8
+
+<Mon Oct  3 19:31:07 2022>	[Error]:	The model has the following errors:
+Unknown optimizer: mean_squared_error. Please ensure this object is passed to the `custom_objects` argument. See https://www.tensorflow.org/guide/keras/save_and_serialize#registering_the_custom_object for details.
+<Mon Oct  3 19:31:10 2022>	[Info]:	The model compiled with errors.[Mon Oct  3 19:31:45 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:31:45 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:32:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:32:05 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 19:32:05 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:32:05 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:32:06 2022>	[Info]:	Scheme drawn sucessfuly.[Mon Oct  3 19:32:51 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:32:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Mon Oct  3 19:33:12 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:33:12 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:33:22 2022]		Finishing the current session.
+
+[Mon Oct  3 19:33:31 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:33:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:33:38 2022]		Finishing the current session.
+
+[Mon Oct  3 19:33:51 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:33:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Mon Oct  3 19:34:20 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:34:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Mon Oct  3 19:34:34 2022]		Finishing the current session.
+
+[Mon Oct  3 19:35:14 2022]		Wellcome to CORNET!
+<Mon Oct  3 19:35:14 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Mon Oct  3 19:35:18 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Mon Oct  3 19:35:19 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [120]
+		Output:8
+
+<Mon Oct  3 19:35:20 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:35:20 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:35:20 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 19:35:26 2022>	[Info]:	Removed ('Dense [120]', ('', '')) from the layer list.
+<Mon Oct  3 19:35:27 2022>	[Error]:	Cannot compile the model: it is empty
+<Mon Oct  3 19:35:35 2022>	[Error]:	Cannot compile the model: it is empty
+<Mon Oct  3 19:35:38 2022>	[Info]:	Adding new layer to the model:
+		Dense 
+<Mon Oct  3 19:35:41 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense 
+		Output:8
+
+<Mon Oct  3 19:35:41 2022>	[Error]:	The model has the following errors:
+int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+<Mon Oct  3 19:35:41 2022>	[Info]:	The model compiled with errors.
+<Mon Oct  3 19:35:55 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct  3 19:35:56 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense 
+		Dense [180]
+		Output:8
+
+<Mon Oct  3 19:35:56 2022>	[Error]:	The model has the following errors:
+int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+<Mon Oct  3 19:35:56 2022>	[Info]:	The model compiled with errors.
+<Mon Oct  3 19:35:59 2022>	[Info]:	Removed ('Dense ', ('', '')) from the layer list.
+<Mon Oct  3 19:36:00 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [180]
+		Output:8
+
+<Mon Oct  3 19:36:00 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_3 (Dense)             (None, 8, 8, 180)         360       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           1448      
+                                                                 
+=================================================================
+Total params: 1,808
+Trainable params: 1,808
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:36:00 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:36:00 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 19:36:11 2022>	[Info]:	Adding new layer to the model:
+		Dropout 
+<Mon Oct  3 19:36:12 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dense [180]
+		Dropout 
+		Output:8
+
+<Mon Oct  3 19:36:12 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_3 (Dense)             (None, 8, 8, 180)         360       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           1448      
+                                                                 
+=================================================================
+Total params: 1,808
+Trainable params: 1,808
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_4 (Dense)             (None, 8, 8, 180)         360       
+                                                                 
+ dropout (Dropout)           (None, 8, 8, 180)         0         
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           1448      
+                                                                 
+=================================================================
+Total params: 1,808
+Trainable params: 1,808
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:36:12 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:36:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct  3 19:36:18 2022>	[Info]:	Removed ('Dense [180]', ('', '')) from the layer list.
+<Mon Oct  3 19:36:20 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Dropout 
+		Output:8
+
+<Mon Oct  3 19:36:20 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense (Dense)               (None, 8, 8, 120)         240       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           968       
+                                                                 
+=================================================================
+Total params: 1,208
+Trainable params: 1,208
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_3 (Dense)             (None, 8, 8, 180)         360       
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           1448      
+                                                                 
+=================================================================
+Total params: 1,808
+Trainable params: 1,808
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dense_4 (Dense)             (None, 8, 8, 180)         360       
+                                                                 
+ dropout (Dropout)           (None, 8, 8, 180)         0         
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           1448      
+                                                                 
+=================================================================
+Total params: 1,808
+Trainable params: 1,808
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ dropout_1 (Dropout)         (None, 8, 8, 1)           0         
+                                                                 
+ output (Dense)              (None, 8, 8, 8)           16        
+                                                                 
+=================================================================
+Total params: 16
+Trainable params: 16
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct  3 19:36:20 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct  3 19:36:20 2022>	[Info]:	Scheme drawn sucessfuly.

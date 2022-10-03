@@ -5,6 +5,8 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 from ._gui import gui
+from ._model import Model
+from ._compiler import Compiler
 
 
 def info():

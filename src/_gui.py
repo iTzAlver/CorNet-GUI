@@ -10,6 +10,9 @@ from .utils import HoverButton, ColorStyles
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from PIL import Image
 
+from ._compiler import Compiler
+from ._model import Model
+
 import time
 import graphviz as gv
 import matplotlib.pyplot as plt
@@ -45,7 +48,7 @@ class MainWindow:
     def __init__(self, master):
         self.master = master
         self.master.title("CORNET")
-        self.master.geometry('605x710')
+        self.master.geometry('605x810')
         self.colors = ColorStyles
         self.model_list = self._readmodels()
         # -------------------------------------------------------------------------------------------------------------
@@ -72,10 +75,63 @@ class MainWindow:
                 self.devices_list.append(dev.name)
             self.devices_role[dev.name] = 0
         # Training variables:
-        self.throughput = None
+        self.throughput = 8  # TOREMOVE
         # Model variables:
-        self.typeoflayers = ['Dense', 'Conv2D', 'Flatten']
+        self.typeoflayers = ['Dense',
+                             'Conv2D',
+                             'Flatten',
+                             'Activation',
+                             'Embedding',
+                             'Masking',
+                             'Lambda',
+                             '',
+                             'Conv1D',
+                             'Conv3D',
+                             'SeparableConv1D',
+                             'SeparableConv2D',
+                             'DepthwiseConv2D',
+                             'Conv1DTranspose',
+                             'Conv2DTranspose',
+                             'Conv3DTranspose',
+                             '',
+                             'MaxPooling1D',
+                             'MaxPooling2D',
+                             'MaxPooling3D',
+                             'AveragePooling1D',
+                             'AveragePooling2D',
+                             'AveragePooling3D',
+                             'GlobalMaxPooling1D',
+                             'GlobalMaxPooling2D',
+                             'GlobalMaxPooling3D',
+                             'GlobalAveragePooling1D',
+                             'GlobalAveragePooling2D',
+                             'GlobalAveragePooling3D',
+                             '',
+                             'LSTM',
+                             'GRU',
+                             'SimpleRNN',
+                             'RNN',
+                             'TimeDistributed',
+                             'Bidirectional',
+                             'ConvLSTM1D',
+                             'ConvLSTM2D',
+                             'ConvLSTM3D',
+                             'TextVectorization',
+                             '',
+                             'Normalization',
+                             'Discretization',
+                             'Dropout'
+                             ]
+        self.losses = [
+            'kld', 'mean_absolute_error', 'mean_absolute_percentage_error', 'mean_squared_error',
+            'mean_squared_logarithmic_error', 'binary_crossentropy', 'binary_focal_crossentropy',
+            'categorical_crossentropy', 'categorical_hinge', 'cosine_similarity', 'deserialize', 'get', 'hinge',
+            'huber_loss', 'log_cosh', 'poisson', 'serialize', 'sparse_categorical_crossentropy', 'squared_hinge'
+        ]
+        self.metrics = ['accuracy', 'mse']
+        self.optimizers = ['adadelta', 'adam', 'RMSprop', 'sgd', 'nadam', 'adamax', 'adagrad', 'ftlr']
         self.current_model_list = []
+        self.model = None
         # Canvas:
         self.canvas1 = None
         self.toolbar1 = None
@@ -211,13 +267,13 @@ class MainWindow:
         # -------------------------------------------------------------------------------------------------------------
         #                       MODEL FRAME
         # -------------------------------------------------------------------------------------------------------------
-        self.model_lf = LabelFrame(self.master, width=597, height=192)
+        self.model_lf = LabelFrame(self.master, width=597, height=292)
         self.model_lf.place(x=5, y=515)
 
-        self.model_lf_add = LabelFrame(self.model_lf, width=198, height=188)
+        self.model_lf_add = LabelFrame(self.model_lf, width=198, height=288)
         self.model_lf_add.place(x=0, y=0)
 
-        self.model_lf_ovw = LabelFrame(self.model_lf, width=392, height=188)
+        self.model_lf_ovw = LabelFrame(self.model_lf, width=392, height=288)
         self.model_lf_ovw.place(x=200, y=0)
 
         self.type_label = Label(self.model_lf_add, text='Type of layer:')
@@ -230,6 +286,7 @@ class MainWindow:
         self.layer_selection = ttk.Combobox(self.model_lf_add, width=13, state='readonly')
         self.layer_selection.place(x=90, y=5)
         self.layer_selection["values"] = self.typeoflayers
+        self.layer_selection.set(self.typeoflayers[0])
 
         self.shape_entry = Entry(self.model_lf_add, width=16)
         self.shape_entry.place(x=90, y=30)
@@ -267,6 +324,25 @@ class MainWindow:
         self.listoflayers = ttk.Combobox(self.model_lf_add, width=27, state='readonly')
         self.listoflayers.place(x=5, y=120)
         self.listoflayers["values"] = self.current_model_list
+
+        self.loss_label = Label(self.model_lf_add, text='Loss:')
+        self.loss_label.place(x=5, y=220)
+
+        self.opt_label = Label(self.model_lf_add, text='Optimizer:')
+        self.opt_label.place(x=5, y=250)
+
+        self.opt_label = Label(self.model_lf_add, text='COMPILE OPTIONS:')
+        self.opt_label.place(x=45, y=185)
+
+        self.loss_selection = ttk.Combobox(self.model_lf_add, width=21, state='readonly')
+        self.loss_selection.place(x=40, y=220)
+        self.loss_selection["values"] = self.losses
+        self.loss_selection.set(self.losses[3])
+
+        self.opt_selection = ttk.Combobox(self.model_lf_add, width=16, state='readonly')
+        self.opt_selection.place(x=70, y=250)
+        self.opt_selection["values"] = self.optimizers
+        self.opt_selection.set(self.optimizers[1])
 
     # -------------------------------------------------------------------------------------------------------------
     #                       EXTERNAL FUNCTIONS
@@ -311,10 +387,15 @@ class MainWindow:
         self.lowrite(_text='Training the current model.', cat='Info')
         pass
 
-    @staticmethod
-    def _compile(model_list):
-        # Compile the model.
-        return True
+    def _compile(self, compiler):
+        # Compile the model into self.model.
+        try:
+            self.model = Model(compiler)
+            self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
+            return True
+        except Exception as ex:
+            self.lowrite(f'The model has the following errors:\n{ex}', cat='Error')
+            return False
 
     # -------------------------------------------------------------------------------------------------------------
     #                       INTERFACE METHODS
@@ -373,25 +454,39 @@ class MainWindow:
     def add_layer(self, idx=None):
         # Add the layer button.
         typ = self.layer_selection.get()
-        shape = self.shape_entry.get()
-        if shape:
-            shape = int(round(float(self.shape_entry.get())))
+        shape = self.shape_entry.get().split(', ')
+
+        if shape[0]:
+            for index, shap in enumerate(shape):
+                shape[index] = int(round(float(shap)))
         else:
             shape = ''
+
         extras = self.extra_name_entry.get()
+        values = self.extra_value_entry.get()
         if extras:
             extras = extras.split(', ')
-        values = [float(val) for val in self.extra_value_entry.get().split(', ') if val]
+        if values:
+            values = values.split(', ')
+            for i, value in enumerate(values):
+                if value[0] != "'":
+                    values[i] = float(value)
+                else:
+                    values[i] = value
         if len(extras) != len(values):
             self.lowrite(_text=f'Cannot match {len(extras)} keywords to {len(values)} atributes.', cat='Error')
             return
         else:
-            self.lowrite(_text=f'Adding new layer to the model:\n\t\t{typ}:{shape}', cat='Info')
+            self.lowrite(_text=f'Adding new layer to the model:\n\t\t{typ} {shape}', cat='Info')
             if idx is None:
-                self.current_model_list.append((f'{typ}:{shape}', (extras, values)))
+                self.current_model_list.append((f'{typ} {shape}', (extras, values)))
             else:
-                self.current_model_list[idx] = (f'{typ}:{shape}', (extras, values))
+                self.current_model_list[idx] = (f'{typ} {shape}', (extras, values))
             self.listoflayers["values"] = [val[0] for val in self.current_model_list]
+
+        self.shape_entry.delete(0, END)
+        self.extra_name_entry.delete(0, END)
+        self.extra_value_entry.delete(0, END)
         return
 
     def compile(self):
@@ -403,7 +498,9 @@ class MainWindow:
             current_model_list.append(f'Output:{self.throughput}')
             for layer in current_model_list:
                 self.lowrite(_text=f'\t\t{layer}\n', cat='Intro')
-            if self._compile(self.current_model_list):
+
+            compiled_model = self._parse_compiler()
+            if self._compile(compiled_model):
                 self.lowrite(_text='The model compiled sucessfuly.', cat='Info')
                 self.shape_entry.delete(0, END)
                 self.extra_name_entry.delete(0, END)
@@ -442,27 +539,30 @@ class MainWindow:
             self.lowrite(_text=f'Target not removed: the list is empty.', cat='Warning')
         return
 
-    def draw_scheme(self):
+    def draw_scheme(self, tf_draw=True):
         # Draw the model scheme.
         model_list = self.current_model_list
-        dot = gv.Digraph('compiled-model', comment=f'{time.ctime()}')
-        dot.format = 'png'
-        dot.node('0', f'Input mesh\n{self.throughput}x{self.throughput}', shape='doubleoctagon')
-        idx = 0
-        for idx, layer in enumerate(model_list):
-            if layer[1] != ('', []):
-                dot.node(f'{idx + 1}', f'{layer[0]}\n{layer[1]}', shape='box')
-            else:
-                dot.node(f'{idx + 1}', f'{layer[0]}', shape='box')
-            dot.edge(f'{idx}', f'{idx + 1}')
-        dot.node(f'{idx + 2}', f'Output mesh\n{self.throughput}', shape='doubleoctagon')
-        dot.edge(f'{idx + 1}', f'{idx + 2}')
+        if tf_draw:
+            self.model.model_print()
+        else:
+            dot = gv.Digraph('compiled-model', comment=f'{time.ctime()}')
+            dot.format = 'png'
+            dot.node('0', f'Input mesh\n({self.throughput}) x ({self.throughput})', shape='doubleoctagon')
+            idx = 0
+            for idx, layer in enumerate(model_list):
+                if layer[1] != ('', ''):
+                    dot.node(f'{idx + 1}', f'{layer[0]}\n{layer[1]}', shape='box')
+                else:
+                    dot.node(f'{idx + 1}', f'{layer[0]}', shape='box')
+                dot.edge(f'{idx}', f'{idx + 1}')
+            dot.node(f'{idx + 2}', f'Output mesh\n({self.throughput})', shape='doubleoctagon')
+            dot.edge(f'{idx + 1}', f'{idx + 2}')
 
-        try:
-            dot.render(directory=DRAW_MODEL_PATH)
-        except Exception as ex:
-            self.lowrite('Graphviz is not installed on this machine, please install Graphviz in your current'
-                         f'machine and add Graphviz to the PATH system variable: {ex}', cat='Error')
+            try:
+                dot.render(directory=DRAW_MODEL_PATH)
+            except Exception as ex:
+                self.lowrite('Graphviz is not installed on this machine, please install Graphviz in your current'
+                             f'machine and add Graphviz to the PATH system variable: {ex}', cat='Error')
 
         png = Image.open(f'{DRAW_MODEL_PATH}/compiled-model.gv.png')
         myfig = plt.figure(figsize=(4.87, 4.32), dpi=75)
@@ -477,6 +577,45 @@ class MainWindow:
         self.toolbar1.update()
         self.canvas1.get_tk_widget().pack()
         self.lowrite(_text=f'Scheme drawn sucessfuly.', cat='Info')
+
+    def _parse_compiler(self):
+        model_list = self.current_model_list
+        layers = []
+        shapes = []
+        kwds = []
+        args = []
+        compiler = {'loss': self.loss_selection.get(),
+                    'optimizer': self.opt_selection.get(),
+                    'metrics': self.metrics}
+        devices = self.devices
+        for layer in model_list:
+            ls = layer[0].replace(',', '').replace('[', '').replace(']', '').split(' ')
+            layers.append(ls[0])
+            if ls[1] != '':
+                _ls = []
+                for __ls in ls[1:]:
+                    _ls.append(int(__ls))
+                shapes.append(tuple(_ls))
+            else:
+                shapes.append((None, ))
+
+            kwd = layer[1][0]
+            arg = layer[1][1]
+            if kwd:
+                kwds.append(kwd)
+                args.append(arg)
+            else:
+                kwds.append([None])
+                args.append([None])
+
+        mycompiler = Compiler(tput=self.throughput, layers=layers, shapes=shapes, kwds=kwds, args=args,
+                              compiler=compiler, devices=devices)
+
+        if mycompiler.compiled:
+            return mycompiler
+        else:
+            self.lowrite('The model compiled with errors... Check your parameters again.', cat='Error')
+            return None
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
