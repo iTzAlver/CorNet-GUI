@@ -1,0 +1,69 @@
+
+<Tue Oct  4 19:34:18 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:34:20 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:34:20 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:34:20 2022>	[Error]:	Train and validation sum must be under 100%.
+[Tue Oct  4 19:34:22 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+<Tue Oct  4 19:35:32 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:34 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:35 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:35 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:35 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:36 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:36 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:36 2022>	[Error]:	Train and validation sum must be under 100%.
+<Tue Oct  4 19:35:36 2022>	[Error]:	Train and validation sum must be under 100%.Wellcome to the database generator!
+<Tue Oct  4 19:36:46 2022>	[Info]:	Creating a database with the following parameters:
+{'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+<Tue Oct  4 19:37:02 2022>	[Info]:	Creating a database with the following parameters:
+{'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0.8, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+<Tue Oct  4 19:37:06 2022>	[Info]:	Creating a database with the following parameters:
+{'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 9, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+<Tue Oct  4 19:37:08 2022>	[Info]:	Creating a database with the following parameters:
+{'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+<Tue Oct  4 19:53:21 2022>	[Info]:	Creating a database with the following parameters:
+{'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+[Tue Oct  4 19:53:22 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+[Tue Oct  4 19:56:15 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+=========================================================
+Wellcome to the database generator!
+=============================================================================================
+
+<Tue Oct  4 19:57:23 2022>	[Info]:	Creating a database with the following parameters:
+{'path': 'C:/Users/ialve/Desktop/cnet/db/db/ht/test', 'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+[Tue Oct  4 19:57:29 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+====================================================================================
+
+[Tue Oct  4 19:58:28 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+=================================================================================
+
+<Tue Oct  4 19:58:42 2022>	[Info]:	Creating a database with the following parameters:
+{'path': 'C:/Users/ialve/Desktop/cnet/db/db/ht/test.ht', 'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+[Tue Oct  4 19:59:38 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+=================================================================================
+Wellcome to the database generator!
+=================================================================================
+
+<Tue Oct  4 20:06:50 2022>	[Info]:	Built
+<Tue Oct  4 20:06:50 2022>	[Info]:	Creating a database with the following parameters:
+{'path': 'C:/Users/ialve/Desktop/cnet/db/db/ht/test.ht', 'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}
+[Tue Oct  4 20:06:54 2022]		Finishing the current DB session.
+
+Wellcome to the database generator!
+=================================================================================
+
+<Tue Oct  4 20:16:01 2022>	[Info]:	Connection with generator sucessful.
+<Tue Oct  4 20:16:01 2022>	[Info]:	Creating a database with the following parameters:
+{'path': 'C:/Users/ialve/Desktop/cnet/db/db/ht/si.ht', 'distribution': (60, 20, 20), 'tput': 32, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 5.5, 'clust_v': 3.0, 'number': 1024, 'name': 'test_ht'}

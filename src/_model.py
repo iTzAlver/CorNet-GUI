@@ -10,6 +10,7 @@ from tensorflow import keras
 from keras.utils.vis_utils import plot_model
 
 DRAW_MODEL_PATH = r'../multimedia/render'
+MODEL_LOCATION = r'../db/models'
 
 
 class Logger:
@@ -121,15 +122,140 @@ class Model:
                 model.add(keras.layers.ConvLSTM2D(*layer_shape, **layer_args))
             elif layer_type == 'ConvLSTM3D':
                 model.add(keras.layers.ConvLSTM3D(*layer_shape, **layer_args))
-            # Special layers:
+            # Preprocessing layers:
             elif layer_type == 'TextVectorization':
                 model.add(keras.layers.TextVectorization(*layer_shape, **layer_args))
             elif layer_type == 'Normalization':
                 model.add(keras.layers.Normalization(*layer_shape, **layer_args))
             elif layer_type == 'Discretization':
                 model.add(keras.layers.Discretization(*layer_shape, **layer_args))
+            elif layer_type == 'CategoryEncoding':
+                model.add(keras.layers.CategoryEncoding(*layer_shape, **layer_args))
+            elif layer_type == 'Hashing':
+                model.add(keras.layers.Hashing(*layer_shape, **layer_args))
+            elif layer_type == 'StringLookup':
+                model.add(keras.layers.StringLookup(*layer_shape, **layer_args))
+            elif layer_type == 'IntegerLookup':
+                model.add(keras.layers.IntegerLookup(*layer_shape, **layer_args))
+            elif layer_type == 'Resizing':
+                model.add(keras.layers.Resizing(*layer_shape, **layer_args))
+            elif layer_type == 'Rescaling':
+                model.add(keras.layers.Rescaling(*layer_shape, **layer_args))
+            elif layer_type == 'CenterCrop':
+                model.add(keras.layers.CenterCrop(*layer_shape, **layer_args))
+            elif layer_type == 'RandomCrop':
+                model.add(keras.layers.RandomCrop(*layer_shape, **layer_args))
+            elif layer_type == 'RandomFlip':
+                model.add(keras.layers.RandomFlip(*layer_shape, **layer_args))
+            elif layer_type == 'RandomTranslation':
+                model.add(keras.layers.RandomTranslation(*layer_shape, **layer_args))
+            elif layer_type == 'RandomRotation':
+                model.add(keras.layers.RandomRotation(*layer_shape, **layer_args))
+            elif layer_type == 'RandomZoom':
+                model.add(keras.layers.RandomZoom(*layer_shape, **layer_args))
+            elif layer_type == 'RandomHeight':
+                model.add(keras.layers.RandomHeight(*layer_shape, **layer_args))
+            elif layer_type == 'RandomWidth':
+                model.add(keras.layers.RandomWidth(*layer_shape, **layer_args))
+            elif layer_type == 'RandomContrast':
+                model.add(keras.layers.RandomContrast(*layer_shape, **layer_args))
+            elif layer_type == 'RandomBrightness':
+                model.add(keras.layers.RandomBrightness(*layer_shape, **layer_args))
+            # Normalization layers:
+            elif layer_type == 'BatchNormalization':
+                model.add(keras.layers.BatchNormalization(*layer_shape, **layer_args))
+            elif layer_type == 'LayerNormalization':
+                model.add(keras.layers.LayerNormalization(*layer_shape, **layer_args))
+            elif layer_type == 'UnitNormalization':
+                model.add(keras.layers.UnitNormalization(*layer_shape, **layer_args))
+            # Regularization layers:
             elif layer_type == 'Dropout':
                 model.add(keras.layers.Dropout(*layer_shape, **layer_args))
+            elif layer_type == 'SpatialDropout1D':
+                model.add(keras.layers.SpatialDropout1D(*layer_shape, **layer_args))
+            elif layer_type == 'SpatialDropout2D':
+                model.add(keras.layers.SpatialDropout2D(*layer_shape, **layer_args))
+            elif layer_type == 'SpatialDropout3D':
+                model.add(keras.layers.SpatialDropout3D(*layer_shape, **layer_args))
+            elif layer_type == 'GaussianDropout':
+                model.add(keras.layers.GaussianDropout(*layer_shape, **layer_args))
+            elif layer_type == 'GaussianNoise':
+                model.add(keras.layers.GaussianNoise(*layer_shape, **layer_args))
+            elif layer_type == 'ActivityRegularization':
+                model.add(keras.layers.ActivityRegularization(*layer_shape, **layer_args))
+            elif layer_type == 'AlphaDropout':
+                model.add(keras.layers.AlphaDropout(*layer_shape, **layer_args))
+            # Attention layers:
+            elif layer_type == 'MultiHeadAttention':
+                model.add(keras.layers.MultiHeadAttention(*layer_shape, **layer_args))
+            elif layer_type == 'Attention':
+                model.add(keras.layers.Attention(*layer_shape, **layer_args))
+            elif layer_type == 'AdditiveAttention':
+                model.add(keras.layers.AdditiveAttention(*layer_shape, **layer_args))
+            # Reshaping layers:
+            elif layer_type == 'Reshape':
+                model.add(keras.layers.Reshape(*layer_shape, **layer_args))
+            elif layer_type == 'RepeatVector':
+                model.add(keras.layers.RepeatVector(*layer_shape, **layer_args))
+            elif layer_type == 'Permute':
+                model.add(keras.layers.Permute(*layer_shape, **layer_args))
+            elif layer_type == 'Cropping1D':
+                model.add(keras.layers.Cropping1D(*layer_shape, **layer_args))
+            elif layer_type == 'Cropping2D':
+                model.add(keras.layers.Cropping2D(*layer_shape, **layer_args))
+            elif layer_type == 'Cropping3D':
+                model.add(keras.layers.Cropping3D(*layer_shape, **layer_args))
+            elif layer_type == 'UpSampling1D':
+                model.add(keras.layers.UpSampling1D(*layer_shape, **layer_args))
+            elif layer_type == 'UpSampling2D':
+                model.add(keras.layers.UpSampling2D(*layer_shape, **layer_args))
+            elif layer_type == 'UpSampling3D':
+                model.add(keras.layers.UpSampling3D(*layer_shape, **layer_args))
+            elif layer_type == 'ZeroPadding1D':
+                model.add(keras.layers.ZeroPadding1D(*layer_shape, **layer_args))
+            elif layer_type == 'ZeroPadding2D':
+                model.add(keras.layers.ZeroPadding2D(*layer_shape, **layer_args))
+            elif layer_type == 'ZeroPadding3D':
+                model.add(keras.layers.ZeroPadding3D(*layer_shape, **layer_args))
+            # Merging layers:
+            elif layer_type == 'Concatenate':
+                model.add(keras.layers.Concatenate(*layer_shape, **layer_args))
+            elif layer_type == 'Average':
+                model.add(keras.layers.Average(*layer_shape, **layer_args))
+            elif layer_type == 'Maximum':
+                model.add(keras.layers.Maximum(*layer_shape, **layer_args))
+            elif layer_type == 'Minimum':
+                model.add(keras.layers.Minimum(*layer_shape, **layer_args))
+            elif layer_type == 'Add':
+                model.add(keras.layers.Add(*layer_shape, **layer_args))
+            elif layer_type == 'Subtract':
+                model.add(keras.layers.Subtract(*layer_shape, **layer_args))
+            elif layer_type == 'Multiply':
+                model.add(keras.layers.Multiply(*layer_shape, **layer_args))
+            elif layer_type == 'Dot':
+                model.add(keras.layers.Dot(*layer_shape, **layer_args))
+            # Loclally-connected layers:
+            elif layer_type == 'LocallyConnected1D':
+                model.add(keras.layers.LocallyConnected1D(*layer_shape, **layer_args))
+            elif layer_type == 'LocallyConnected2D':
+                model.add(keras.layers.LocallyConnected2D(*layer_shape, **layer_args))
+            # Activation layers:
+            elif layer_type == 'ReLU':
+                model.add(keras.layers.ReLU(*layer_shape, **layer_args))
+            elif layer_type == 'Softmax':
+                model.add(keras.layers.Softmax(*layer_shape, **layer_args))
+            elif layer_type == 'LeakyReLU':
+                model.add(keras.layers.LeakyReLU(*layer_shape, **layer_args))
+            elif layer_type == 'PReLU':
+                model.add(keras.layers.PReLU(*layer_shape, **layer_args))
+            elif layer_type == 'ELU':
+                model.add(keras.layers.ELU(*layer_shape, **layer_args))
+            elif layer_type == 'ThresholdedReLU':
+                model.add(keras.layers.ThresholdedReLU(*layer_shape, **layer_args))
+            elif layer_type != '':
+                importmodel = keras.models.load_model(f'{MODEL_LOCATION}/{layer_type}.h5')
+                importmodel._name = layer_type
+                model.add(importmodel)
 
         model.add(keras.layers.Dense(compiler.tput, activation="softmax", name='output'))
 

@@ -5,8 +5,9 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-from tkinter import Tk, LabelFrame, Label, Entry, ttk, Text, END
-from .utils import HoverButton, ColorStyles
+import os
+from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
+from .utils import HoverButton, ColorStyles, TYPEOFLAYERS, TYPEOFLOSES, layers_help
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from PIL import Image
 
@@ -16,6 +17,7 @@ from ._model import Model
 import time
 import graphviz as gv
 import matplotlib.pyplot as plt
+import pickle
 
 
 # from tensorflow.python.client import device_lib TOREMOVE
@@ -29,6 +31,8 @@ ICO_LOCATION = r'../multimedia/uah.ico'
 LOGFILE_PATH = r'../temp/logfile.txt'
 LMS_PATH = r'../temp/lms.txt'
 DRAW_MODEL_PATH = r'../multimedia/render'
+COMPILER_LOCATION = r'../db/compilers'
+MODEL_LOCATION = r'../db/models'
 # -----------------------------------------------------------
 
 
@@ -48,9 +52,10 @@ class MainWindow:
     def __init__(self, master):
         self.master = master
         self.master.title("CORNET")
-        self.master.geometry('605x810')
+        self.master.geometry('620x810')
+        self.windowsize = '620x810'
         self.colors = ColorStyles
-        self.model_list = self._readmodels()
+        self.model_list = self._readmodels_slm()
         # -------------------------------------------------------------------------------------------------------------
         #                       VARIABLES
         # -------------------------------------------------------------------------------------------------------------
@@ -77,57 +82,8 @@ class MainWindow:
         # Training variables:
         self.throughput = 8  # TOREMOVE
         # Model variables:
-        self.typeoflayers = ['Dense',
-                             'Conv2D',
-                             'Flatten',
-                             'Activation',
-                             'Embedding',
-                             'Masking',
-                             'Lambda',
-                             '',
-                             'Conv1D',
-                             'Conv3D',
-                             'SeparableConv1D',
-                             'SeparableConv2D',
-                             'DepthwiseConv2D',
-                             'Conv1DTranspose',
-                             'Conv2DTranspose',
-                             'Conv3DTranspose',
-                             '',
-                             'MaxPooling1D',
-                             'MaxPooling2D',
-                             'MaxPooling3D',
-                             'AveragePooling1D',
-                             'AveragePooling2D',
-                             'AveragePooling3D',
-                             'GlobalMaxPooling1D',
-                             'GlobalMaxPooling2D',
-                             'GlobalMaxPooling3D',
-                             'GlobalAveragePooling1D',
-                             'GlobalAveragePooling2D',
-                             'GlobalAveragePooling3D',
-                             '',
-                             'LSTM',
-                             'GRU',
-                             'SimpleRNN',
-                             'RNN',
-                             'TimeDistributed',
-                             'Bidirectional',
-                             'ConvLSTM1D',
-                             'ConvLSTM2D',
-                             'ConvLSTM3D',
-                             'TextVectorization',
-                             '',
-                             'Normalization',
-                             'Discretization',
-                             'Dropout'
-                             ]
-        self.losses = [
-            'kld', 'mean_absolute_error', 'mean_absolute_percentage_error', 'mean_squared_error',
-            'mean_squared_logarithmic_error', 'binary_crossentropy', 'binary_focal_crossentropy',
-            'categorical_crossentropy', 'categorical_hinge', 'cosine_similarity', 'deserialize', 'get', 'hinge',
-            'huber_loss', 'log_cosh', 'poisson', 'serialize', 'sparse_categorical_crossentropy', 'squared_hinge'
-        ]
+        self.typeoflayers = TYPEOFLAYERS
+        self.losses = TYPEOFLOSES
         self.metrics = ['accuracy', 'mse']
         self.optimizers = ['adadelta', 'adam', 'RMSprop', 'sgd', 'nadam', 'adamax', 'adagrad', 'ftlr']
         self.current_model_list = []
@@ -234,7 +190,7 @@ class MainWindow:
         # -------------------------------------------------------------------------------------------------------------
         #                       LOGTRACKER FRAME
         # -------------------------------------------------------------------------------------------------------------
-        self.log_text = Text(master, height=6, width=73, bd=5, bg='black')
+        self.log_text = scrolledtext.ScrolledText(master, height=6, width=73, bd=5, bg='black')
         self.log_text.pack()
         self.log_text.place(x=5, y=5)
         self.lowrite(f'[{time.ctime()}]\t\tWellcome to CORNET!', cat='Intro')
@@ -287,6 +243,7 @@ class MainWindow:
         self.layer_selection.place(x=90, y=5)
         self.layer_selection["values"] = self.typeoflayers
         self.layer_selection.set(self.typeoflayers[0])
+        self.layer_selection.bind("<<ComboboxSelected>>", self._showhelp)
 
         self.shape_entry = Entry(self.model_lf_add, width=16)
         self.shape_entry.place(x=90, y=30)
@@ -343,6 +300,23 @@ class MainWindow:
         self.opt_selection.place(x=70, y=250)
         self.opt_selection["values"] = self.optimizers
         self.opt_selection.set(self.optimizers[1])
+        # -------------------------------------------------------------------------------------------------------------
+        #                       HELP TEXTBOX
+        # -------------------------------------------------------------------------------------------------------------
+        self.help_text = scrolledtext.ScrolledText(self.master, height=49, width=80, bd=5, bg='black')
+        self.help_text.pack()
+        self.help_text.place(x=620, y=5)
+        self.expander = HoverButton(self.master,
+                                    text='<\n>',
+                                    command=self._expand,
+                                    height=53,
+                                    width=1,
+                                    bg=self.colors.white)
+        self.expander.place(x=602, y=3)
+        # -------------------------------------------------------------------------------------------------------------
+        #                       LAST CALLS
+        # -------------------------------------------------------------------------------------------------------------
+        self._read_models()
 
     # -------------------------------------------------------------------------------------------------------------
     #                       EXTERNAL FUNCTIONS
@@ -359,13 +333,29 @@ class MainWindow:
 
     def export_model(self):
         # Export the deep learning model.
-        self.lowrite(_text='Model exported to {}.', cat='Info')
-        pass
+        filename = filedialog.asksaveasfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LOCATION)
+        if filename:
+            if self.model is None:
+                if not self.compile():
+                    self.lowrite(_text=f'Cannot export the current model: the model is not compilable.',
+                                 cat='Info')
+                    return
+            with open(filename, 'wb') as file:
+                pickle.dump(self.current_model_list, file)
+            _filename = filename.split('/')[-1]
+            self.model.model.save(f'{MODEL_LOCATION}/{_filename}.h5')
+            self._read_models()
+            self.lowrite(_text=f'Model exported to {filename}.', cat='Info')
 
     def import_model(self):
         # Import the deep learning model.
-        self.lowrite(_text='Imported model {}.', cat='Info')
-        pass
+        filename = filedialog.askopenfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LOCATION)
+        if filename:
+            with open(filename, 'rb') as file:
+                self.current_model_list = pickle.load(file)
+                self.listoflayers["values"] = [val[0] for val in self.current_model_list]
+            self.compile()
+            self.lowrite(_text=f'Imported model {filename}.', cat='Info')
 
     def start_feed(self):
         # Start feeding.
@@ -401,8 +391,8 @@ class MainWindow:
     #                       INTERFACE METHODS
     # -------------------------------------------------------------------------------------------------------------
     @staticmethod
-    def _readmodels():
-        # Read the models from the .txt file.
+    def _readmodels_slm():
+        # Read the SLM models from the .txt file.
         modelist = []
         with open(LMS_PATH, 'r', encoding='utf-8') as file:
             for line in file:
@@ -458,7 +448,7 @@ class MainWindow:
 
         if shape[0]:
             for index, shap in enumerate(shape):
-                shape[index] = int(round(float(shap)))
+                shape[index] = self._tonum(shap)
         else:
             shape = ''
 
@@ -469,10 +459,12 @@ class MainWindow:
         if values:
             values = values.split(', ')
             for i, value in enumerate(values):
-                if value[0] != "'":
-                    values[i] = float(value)
+                if value[0] == "\'":
+                    values[i] = value.replace('\'', '')
+                elif value[0] == '(':
+                    values[i] = tuple([self._tonum(val) for val in value.replace('(', '').replace(')', '').split(',')])
                 else:
-                    values[i] = value
+                    values[i] = self._tonum(value)
         if len(extras) != len(values):
             self.lowrite(_text=f'Cannot match {len(extras)} keywords to {len(values)} atributes.', cat='Error')
             return
@@ -509,8 +501,9 @@ class MainWindow:
             else:
                 self.lowrite(_text='The model compiled with errors.', cat='Info')
         else:
-            self.lowrite(_text='Cannot compile the model: it is empty', cat='Error')
-        return
+            self.lowrite(_text='Cannot compile the model: it is empty.', cat='Error')
+            return False
+        return True
 
     def replace(self):
         # Replace a layer from in target.
@@ -579,6 +572,7 @@ class MainWindow:
         self.lowrite(_text=f'Scheme drawn sucessfuly.', cat='Info')
 
     def _parse_compiler(self):
+        # Parses the current model list into the compiler.
         model_list = self.current_model_list
         layers = []
         shapes = []
@@ -616,6 +610,40 @@ class MainWindow:
         else:
             self.lowrite('The model compiled with errors... Check your parameters again.', cat='Error')
             return None
+
+    @staticmethod
+    def _tonum(strg):
+        # Translates a string to float or integer.
+        if '.' in strg:
+            return float(strg)
+        else:
+            return int(strg)
+
+    def _showhelp(self, event):
+        # Shows the help for each layer selected.
+        help_msg = layers_help(self.layer_selection.get())
+        self.help_text.delete('1.0', END)
+        self.help_text.insert(END, help_msg)
+        self.help_text.tag_add(0, f'0.1', END)
+        self.help_text.tag_config(0, foreground=self.colors.green)
+        self.help_text.see('0.0')
+        return event
+
+    def _expand(self):
+        # Resizes the window in order to hide the information about the layers.
+        if self.windowsize == '1290x810':
+            self.master.geometry('620x810')
+            self.windowsize = '620x810'
+        elif self.windowsize == '620x810':
+            self.master.geometry('1290x810')
+            self.windowsize = '1290x810'
+
+    def _read_models(self):
+        # This function reads the current custom models and updates the model list.
+        cmodels = [cmodel[:-3] for cmodel in os.listdir(MODEL_LOCATION)]
+        self.typeoflayers = TYPEOFLAYERS
+        self.typeoflayers.extend(cmodels)
+        self.layer_selection["values"] = self.typeoflayers
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

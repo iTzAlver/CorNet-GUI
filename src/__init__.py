@@ -7,6 +7,7 @@
 from ._gui import gui
 from ._model import Model
 from ._compiler import Compiler
+from ._dbgui import dbgui
 
 
 def info():
