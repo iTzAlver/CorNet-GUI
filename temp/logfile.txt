@@ -3626,3 +3626,1690 @@ _________________________________________________________________
 <Wed Oct  5 13:36:00 2022>	[Info]:	Device /device:CPU:0 set up for None.
 [Wed Oct  5 13:36:50 2022]		Finishing the current session.
 
+[Wed Oct  5 14:01:24 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:01:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:01:37 2022>	[Info]:	Opening dual interface for database building.
+<Wed Oct  5 14:02:08 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:02:11 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:02:11 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:02:11 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:02:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:02:12 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.[Wed Oct  5 14:21:24 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:21:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:22:03 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:None
+
+<Wed Oct  5 14:22:03 2022>	[Error]:	The model has the following errors:
+The last dimension of the inputs to a Dense layer should be defined. Found None. Full input shape received: (None, None)
+<Wed Oct  5 14:22:03 2022>	[Info]:	The model compiled with errors.
+<Wed Oct  5 14:22:03 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:22:30 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:22:36 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:22:36 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_1 (Conv2D)           (None, 30, 30, 64)        640       
+                                                                 
+ flatten_1 (Flatten)         (None, 57600)             0         
+                                                                 
+ dense_1 (Dense)             (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:22:36 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:22:36 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:22:36 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:22:42 2022>	[Info]:	Training the current model.[Wed Oct  5 14:26:59 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:26:59 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:27:11 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:27:13 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:27:13 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:27:13 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:27:14 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:27:14 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:27:16 2022>	[Info]:	Training the current model.
+<Wed Oct  5 14:29:39 2022>	[Info]:	Opening dual interface for database building.[Wed Oct  5 14:35:13 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:35:13 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:35:38 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:35:40 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:35:40 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:35:40 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:35:41 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:35:41 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:35:42 2022>	[Info]:	Training the current model.[Wed Oct  5 14:36:35 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:36:35 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:36:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:36:43 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:36:43 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:36:43 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:36:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:36:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:36:46 2022>	[Info]:	Training the current model.
+<Wed Oct  5 14:37:05 2022>	[Info]:	Training the current model.[Wed Oct  5 14:38:36 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:38:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:38:40 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:38:42 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:38:42 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:38:42 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:38:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:38:42 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:38:44 2022>	[Info]:	Training the current model.[Wed Oct  5 14:39:10 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:39:10 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:39:11 2022>	[Info]:	Training the current model.
+<Wed Oct  5 14:39:25 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:39:27 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:39:27 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:39:27 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:39:28 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:39:28 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:39:45 2022>	[Info]:	Training the current model.[Wed Oct  5 14:40:37 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:40:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:40:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:40:43 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:40:43 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:40:43 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:40:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:40:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:40:45 2022>	[Info]:	Training the current model.[Wed Oct  5 14:42:56 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:42:56 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:43:00 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:43:01 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:43:02 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:43:02 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:43:02 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:43:02 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:43:03 2022>	[Info]:	Training the current model.[Wed Oct  5 14:43:35 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:43:35 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:43:39 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:43:42 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:43:42 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:43:42 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:43:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:43:42 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:43:44 2022>	[Info]:	Training the current model.[Wed Oct  5 14:44:08 2022]		Wellcome to CORNET!
+<Wed Oct  5 14:44:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 14:44:18 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 14:44:20 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 14:44:20 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 14:44:20 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 14:44:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 14:44:21 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 14:44:21 2022>	[Info]:	Training the current model.
+<Wed Oct  5 14:44:42 2022>	[Info]:	Training the current model.[Wed Oct  5 15:00:40 2022]		Wellcome to CORNET!
+<Wed Oct  5 15:00:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Wed Oct  5 15:02:33 2022]		Wellcome to CORNET!
+<Wed Oct  5 15:02:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 15:03:03 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 15:03:05 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 15:03:06 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 15:03:06 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 15:03:06 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 15:03:06 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 15:56:43 2022>	[Info]:	Training the current model.
+<Wed Oct  5 15:56:51 2022>	[Info]:	Training stopped.[Wed Oct  5 15:57:48 2022]		Wellcome to CORNET!
+<Wed Oct  5 15:57:48 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 15:59:02 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 15:59:04 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 15:59:04 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 15:59:04 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 15:59:05 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 15:59:05 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 15:59:08 2022>	[Info]:	Training the current model.
+<Wed Oct  5 15:59:50 2022>	[Info]:	Training stopped.[Wed Oct  5 16:01:32 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:01:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:01:36 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:01:37 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:01:38 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:01:38 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:01:38 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:01:38 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:01:39 2022>	[Info]:	Training the current model.[Wed Oct  5 16:05:37 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:05:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:05:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:05:43 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:05:43 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:05:43 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:05:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:05:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:05:44 2022>	[Info]:	Training the current model.
+<Wed Oct  5 16:05:52 2022>	[Info]:	Training stopped.[Wed Oct  5 16:31:41 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:31:41 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:31:52 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:31:53 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:31:53 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:31:53 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:31:54 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:31:54 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:31:56 2022>	[Info]:	Training the current model.[Wed Oct  5 16:32:31 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:32:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:32:57 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:32:59 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:32:59 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:32:59 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:33:00 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:33:00 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:33:02 2022>	[Info]:	Training the current model.[Wed Oct  5 16:33:57 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:33:57 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:34:13 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:34:15 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:34:15 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:34:15 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:34:15 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:34:15 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:34:17 2022>	[Info]:	Training the current model.[Wed Oct  5 16:40:12 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:40:12 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:40:16 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:40:18 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:40:19 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:40:19 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:40:19 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:40:19 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:40:21 2022>	[Info]:	Training the current model.[Wed Oct  5 16:41:34 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:41:34 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:41:39 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:41:41 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:41:41 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:41:41 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:41:41 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:41:41 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:41:46 2022>	[Info]:	Training the current model.
+<Wed Oct  5 16:42:15 2022>	[Info]:	Training stopped.[Wed Oct  5 16:42:45 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:42:45 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Wed Oct  5 16:42:51 2022]		Finishing the current session.
+
+[Wed Oct  5 16:43:47 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:43:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:43:52 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:43:54 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:43:54 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:43:54 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:43:54 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:43:54 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:43:55 2022>	[Info]:	Training the current model.[Wed Oct  5 16:45:51 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:45:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:47:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:47:42 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:47:43 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:47:43 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:47:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:47:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:47:44 2022>	[Info]:	Training the current model.[Wed Oct  5 16:48:47 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:48:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:49:17 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:49:19 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:49:19 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:49:19 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:49:20 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:49:20 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:49:23 2022>	[Info]:	Training the current model.[Wed Oct  5 16:56:14 2022]		Wellcome to CORNET!
+<Wed Oct  5 16:56:14 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 16:56:19 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 16:56:21 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 16:56:22 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 16:56:22 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 16:56:22 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 16:56:22 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 16:56:24 2022>	[Info]:	Training the current model.
+<Wed Oct  5 16:59:01 2022>	[Info]:	Training stopped.[Wed Oct  5 17:00:03 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:00:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:00:07 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:00:09 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:00:09 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:00:09 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:00:09 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:00:09 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:00:14 2022>	[Info]:	Training the current model.[Wed Oct  5 17:01:00 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:01:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:01:03 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:01:06 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:01:06 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:01:06 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:01:07 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:01:07 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:01:07 2022>	[Info]:	Training the current model.[Wed Oct  5 17:03:23 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:03:23 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:03:30 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:03:33 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:03:33 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:03:33 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:03:33 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:03:33 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:03:36 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:04:59 2022>	[Info]:	Training stopped.[Wed Oct  5 17:05:27 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:05:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:05:34 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:05:48 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:05:48 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:05:48 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:05:48 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:05:48 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:05:50 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:07:01 2022>	[Info]:	Training stopped.[Wed Oct  5 17:07:27 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:07:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:07:35 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:07:36 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:07:37 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:07:37 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:07:37 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:07:37 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:07:39 2022>	[Info]:	Training the current model.[Wed Oct  5 17:19:49 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:19:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:20:35 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:20:37 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:20:37 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:20:37 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:20:37 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:20:37 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:20:39 2022>	[Info]:	Training the current model.[Wed Oct  5 17:22:37 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:22:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:22:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:22:42 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:22:43 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:22:43 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:22:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:22:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:22:45 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:23:47 2022>	[Info]:	Training stopped.[Wed Oct  5 17:25:54 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:25:54 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:26:33 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:26:35 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:26:35 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:26:35 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:26:36 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:26:36 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:26:37 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:27:25 2022>	[Info]:	Training stopped.[Wed Oct  5 17:28:28 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:28:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:28:34 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:28:35 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:28:36 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:28:36 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:28:36 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:28:36 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:28:36 2022>	[Info]:	Training the current model.[Wed Oct  5 17:30:21 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:30:21 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:30:34 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:30:36 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:30:36 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:30:36 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:30:36 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:30:36 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:31:07 2022>	[Info]:	Training the current model.[Wed Oct  5 17:31:47 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:31:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:32:03 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:32:05 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:32:05 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:32:05 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:32:05 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:32:05 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:32:07 2022>	[Info]:	Training the current model.[Wed Oct  5 17:34:45 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:34:45 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:35:10 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:35:11 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:35:12 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:35:12 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:35:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:35:12 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:35:19 2022>	[Info]:	Training the current model.[Wed Oct  5 17:36:56 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:36:56 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:37:00 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:37:02 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:37:02 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:37:02 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:37:03 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:37:03 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:37:03 2022>	[Info]:	Training the current model.[Wed Oct  5 17:37:57 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:37:57 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:38:03 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:38:04 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:38:04 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:38:04 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:38:05 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:38:05 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:38:07 2022>	[Info]:	Training the current model.[Wed Oct  5 17:39:20 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:39:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:39:25 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:39:26 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:39:26 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:39:26 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:39:27 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:39:27 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:39:29 2022>	[Info]:	Training the current model.[Wed Oct  5 17:40:18 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:40:18 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:40:21 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:40:23 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:40:23 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:40:23 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:40:24 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:40:24 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:40:25 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:41:11 2022>	[Info]:	Training stopped.
+<Wed Oct  5 17:41:54 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:42:03 2022>	[Info]:	Training stopped.[Wed Oct  5 17:43:00 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:43:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:43:04 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:43:05 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:43:06 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:43:06 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:43:06 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:43:06 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 17:43:07 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:43:28 2022>	[Info]:	Training stopped.
+<Wed Oct  5 17:43:56 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/compilers/test_trained.
+<Wed Oct  5 17:44:05 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:44:05 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_1 (Conv2D)           (None, 30, 30, 64)        640       
+                                                                 
+ flatten_1 (Flatten)         (None, 57600)             0         
+                                                                 
+ dense_1 (Dense)             (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:44:05 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:44:05 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:44:05 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test_trained.[Wed Oct  5 17:47:09 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:47:09 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:47:17 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:47:20 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:47:20 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:47:20 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:47:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:47:21 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test_trained.[Wed Oct  5 17:47:49 2022]		Wellcome to CORNET!
+<Wed Oct  5 17:47:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 17:47:54 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 17:47:56 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 17:47:56 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 17:47:56 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 17:47:56 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 17:47:56 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test_trained.
+<Wed Oct  5 17:48:01 2022>	[Info]:	Training the current model.
+<Wed Oct  5 17:48:17 2022>	[Info]:	Training stopped.[Wed Oct  5 18:00:36 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:00:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:13:37 2022>	[Info]:	Database test_ht loaded.[Wed Oct  5 18:14:03 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:14:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:14:09 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:14:18 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [6, 3]
+<Wed Oct  5 18:14:50 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 18:14:55 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Wed Oct  5 18:15:00 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+[Wed Oct  5 18:17:24 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:17:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:17:28 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:17:33 2022>	[Info]:	Adding new layer to the model:
+		Conv1D [6, 3]
+<Wed Oct  5 18:17:45 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 18:17:51 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Wed Oct  5 18:18:08 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv1D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+[Wed Oct  5 18:19:47 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:19:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:19:52 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:20:01 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [6, 4]
+<Wed Oct  5 18:20:06 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 18:20:14 2022>	[Info]:	Adding new layer to the model:
+		Dense [120]
+<Wed Oct  5 18:20:18 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 4]
+		Flatten 
+		Dense [120]
+		Output:32
+
+<Wed Oct  5 18:20:18 2022>	[Error]:	The model has the following errors:
+module 'contextlib' has no attribute 'supress'
+<Wed Oct  5 18:20:18 2022>	[Info]:	The model compiled with errors.[Wed Oct  5 18:22:35 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:22:35 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:22:40 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Wed Oct  5 18:22:43 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Train
+<Wed Oct  5 18:22:48 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:22:55 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [6, 4]
+<Wed Oct  5 18:22:55 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 4]
+		Output:32
+
+<Wed Oct  5 18:23:12 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 29, 29, 6)         102       
+                                                                 
+ output (Dense)              (None, 29, 29, 32)        224       
+                                                                 
+=================================================================
+Total params: 326
+Trainable params: 326
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 18:23:13 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 18:23:13 2022>	[Info]:	Scheme drawn sucessfuly.[Wed Oct  5 18:27:04 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:27:04 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:27:09 2022>	[Info]:	Database test_ht loaded.
+[Wed Oct  5 18:27:15 2022]		Finishing the current session.
+
+[Wed Oct  5 18:27:26 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:27:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:27:32 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:27:45 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [6, 3]
+<Wed Oct  5 18:27:52 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 18:28:03 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Wed Oct  5 18:28:04 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Wed Oct  5 18:28:05 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Train
+<Wed Oct  5 18:28:15 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 18:28:15 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 6)         60        
+                                                                 
+ flatten (Flatten)           (None, 5400)              0         
+                                                                 
+ dense (Dense)               (None, 80)                432080    
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 434,732
+Trainable params: 434,732
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 18:28:15 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 18:28:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 18:28:31 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 18:28:35 2022>	[Info]:	Training the current model.
+<Wed Oct  5 18:28:58 2022>	[Info]:	Training stopped.[Wed Oct  5 18:30:39 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:30:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 18:30:59 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 18:31:02 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Wed Oct  5 18:31:02 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Train
+<Wed Oct  5 18:31:08 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [6, 3]
+<Wed Oct  5 18:31:14 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 18:31:19 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Wed Oct  5 18:31:28 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 18:31:28 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 6)         60        
+                                                                 
+ flatten (Flatten)           (None, 5400)              0         
+                                                                 
+ dense (Dense)               (None, 80)                432080    
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 434,732
+Trainable params: 434,732
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 18:31:28 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 18:31:29 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 18:31:39 2022>	[Info]:	Training the current model.
+<Wed Oct  5 18:33:12 2022>	[Info]:	Training stopped.
+<Wed Oct  5 18:36:52 2022>	[Info]:	Opening dual interface for database building.[Wed Oct  5 18:39:34 2022]		Wellcome to CORNET!
+<Wed Oct  5 18:39:34 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Wed Oct  5 19:16:37 2022]		Finishing the current session.
+
+[Wed Oct  5 19:16:53 2022]		Wellcome to CORNET!
+<Wed Oct  5 19:16:53 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Wed Oct  5 19:18:17 2022]		Finishing the current session.
+

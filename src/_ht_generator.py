@@ -10,11 +10,12 @@ from ._database_structure import Database
 
 
 class HtGenerator:
-    def __init__(self, generator, queue):
+    def __init__(self, generator, queue, scale=255):
         self.options = generator
         self.segs = []
         self.mtxs = []
         self.queue = queue
+        self.scale = scale
         queue.put('Connection with generator sucessful.')
         self.build()
         thedb = Database((self.mtxs, self.segs), generator)
@@ -47,28 +48,26 @@ class HtGenerator:
                 mtx[row, col] = abs(element + awgn + off)
         return mtx
 
-    @staticmethod
-    def _insert_1(seg):
+    def _insert_1(self, seg):
         if sum(seg) == len(seg):
             return seg
         else:
             idx = np.random.randint(len(seg))
             while seg[idx] != 0:
                 idx = np.random.randint(len(seg))
-            seg[idx] = 1
+            seg[idx] = self.scale
         return seg
 
-    @staticmethod
-    def _seg2mat(seg):
-        mat = np.zeros((len(seg), len(seg)), dtype=np.uint8)
+    def _seg2mat(self, seg):
+        mat = np.zeros((len(seg), len(seg), 1), dtype=np.uint8)
         base = 0
         placix = 0
         for idx, element in enumerate(seg):
             mat[idx, idx] = 1
             if element == 0:
                 for ix in range(base, placix + base + 1):
-                    mat[idx, ix] = 1
-                    mat[ix, idx] = 1
+                    mat[idx, ix] = np.array([self.scale])
+                    mat[ix, idx] = np.array([self.scale])
                 placix += 1
             else:
                 base = idx

@@ -7,7 +7,7 @@
 # Import statements:
 class Compiler:
     def __init__(self, tput: int, layers: list, shapes: list[tuple], kwds: list[list], args: list[list], compiler: dict,
-                 devices: list, verbose: bool = True):
+                 devices: dict, verbose: bool = True):
         self.tput = tput
         self.layers = layers
         self.shapes = shapes

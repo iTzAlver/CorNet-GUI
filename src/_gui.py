@@ -10,11 +10,13 @@ from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedi
 from .utils import HoverButton, ColorStyles, TYPEOFLAYERS, TYPEOFLOSES, layers_help
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from PIL import Image
+from tensorflow import keras
 
 from ._compiler import Compiler
 from ._model import Model
 from ._database_structure import load_database
 from ._dbgui import dbgui
+from ._model import fitmodel
 
 import time
 import graphviz as gv
@@ -22,12 +24,7 @@ import matplotlib.pyplot as plt
 import pickle
 import multiprocessing
 
-
-# from tensorflow.python.client import device_lib TOREMOVE
-class Helping:
-    def __init__(self):
-        self.name = '/device:CPU:0'
-        self.device_type = 'CPU'
+from tensorflow.python.client import device_lib
 
 
 ICO_LOCATION = r'../multimedia/uah.ico'
@@ -37,6 +34,7 @@ DRAW_MODEL_PATH = r'../multimedia/render'
 COMPILER_LOCATION = r'../db/compilers'
 MODEL_LOCATION = r'../db/models'
 DATABASE_LOCATION = r'../db/db'
+MODEL_TEMP = r'../temp/tempmodel.h5'
 # -----------------------------------------------------------
 
 
@@ -71,8 +69,7 @@ class MainWindow:
                               'Error': self.colors.red,
                               'Note': self.colors.green}
         # Tensorflow devices:
-        # self.devices = device_lib.list_local_devices() TOREMOVE
-        self.devices = [Helping()]  # TOREMOVE
+        self.devices = device_lib.list_local_devices()
         self.devices_list = []
         self.devices_role = {}
         self.device_roles = ['None', 'Train', 'Feed']
@@ -85,6 +82,8 @@ class MainWindow:
             self.devices_role[dev.name] = 0
         # Training variables:
         self.throughput = None
+        self.running = False
+        self.history = []
         # Model variables:
         self.typeoflayers = TYPEOFLAYERS
         self.losses = TYPEOFLOSES
@@ -96,6 +95,7 @@ class MainWindow:
         self.canvas1 = None
         self.toolbar1 = None
         self.canvas2 = None
+        self.toolbar2 = None
         # Database variables:
         self.database = None
         # -------------------------------------------------------------------------------------------------------------
@@ -367,6 +367,7 @@ class MainWindow:
                 self.current_model_list = pickle.load(file)
                 self.listoflayers["values"] = [val[0] for val in self.current_model_list]
             self.compile()
+            self.model.model = keras.models.load_model(f'{MODEL_LOCATION}/{filename.split("/")[-1]}.h5')
             self.lowrite(_text=f'Imported model {filename}.', cat='Info')
 
     def start_feed(self):
@@ -381,8 +382,27 @@ class MainWindow:
 
     def train_static(self):
         # Training the model with the database.
-        self.lowrite(_text='Training the current model.', cat='Info')
-        self.model.fit(self.database)
+        if self.running:
+            self.running = False
+            self.lowrite(_text='Training stopped.', cat='Info')
+        else:
+            self.running = True
+            self.lowrite(_text='Training the current model.', cat='Info')
+
+            self.model.model.save(MODEL_TEMP)
+            self.model.model = None
+            queue = multiprocessing.Queue()
+            p = multiprocessing.Process(target=fitmodel, args=(self.model, self.database, queue))
+            p.start()
+            while self.running:
+                self.master.update_idletasks()
+                self.master.update()
+                if not queue.empty():
+                    history = queue.get(False)
+                    self.history.append(history['loss'])
+                    self._print_history()
+            queue.put('MASTER:STOP')
+            self.model.model = keras.models.load_model(MODEL_TEMP)
 
     def _compile(self, compiler):
         # Compile the model into self.model.
@@ -588,7 +608,7 @@ class MainWindow:
         compiler = {'loss': self.loss_selection.get(),
                     'optimizer': self.opt_selection.get(),
                     'metrics': self.metrics}
-        devices = self.devices
+        devices = self.devices_role
         for layer in model_list:
             ls = layer[0].replace(',', '').replace('[', '').replace(']', '').split(' ')
             layers.append(ls[0])
@@ -651,6 +671,21 @@ class MainWindow:
         self.typeoflayers = TYPEOFLAYERS
         self.typeoflayers.extend(cmodels)
         self.layer_selection["values"] = self.typeoflayers
+
+    def _print_history(self):
+        myfig = plt.figure(figsize=(4.86, 3), dpi=80)
+        plt.plot(self.history)
+        plt.title('Learning curve')
+        plt.grid()
+        if self.canvas2 is not None:
+            self.canvas2.get_tk_widget().pack_forget()
+            self.toolbar2.destroy()
+        self.canvas2 = FigureCanvasTkAgg(myfig, master=self.model_lf_ovw)
+        self.canvas2.draw()
+        self.toolbar2 = NavigationToolbar2Tk(self.canvas2, self.model_lf_ovw)
+        self.toolbar2.update()
+        self.canvas2.get_tk_widget().pack()
+        plt.close(myfig)
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
