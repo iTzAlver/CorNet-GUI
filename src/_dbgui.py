@@ -5,7 +5,7 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-import os
+import multiprocessing
 import time
 from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
 from .utils import ColorStyles, HoverButton
@@ -175,8 +175,20 @@ class MainWindow:
                 generator['clust_v'] = self._tonum(self.clustervar_entry.get())
                 generator['number'] = self._tonum(self.numberofmatrix_entry.get())
                 generator['name'] = self.name_entry.get()
-                self.htgenerator = HtGenerator(generator, lowrite=self.lowrite)
                 self.lowrite(f'Creating a database with the following parameters:\n{generator}', cat='Info')
+
+                queue = multiprocessing.Queue()
+                self.htgenerator = (generator, queue)
+                proc = multiprocessing.Process(target=HtGenerator, args=self.htgenerator)
+                proc.start()
+                msg = queue.get()
+                while msg != 'ENDC':
+                    self.lowrite(msg, cat='Info')
+                    msg = queue.get()
+                    self.master.update_idletasks()
+                    self.master.update()
+                proc.join()
+                self.lowrite(f'Database {generator["name"]} created sucessfuly.', cat='Info')
 
     def lowrite(self, _text, cat=None, extra=None):
         # Write in log files and trackers.

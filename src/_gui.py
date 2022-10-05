@@ -13,11 +13,14 @@ from PIL import Image
 
 from ._compiler import Compiler
 from ._model import Model
+from ._database_structure import load_database
+from ._dbgui import dbgui
 
 import time
 import graphviz as gv
 import matplotlib.pyplot as plt
 import pickle
+import multiprocessing
 
 
 # from tensorflow.python.client import device_lib TOREMOVE
@@ -33,6 +36,7 @@ LMS_PATH = r'../temp/lms.txt'
 DRAW_MODEL_PATH = r'../multimedia/render'
 COMPILER_LOCATION = r'../db/compilers'
 MODEL_LOCATION = r'../db/models'
+DATABASE_LOCATION = r'../db/db'
 # -----------------------------------------------------------
 
 
@@ -80,7 +84,7 @@ class MainWindow:
                 self.devices_list.append(dev.name)
             self.devices_role[dev.name] = 0
         # Training variables:
-        self.throughput = 8  # TOREMOVE
+        self.throughput = None
         # Model variables:
         self.typeoflayers = TYPEOFLAYERS
         self.losses = TYPEOFLOSES
@@ -92,6 +96,8 @@ class MainWindow:
         self.canvas1 = None
         self.toolbar1 = None
         self.canvas2 = None
+        # Database variables:
+        self.database = None
         # -------------------------------------------------------------------------------------------------------------
         #                       DATABASE FRAME
         # -------------------------------------------------------------------------------------------------------------
@@ -324,12 +330,18 @@ class MainWindow:
     def gui_database(self):
         # Database generator interface.
         self.lowrite(_text='Opening dual interface for database building.', cat='Info')
-        pass
+        p = multiprocessing.Process(target=dbgui)
+        p.start()
 
     def import_database(self):
         # Import the generated database.
-        self.lowrite(_text='Database {} loaded.', cat='Info')
-        pass
+        dbpath = filedialog.askopenfilename(filetypes=[('Database files', '*.ht')], initialdir=DATABASE_LOCATION)
+        if dbpath:
+            database = load_database(dbpath)
+            self.database = database
+            self.throughput = len(self.database.dataset.xtrain[0])
+            self.training_label.config(text=f'Throughtput: {self.throughput}')
+            self.lowrite(_text=f'Database {database.name} loaded.', cat='Info')
 
     def export_model(self):
         # Export the deep learning model.
@@ -358,24 +370,19 @@ class MainWindow:
             self.lowrite(_text=f'Imported model {filename}.', cat='Info')
 
     def start_feed(self):
-        # Start feeding.
+        # Start feeding. TODO
         self.lowrite(_text='Starting model feeding with custom batch size: {}.', cat='Info')
         pass
 
     def stop_feed(self):
-        # Stop feeding.
+        # Stop feeding. TODO
         self.lowrite(_text='Real time feeding stopped.', cat='Info')
-        pass
-
-    def device_distribution(self):
-        # Stop feeding.
-        self.lowrite(_text='Showing the distributions for each device.', cat='Info')
         pass
 
     def train_static(self):
         # Training the model with the database.
         self.lowrite(_text='Training the current model.', cat='Info')
-        pass
+        self.model.fit(self.database)
 
     def _compile(self, compiler):
         # Compile the model into self.model.

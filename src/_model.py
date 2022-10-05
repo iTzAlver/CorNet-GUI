@@ -277,6 +277,9 @@ class Model:
         plot_model(self.model, to_file=f'{DRAW_MODEL_PATH}/compiled-model.gv.png', show_shapes=True,
                    show_layer_names=True)
 
+    def fit(self, db):
+        pass
+
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

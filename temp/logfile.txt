@@ -3540,3 +3540,89 @@ _________________________________________________________________
 
 [Tue Oct  4 19:23:29 2022]		Finishing the current DB session.
 
+[Wed Oct  5 13:26:17 2022]		Wellcome to CORNET!
+<Wed Oct  5 13:26:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Wed Oct  5 13:27:26 2022]		Finishing the current session.
+
+[Wed Oct  5 13:28:07 2022]		Wellcome to CORNET!
+<Wed Oct  5 13:28:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 13:28:10 2022>	[Info]:	Opening dual interface for database building.
+<Wed Oct  5 13:28:32 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 13:29:06 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Wed Oct  5 13:29:15 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Wed Oct  5 13:29:23 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Wed Oct  5 13:29:24 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 13:29:24 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 13:29:24 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 13:29:25 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 13:29:34 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/compilers/test.[Wed Oct  5 13:30:12 2022]		Wellcome to CORNET!
+<Wed Oct  5 13:30:12 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 13:30:41 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 13:30:46 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [64, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 13:30:46 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 64)        640       
+                                                                 
+ flatten (Flatten)           (None, 57600)             0         
+                                                                 
+ dense (Dense)               (None, 80)                4608080   
+                                                                 
+ output (Dense)              (None, 32)                2592      
+                                                                 
+=================================================================
+Total params: 4,611,312
+Trainable params: 4,611,312
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Oct  5 13:30:46 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Oct  5 13:30:47 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Oct  5 13:30:47 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Wed Oct  5 13:31:02 2022>	[Info]:	Training the current model.[Wed Oct  5 13:35:32 2022]		Wellcome to CORNET!
+<Wed Oct  5 13:35:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 13:35:38 2022>	[Info]:	Device /device:CPU:0 set up for None.
+<Wed Oct  5 13:35:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 13:36:00 2022>	[Info]:	Device /device:CPU:0 set up for None.
+[Wed Oct  5 13:36:50 2022]		Finishing the current session.
+
