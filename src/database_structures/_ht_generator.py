@@ -5,41 +5,52 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
+import multiprocessing
 import numpy as np
 from ._database_structure import Database
+from ._generator import Generator
 
 
+# -----------------------------------------------------------
 class HtGenerator:
-    def __init__(self, generator, queue, scale=255):
-        self.options = generator
-        self.segs = []
-        self.mtxs = []
-        self.queue = queue
-        self.scale = scale
-        queue.put('Connection with generator sucessful.')
+    """The class HtGenerator: Creates a Hipertraining dataset from a generator."""
+    def __init__(self, generator: Generator, queue: multiprocessing.Queue = None, scale: int = 255):
+        self.options: Generator = generator
+        self.segs: list[np.array] = []
+        self.mtxs: list[np.array] = []
+        self.queue: multiprocessing.Queue = queue
+        self.scale: int = scale
+        if queue is not None:
+            queue.put('The connection with HTGenerator is sucessful.')
         self.build()
         thedb = Database((self.mtxs, self.segs), generator)
         thedb.save()
-        queue.put('ENDC')
+        if queue is not None:
+            queue.put('ENDC')
 
     def build(self):
+        # Builds the database.
         for i in range(0, self.options['number']):
-            seg, _mtx = self.single_build()
-            mtx = self.awgn_off(_mtx)
+            seg, _mtx = self._single_build()
+            mtx = self._awgn_off(_mtx)
             self.segs.append(seg)
             self.mtxs.append(mtx)
-            if self.queue.empty():
-                self.queue.put(f'Building HT database {i} / {self.options["number"]}.')
-        self.queue.put(f'Building HT database {self.options["number"]} / {self.options["number"]}.')
+            if self.queue is not None:
+                if self.queue.empty():
+                    self.queue.put(f'Building HT database {i} / {self.options["number"]}.')
+        if self.queue is not None:
+            self.queue.put(f'Building HT database {self.options["number"]} / {self.options["number"]}.')
 
-    def single_build(self):
+    def _single_build(self):
+        # Builds only a pair of matrix.
         segmentation = np.zeros(self.options['tput'], dtype=np.uint8)
         no_splits = np.round(self.options['clust_m'] + self.options['clust_v'] * np.random.random())
         for _ in range(int(no_splits)):
             segmentation = self._insert_1(segmentation)
         return segmentation, self._seg2mat(segmentation)
 
-    def awgn_off(self, _mtx):
+    def _awgn_off(self, _mtx):
+        # Adds offset and AWGN to the matrix.
         mtx = np.copy(_mtx)
         off = self.options['off_m'] + self.options['off_v'] * (np.random.random() - 0.5)
         for row, rowe in enumerate(_mtx):
@@ -48,17 +59,20 @@ class HtGenerator:
                 mtx[row, col] = abs(element + awgn + off)
         return mtx
 
-    def _insert_1(self, seg):
+    @staticmethod
+    def _insert_1(seg):
+        # Inserts the number of segmentations in the result.
         if sum(seg) == len(seg):
             return seg
         else:
             idx = np.random.randint(len(seg))
             while seg[idx] != 0:
                 idx = np.random.randint(len(seg))
-            seg[idx] = self.scale
+            seg[idx] = 1
         return seg
 
     def _seg2mat(self, seg):
+        # Builds the matrix from the segmentation.
         mat = np.zeros((len(seg), len(seg), 1), dtype=np.uint8)
         base = 0
         placix = 0

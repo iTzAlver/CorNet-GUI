@@ -7,9 +7,10 @@
 # Import statements:
 import multiprocessing
 import time
-from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
+from tkinter import Tk, LabelFrame, Label, Entry, END, scrolledtext, filedialog
 from .utils import ColorStyles, HoverButton
-from ._ht_generator import HtGenerator
+from src.database_structures import HtGenerator
+from src.database_structures import Generator
 
 ICO_LOCATION = r'../multimedia/uah.ico'
 LOGFILE_PATH = r'../temp/logfiledb.txt'
@@ -155,29 +156,31 @@ class MainWindow:
     #                       GUI METHODS
     # -------------------------------------------------------------------------------------------------------------
     def generate_ht(self):
-        generator = dict()
+        _generator = dict()
         train = self._tonum(self.train_entry.get())
         validation = self._tonum(self.validation_entry.get())
         test = 100 - train - validation
         if test < 0:
             self.lowrite('Train and validation sum must be under 100%.', cat='Error')
         else:
-            generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.ht')], initialdir=HT_PATH)
-            if generator['path']:
-                generator['path'] = f'{generator["path"]}.ht'
-                generator['distribution'] = (train, validation, test)
-                generator['tput'] = self._tonum(self.tput_entry.get())
-                generator['awgn_m'] = self._tonum(self.awgnmean_entry.get())
-                generator['awgn_v'] = self._tonum(self.awgnvar_entry.get())
-                generator['off_m'] = self._tonum(self.offsetmean_entry.get())
-                generator['off_v'] = self._tonum(self.offsetvar_entry.get())
-                generator['clust_m'] = self._tonum(self.clustermean_entry.get())
-                generator['clust_v'] = self._tonum(self.clustervar_entry.get())
-                generator['number'] = self._tonum(self.numberofmatrix_entry.get())
-                generator['name'] = self.name_entry.get()
-                self.lowrite(f'Creating a database with the following parameters:\n{generator}', cat='Info')
+            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.ht')], initialdir=HT_PATH)
+            if _generator['path']:
+                _generator['path'] = f'{_generator["path"]}.ht'
+                _generator['distribution'] = (train, validation, test)
+                _generator['tput'] = self._tonum(self.tput_entry.get())
+                _generator['awgn_m'] = self._tonum(self.awgnmean_entry.get())
+                _generator['awgn_v'] = self._tonum(self.awgnvar_entry.get())
+                _generator['off_m'] = self._tonum(self.offsetmean_entry.get())
+                _generator['off_v'] = self._tonum(self.offsetvar_entry.get())
+                _generator['clust_m'] = self._tonum(self.clustermean_entry.get())
+                _generator['clust_v'] = self._tonum(self.clustervar_entry.get())
+                _generator['number'] = self._tonum(self.numberofmatrix_entry.get())
+                _generator['name'] = self.name_entry.get()
+                self.lowrite(f'Creating a database with the following parameters:\n{_generator}', cat='Info')
 
                 queue = multiprocessing.Queue()
+                generator = Generator(**_generator)
+
                 self.htgenerator = (generator, queue)
                 proc = multiprocessing.Process(target=HtGenerator, args=self.htgenerator)
                 proc.start()

@@ -14,7 +14,7 @@ from tensorflow import keras
 
 from ._compiler import Compiler
 from ._model import Model
-from ._database_structure import load_database
+from src.database_structures._database_structure import load_database
 from ._dbgui import dbgui
 from ._model import fitmodel
 

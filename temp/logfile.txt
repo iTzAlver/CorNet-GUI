@@ -5313,3 +5313,47 @@ _________________________________________________________________
 	Device 0:	/device:CPU:0		Role: None
 [Wed Oct  5 19:18:17 2022]		Finishing the current session.
 
+[Wed Oct  5 19:19:03 2022]		Wellcome to CORNET!
+<Wed Oct  5 19:19:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 19:19:39 2022>	[Info]:	Opening dual interface for database building.
+<Wed Oct  5 19:19:45 2022>	[Info]:	Database test_ht loaded.
+[Wed Oct  5 19:19:53 2022]		Finishing the current session.
+
+[Wed Oct  5 19:20:01 2022]		Wellcome to CORNET!
+<Wed Oct  5 19:20:01 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Wed Oct  5 19:20:47 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:None
+
+<Wed Oct  5 19:20:47 2022>	[Error]:	The model has the following errors:
+No seelected training devices...
+<Wed Oct  5 19:20:47 2022>	[Info]:	The model compiled with errors.
+<Wed Oct  5 19:20:55 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 19:20:57 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 19:20:57 2022>	[Error]:	The model has the following errors:
+No seelected training devices...
+<Wed Oct  5 19:20:57 2022>	[Info]:	The model compiled with errors.
+<Wed Oct  5 19:21:02 2022>	[Info]:	Database test_ht loaded.
+<Wed Oct  5 19:21:04 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [6, 3]
+		Flatten 
+		Dense [80]
+		Output:32
+
+<Wed Oct  5 19:21:04 2022>	[Error]:	The model has the following errors:
+No seelected training devices...
+<Wed Oct  5 19:21:04 2022>	[Info]:	The model compiled with errors.
+[Wed Oct  5 19:21:20 2022]		Finishing the current session.
+

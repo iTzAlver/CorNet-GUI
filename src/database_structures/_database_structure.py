@@ -5,35 +5,32 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
+from ._dataset import Dataset
+from ._generator import Generator
 import random
 import pickle
+
+
 # -----------------------------------------------------------
-
-
-class _Dataset:
-    def __init__(self, xtrain, ytrain, xtest, ytest, xval, yval):
-        self.xtrain = xtrain
-        self.ytrain = ytrain
-        self.xtest = xtest
-        self.ytest = ytest
-        self.xval = xval
-        self.yval = yval
-
-
 class Database:
-    def __init__(self, setz, generator, dbtype='hypertrain'):
-        self.name = generator['name']
+    def __init__(self, setz: tuple[list, list], generator: Generator, dbtype='hypertrain'):
+        self.name: str = generator['name']
+        self.distribution: dict = {'train': generator['distribution'][0],
+                                   'validation': generator['distribution'][1],
+                                   'test': generator['distribution'][2]}
+
         (xtrain, ytrain), (xtest, ytest), (xval, yval) = self._splitdb(setz, generator['distribution'])
-        self.dataset = _Dataset(xtrain, ytrain, xtest, ytest, xval, yval)
-        self.distribution = {'train': generator['distribution'][0],
-                             'validation': generator['distribution'][1],
-                             'test': generator['distribution'][2]}
-        self.size = (len(self.dataset.xtrain), len(self.dataset.xval), len(self.dataset.xtest))
-        self._path = generator['path']
-        self.type = dbtype
+        self.dataset: Dataset = Dataset(xtrain, ytrain, xtest, ytest, xval, yval)
+
+        self.size: tuple[int, int, int] = (len(self.dataset.xtrain),
+                                           len(self.dataset.xval),
+                                           len(self.dataset.xtest))
+        self.path: str = generator['path']
+        self.type: str = dbtype
 
     @staticmethod
-    def _splitdb(setz: list, split: tuple):
+    def _splitdb(setz: tuple[list, list], split: tuple):
+        # This function splits the database into test, train and validation from a single distribution.
         total = len(setz[0])
         xtrain = []
         ytrain = []
@@ -58,7 +55,8 @@ class Database:
         return (xtrain, ytrain), (xtest, ytest), (xval, yval)
 
     def save(self):
-        with open(self._path, 'wb') as file:
+        # Saves the model from the given path in the Generator.
+        with open(self.path, 'wb') as file:
             pickle.dump(self, file)
 
     def __repr__(self):
@@ -68,11 +66,11 @@ class Database:
                f'\tTest: {len(self.dataset.xtest)}\n' \
                f'{self.distribution}.'
 
-
-def load_database(path):
-    with open(path, 'rb') as file:
-        self = pickle.load(file)
-    return self
+    @staticmethod
+    def load_database(path):
+        with open(path, 'rb') as file:
+            self = pickle.load(file)
+        return self
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

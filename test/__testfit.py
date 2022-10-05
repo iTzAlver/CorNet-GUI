@@ -6,10 +6,9 @@
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
 from tensorflow import keras, convert_to_tensor
-from src._database_structure import load_database
+from src.database_structures._database_structure import load_database
 # Import the required libraries
 from tkinter import *
-from tkinter import messagebox
 import time
 
 
