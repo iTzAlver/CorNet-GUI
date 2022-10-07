@@ -92,6 +92,11 @@ class HtGenerator:
                 base = idx
                 placix = 0
         return mat
+
+    def __repr__(self):
+        return 'Warning: HtGenerator objects are not designed to be stored. Consider calling only ' \
+               'HtGenerator(generator) as only a class build. This object is built with the following Generator:' \
+               f'\n{self.options}'
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

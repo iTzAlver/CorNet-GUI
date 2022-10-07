@@ -151,6 +151,12 @@ class Model:
         if bypass:
             model.save(bypass)
         return
+
+    def __repr__(self):
+        return f'Model object with the following parameters:\nCompiler: {self.compiler}\nSummary: {self.summary}'
+
+    def __bool__(self):
+        return self.is_trained
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
