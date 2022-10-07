@@ -5,3 +5,4 @@ future~=0.18.2
 Pillow~=9.2.0
 keras >= 2.10.0
 numpy~=1.23.3
+ttkwidgets~=0.12.1

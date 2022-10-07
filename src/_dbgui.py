@@ -9,8 +9,8 @@ import multiprocessing
 import time
 from tkinter import Tk, LabelFrame, Label, Entry, END, scrolledtext, filedialog
 from .utils import ColorStyles, HoverButton
-from src.database_structures import HtGenerator
-from src.database_structures import Generator
+from .database_structures import HtGenerator
+from .database_structures import Generator
 
 ICO_LOCATION = r'../multimedia/uah.ico'
 LOGFILE_PATH = r'../temp/logfiledb.txt'
@@ -148,7 +148,7 @@ class MainWindow:
         self.log_text = scrolledtext.ScrolledText(self.master, height=12, width=81, bd=5, bg='black')
         self.log_text.pack()
         self.log_text.place(x=5, y=210)
-        self.lowrite('Wellcome to the database generator!\n========================================================='
+        self.lowrite('Welcome to the database generator!\n========================================================='
                      '========================\n',
                      cat='Intro')
 
@@ -163,7 +163,8 @@ class MainWindow:
         if test < 0:
             self.lowrite('Train and validation sum must be under 100%.', cat='Error')
         else:
-            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.ht')], initialdir=HT_PATH)
+            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.ht')],
+                                                              initialdir=HT_PATH)
             if _generator['path']:
                 _generator['path'] = f'{_generator["path"]}.ht'
                 _generator['distribution'] = (train, validation, test)

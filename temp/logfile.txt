@@ -5357,3 +5357,1282 @@ No seelected training devices...
 <Wed Oct  5 19:21:04 2022>	[Info]:	The model compiled with errors.
 [Wed Oct  5 19:21:20 2022]		Finishing the current session.
 
+[Fri Oct  7 12:58:55 2022]		Wellcome to CORNET!
+<Fri Oct  7 12:58:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 12:59:09 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 12:59:13 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 12:59:41 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+[Fri Oct  7 12:59:50 2022]		Finishing the current session.
+
+[Fri Oct  7 13:01:24 2022]		Wellcome to CORNET!
+<Fri Oct  7 13:01:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 13:01:44 2022]		Finishing the current session.
+
+[Fri Oct  7 13:02:47 2022]		Wellcome to CORNET!
+<Fri Oct  7 13:02:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 13:02:50 2022]		Finishing the current session.
+
+[Fri Oct  7 13:09:27 2022]		Wellcome to CORNET!
+<Fri Oct  7 13:09:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 13:11:14 2022>	[Info]:	Database test_tp4_ht loaded.
+<Fri Oct  7 13:11:29 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 13:11:45 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 13:11:56 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 13:11:58 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 13:12:03 2022>	[Info]:	Compiling the current model:
+		Input:4
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:4
+[Fri Oct  7 13:13:05 2022]		Wellcome to CORNET!
+<Fri Oct  7 13:13:05 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 13:13:10 2022>	[Info]:	Database test_tp4_ht loaded.
+<Fri Oct  7 13:13:17 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 13:13:24 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 13:13:33 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 13:13:35 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 13:13:40 2022>	[Info]:	Compiling the current model:
+		Input:4
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:4
+[Fri Oct  7 15:00:55 2022]		Wellcome to CORNET!
+<Fri Oct  7 15:00:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 15:01:12 2022>	[Info]:	Opening dual interface for database building.
+<Fri Oct  7 15:01:34 2022>	[Info]:	Opening dual interface for database building.
+<Fri Oct  7 15:02:28 2022>	[Info]:	Database test_moha loaded.
+<Fri Oct  7 15:02:40 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 15:02:47 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 15:02:51 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 15:02:56 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 15:02:56 2022>	[Error]:	The model has the following errors:
+No seelected training devices...
+<Fri Oct  7 15:02:56 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 15:03:01 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 15:03:03 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 15:03:03 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 15:03:03 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 15:03:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 15:03:36 2022>	[Info]:	Training the current model.
+<Fri Oct  7 15:04:47 2022>	[Info]:	Training stopped.
+<Fri Oct  7 15:05:30 2022>	[Info]:	Opening dual interface for database building.
+<Fri Oct  7 15:06:24 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 15:06:30 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 15:06:38 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 15:06:38 2022>	[Info]:	Model summary:
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "compiled-model-keras"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 15:06:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 15:06:39 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 15:06:45 2022>	[Info]:	Training the current model.
+<Fri Oct  7 15:07:43 2022>	[Info]:	Training stopped.[Fri Oct  7 15:55:39 2022]		Wellcome to CORNET!
+<Fri Oct  7 15:55:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 15:56:46 2022]		Finishing the current session.
+
+[Fri Oct  7 15:58:04 2022]		Wellcome to CORNET!
+<Fri Oct  7 15:58:04 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 15:58:16 2022]		Wellcome to CORNET!
+<Fri Oct  7 15:58:16 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 15:58:28 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 15:58:33 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 15:58:40 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [62, 2]
+<Fri Oct  7 15:58:50 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 15:58:56 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 15:58:58 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 15:59:03 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [62, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 15:59:04 2022>	[Error]:	The model has the following errors:
+'KerasTensor' object has no attribute 'compile'
+<Fri Oct  7 15:59:04 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 16:02:14 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:02:14 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:02:22 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:02:28 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:02:36 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:02:42 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:02:48 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 16:02:49 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:02:50 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:02:50 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 16:02:50 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 16:02:51 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 16:06:07 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:06:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:06:12 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:06:16 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:06:23 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:06:27 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:06:32 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 16:06:34 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:06:35 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:06:35 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 16:06:35 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 16:06:35 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 16:08:55 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:08:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:09:01 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:09:04 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:09:11 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:12:28 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:12:33 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:12:51 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:12:55 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:12:56 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:12:56 2022>	[Error]:	The model has the following errors:
+int() argument must be a string, a bytes-like object or a number, not 'tuple'
+<Fri Oct  7 16:12:56 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 16:14:22 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:14:22 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 16:14:30 2022]		Finishing the current session.
+
+[Fri Oct  7 16:14:57 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:14:57 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:15:44 2022]		Wellcome to CORNET!
+<Fri Oct  7 16:15:44 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:16:46 2022]		Welcome to CORNET!
+<Fri Oct  7 16:16:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 16:16:58 2022]		Finishing the current session.
+
+[Fri Oct  7 16:17:42 2022]		Welcome to CORNET!
+<Fri Oct  7 16:17:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:22:34 2022]		Welcome to CORNET!
+<Fri Oct  7 16:22:34 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:24:35 2022]		Welcome to CORNET!
+<Fri Oct  7 16:24:35 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:25:01 2022]		Welcome to CORNET!
+<Fri Oct  7 16:25:01 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 16:26:29 2022]		Finishing the current session.
+
+[Fri Oct  7 16:26:36 2022]		Welcome to CORNET!
+<Fri Oct  7 16:26:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:27:03 2022]		Welcome to CORNET!
+<Fri Oct  7 16:27:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None[Fri Oct  7 16:28:07 2022]		Welcome to CORNET!
+<Fri Oct  7 16:28:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:28:19 2022>	[Info]:	Adding new layer to the model:
+		Conv2D 
+<Fri Oct  7 16:28:22 2022>	[Info]:	Removed ('Conv2D ', ('', '')) from the layer list.
+<Fri Oct  7 16:28:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:29:04 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:29:11 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 16:29:12 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:29:16 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:29:18 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:29:21 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:29:21 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 16:29:21 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 16:29:22 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 16:29:47 2022]		Welcome to CORNET!
+<Fri Oct  7 16:29:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 16:29:57 2022]		Finishing the current session.
+
+[Fri Oct  7 16:42:06 2022]		Welcome to CORNET!
+<Fri Oct  7 16:42:06 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:42:51 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:42:53 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:43:14 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:43:21 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:43:25 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:43:32 2022>	[Info]:	Removed ('Conv2D [64, 3]', ('', '')) from the layer list.
+<Fri Oct  7 16:43:35 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:43:44 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:43:46 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:43:52 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:44:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 4]
+<Fri Oct  7 16:44:16 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:44:16 2022>	[Info]:	Replaced ('Conv2D [64, 2]', ('', '')) from the layer list.
+<Fri Oct  7 16:44:22 2022>	[Info]:	Removed ('Conv2D [64, 3]', ('', '')) from the layer list.
+<Fri Oct  7 16:44:35 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:44:44 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:44:49 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 16:44:50 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:44:55 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		open_pipeline 
+		Conv2D [64, 4]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:44:56 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64), (None, 5, 5, 64)]
+<Fri Oct  7 16:44:56 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:45:30 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		open_pipeline 
+		Conv2D [64, 4]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:45:51 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64), (None, 5, 5, 64)]
+<Fri Oct  7 16:45:53 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:46:49 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		open_pipeline 
+		Conv2D [64, 4]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:46:49 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64), (None, 5, 5, 64)]
+<Fri Oct  7 16:46:49 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:46:55 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		open_pipeline 
+		Conv2D [64, 4]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+[Fri Oct  7 16:48:21 2022]		Welcome to CORNET!
+<Fri Oct  7 16:48:21 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 16:48:26 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 16:48:28 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 16:48:31 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:48:40 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:48:46 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline [64, 2]
+<Fri Oct  7 16:48:51 2022>	[Info]:	Removed ('open_pipeline [64, 2]', ('', '')) from the layer list.
+<Fri Oct  7 16:48:52 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:48:59 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:49:01 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:49:08 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:49:13 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 16:49:15 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 2]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:49:16 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 16:49:16 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 16:49:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 16:49:44 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:49:44 2022>	[Info]:	Replaced ('Conv2D [64, 2]', ('', '')) from the layer list.
+<Fri Oct  7 16:49:47 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:49:47 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64)]
+<Fri Oct  7 16:49:47 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:50:12 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:50:12 2022>	[Info]:	Replaced ('close_pipeline ', ('', '')) from the layer list.
+<Fri Oct  7 16:50:35 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:50:35 2022>	[Info]:	Replaced ('close_pipeline ', (['axis'], [0])) from the layer list.
+<Fri Oct  7 16:50:47 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:50:47 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64)]
+<Fri Oct  7 16:50:47 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:50:59 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:51:28 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64)]
+<Fri Oct  7 16:51:46 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:51:46 2022>	[Info]:	Replaced ('close_pipeline ', (['axis'], [0])) from the layer list.
+<Fri Oct  7 16:51:52 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:51:52 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64)]
+<Fri Oct  7 16:51:52 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:52:24 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:52:24 2022>	[Info]:	Replaced ('close_pipeline ', (['axis'], [3])) from the layer list.
+<Fri Oct  7 16:52:34 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		open_pipeline 
+		Conv2D [64, 3]
+		close_pipeline 
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 16:52:34 2022>	[Error]:	The model has the following errors:
+A `Concatenate` layer requires inputs with matching shapes except for the concatenation axis. Received: input_shape=[(None, 7, 7, 64), (None, 6, 6, 64)]
+<Fri Oct  7 16:52:34 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:53:18 2022>	[Info]:	Removed ('close_pipeline ', (['axis'], [3])) from the layer list.
+<Fri Oct  7 16:53:18 2022>	[Info]:	Removed ('Dense [180]', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Info]:	Removed ('Flatten ', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Info]:	Removed ('Conv2D [64, 3]', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Info]:	Removed ('open_pipeline ', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Info]:	Removed ('Conv2D [64, 2]', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Info]:	Removed ('open_pipeline ', ('', '')) from the layer list.
+<Fri Oct  7 16:53:19 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 16:53:19 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 16:53:20 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 16:53:20 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 16:53:28 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:53:39 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 16:53:46 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:53:53 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:54:10 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:54:10 2022>	[Info]:	Replaced ('Conv2D [64, 3]', ('', '')) from the layer list.
+<Fri Oct  7 16:54:20 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Fri Oct  7 16:54:24 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:54:27 2022>	[Info]:	Adding new layer to the model:
+		open_pipeline 
+<Fri Oct  7 16:54:42 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 4]
+<Fri Oct  7 16:54:45 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 16:54:57 2022>	[Info]:	Adding new layer to the model:
+		close_pipeline 
+<Fri Oct  7 16:55:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [280]
+<Fri Oct  7 16:55:13 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 16:55:16 2022>	[Info]:	Compiling the current model:
+		Input:8
+		open_pipeline 
+		Conv2D [64, 2]
+		Flatten 
+		open_pipeline 
+		Conv2D [64, 3]
+		Flatten 
+		open_pipeline 
+		Conv2D [64, 4]
+		Flatten 
+		close_pipeline 
+		Dense [280]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 16:55:16 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 16:55:16 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 16:55:17 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 16:55:21 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 16:57:00 2022>	[Info]:	Training the current model.
+<Fri Oct  7 16:58:08 2022>	[Info]:	Training stopped.[Fri Oct  7 17:15:37 2022]		Welcome to CORNET!
+<Fri Oct  7 17:15:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:17:37 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:17:41 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:17:52 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:18:03 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:18:09 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:18:11 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Fri Oct  7 17:18:11 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:18:11 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:18:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:18:15 2022>	[Info]:	Training the current model.[Fri Oct  7 17:21:19 2022]		Welcome to CORNET!
+<Fri Oct  7 17:21:19 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:21:28 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:21:31 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:21:38 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:21:40 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:21:44 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:21:45 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 17:21:45 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:21:46 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:21:46 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:21:46 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:21:49 2022>	[Info]:	Training the current model.[Fri Oct  7 17:35:21 2022]		Welcome to CORNET!
+<Fri Oct  7 17:35:21 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+[Fri Oct  7 17:35:26 2022]		Finishing the current session.
+
+[Fri Oct  7 17:35:36 2022]		Welcome to CORNET!
+<Fri Oct  7 17:35:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:35:42 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:35:46 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:35:52 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:35:55 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:35:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:36:00 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 17:36:01 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:36:01 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:36:01 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:36:01 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:36:03 2022>	[Info]:	Training the current model.[Fri Oct  7 17:38:15 2022]		Welcome to CORNET!
+<Fri Oct  7 17:38:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:40:50 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:40:52 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:40:58 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:41:00 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:41:14 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:41:15 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 17:41:16 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:41:16 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:41:16 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:41:17 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:41:18 2022>	[Info]:	Training the current model.[Fri Oct  7 17:42:34 2022]		Welcome to CORNET!
+<Fri Oct  7 17:42:34 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:42:38 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:42:41 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:42:48 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:42:54 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:42:58 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:42:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 17:43:00 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:43:00 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:43:00 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:43:00 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:43:03 2022>	[Info]:	Training the current model.
+<Fri Oct  7 17:43:37 2022>	[Info]:	Training stopped.
+<Fri Oct  7 17:43:38 2022>	[Info]:	Training the current model.
+<Fri Oct  7 17:43:45 2022>	[Info]:	Training stopped.
+<Fri Oct  7 17:43:45 2022>	[Info]:	Training the current model.
+<Fri Oct  7 17:43:47 2022>	[Info]:	Training stopped.
+<Fri Oct  7 17:43:47 2022>	[Info]:	Training the current model.[Fri Oct  7 17:43:57 2022]		Welcome to CORNET!
+<Fri Oct  7 17:43:57 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:44:08 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:44:10 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:44:20 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 17:44:25 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 17:44:28 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 17:44:29 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 17:44:30 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:44:31 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:44:31 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:44:31 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 17:44:36 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/compilers/test.
+<Fri Oct  7 17:44:55 2022>	[Info]:	Training the current model.
+<Fri Oct  7 17:45:08 2022>	[Info]:	Training stopped.[Fri Oct  7 17:45:20 2022]		Welcome to CORNET!
+<Fri Oct  7 17:45:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:45:27 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:45:29 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:45:29 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Fri Oct  7 17:45:29 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 17:47:41 2022]		Welcome to CORNET!
+<Fri Oct  7 17:47:41 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:48:30 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:48:32 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:48:32 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Fri Oct  7 17:48:32 2022>	[Info]:	The model compiled with errors.
+<Fri Oct  7 17:49:44 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:49:47 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:49:47 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:49:47 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:49:48 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 17:50:26 2022]		Welcome to CORNET!
+<Fri Oct  7 17:50:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 17:50:31 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 17:50:35 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 17:50:38 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 17:50:38 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 17:50:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 17:50:39 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 18:08:08 2022]		Welcome to CORNET!
+<Fri Oct  7 18:08:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:08:15 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:08:17 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 18:08:26 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 18:08:28 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 18:08:33 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 18:08:35 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 18:08:35 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 18:08:35 2022>	[Info]:	Model summary:
+None
+<Fri Oct  7 18:08:35 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 18:08:36 2022>	[Info]:	Scheme drawn sucessfuly.[Fri Oct  7 18:12:08 2022]		Welcome to CORNET!
+<Fri Oct  7 18:12:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:12:11 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:12:19 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 18:12:24 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 18:12:27 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 18:12:31 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 18:12:32 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 18:12:40 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 18:12:40 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:12:40 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 18:12:41 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:13:00 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:13:22 2022>	[Info]:	Removed ('Conv2D [64, 2]', ('', '')) from the layer list.
+<Fri Oct  7 18:13:22 2022>	[Info]:	Removed ('Dense [80]', ('', '')) from the layer list.
+<Fri Oct  7 18:13:22 2022>	[Info]:	Removed ('Dense [180]', ('', '')) from the layer list.
+<Fri Oct  7 18:13:22 2022>	[Info]:	Removed ('Flatten ', ('', '')) from the layer list.
+<Fri Oct  7 18:13:22 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 18:13:23 2022>	[Warning]:	Target not removed: the list is empty.
+<Fri Oct  7 18:13:23 2022>	[Warning]:	Target not removed: the list is empty.[Fri Oct  7 18:13:31 2022]		Welcome to CORNET!
+<Fri Oct  7 18:13:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:23:56 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:None
+
+<Fri Oct  7 18:23:56 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Fri Oct  7 18:23:56 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 18:26:33 2022]		Welcome to CORNET!
+<Fri Oct  7 18:26:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:27:08 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:None
+
+<Fri Oct  7 18:27:08 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Fri Oct  7 18:27:08 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 18:31:51 2022]		Welcome to CORNET!
+<Fri Oct  7 18:31:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:32:02 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:32:04 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 18:32:04 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Fri Oct  7 18:32:04 2022>	[Info]:	The model compiled with errors.[Fri Oct  7 18:35:44 2022]		Welcome to CORNET!
+<Fri Oct  7 18:35:44 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:35:51 2022>	[Info]:	Database test_dusan loaded.[Fri Oct  7 18:38:08 2022]		Welcome to CORNET!
+<Fri Oct  7 18:38:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:38:20 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:38:23 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Fri Oct  7 18:38:28 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Fri Oct  7 18:38:31 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Fri Oct  7 18:38:34 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Fri Oct  7 18:38:36 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Fri Oct  7 18:38:37 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Fri Oct  7 18:38:37 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:38:38 2022>	[Info]:	The model compiled sucessfuly.
+<Fri Oct  7 18:38:38 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:38:50 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test.[Fri Oct  7 18:39:15 2022]		Welcome to CORNET!
+<Fri Oct  7 18:39:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:39:19 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:39:20 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:39:20 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.[Fri Oct  7 18:40:15 2022]		Welcome to CORNET!
+<Fri Oct  7 18:40:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:40:20 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:41:02 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:41:06 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:41:39 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:41:46 2022>	[Info]:	Training the current model.[Fri Oct  7 18:44:10 2022]		Welcome to CORNET!
+<Fri Oct  7 18:44:10 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:44:14 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:44:16 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:44:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:44:16 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:44:18 2022>	[Info]:	Training the current model.
+<Fri Oct  7 18:44:42 2022>	[Info]:	Training stopped.
+<Fri Oct  7 18:44:42 2022>	[Info]:	Training the current model.[Fri Oct  7 18:47:15 2022]		Welcome to CORNET!
+<Fri Oct  7 18:47:15 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:47:19 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:47:21 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:47:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:47:21 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:47:24 2022>	[Info]:	Training the current model.[Fri Oct  7 18:48:55 2022]		Welcome to CORNET!
+<Fri Oct  7 18:48:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:49:00 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:49:03 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:49:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:49:04 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:49:10 2022>	[Info]:	Training the current model.[Fri Oct  7 18:52:11 2022]		Welcome to CORNET!
+<Fri Oct  7 18:52:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:52:19 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:52:21 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:52:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:52:21 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:52:22 2022>	[Info]:	Training the current model.[Fri Oct  7 18:54:38 2022]		Welcome to CORNET!
+<Fri Oct  7 18:54:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:54:57 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:54:58 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:54:59 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:54:59 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:55:03 2022>	[Info]:	Training the current model.[Fri Oct  7 18:57:37 2022]		Welcome to CORNET!
+<Fri Oct  7 18:57:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:57:41 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:57:43 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:57:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:57:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:57:54 2022>	[Info]:	Training the current model.
+<Fri Oct  7 18:58:15 2022>	[Info]:	Training stopped.
+<Fri Oct  7 18:58:15 2022>	[Info]:	Training the current model.
+<Fri Oct  7 18:58:16 2022>	[Info]:	Training stopped.[Fri Oct  7 18:59:11 2022]		Welcome to CORNET!
+<Fri Oct  7 18:59:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 18:59:16 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 18:59:18 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 18:59:18 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 18:59:18 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 18:59:20 2022>	[Info]:	Training the current model.
+<Fri Oct  7 19:00:25 2022>	[Info]:	Training stopped.[Fri Oct  7 19:06:30 2022]		Welcome to CORNET!
+<Fri Oct  7 19:06:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Fri Oct  7 19:06:36 2022>	[Info]:	Database test_dusan loaded.
+<Fri Oct  7 19:06:38 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Fri Oct  7 19:06:39 2022>	[Info]:	Scheme drawn sucessfuly.
+<Fri Oct  7 19:06:39 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Fri Oct  7 19:06:40 2022>	[Info]:	Training the current model.
+<Fri Oct  7 19:07:33 2022>	[Info]:	Training stopped.

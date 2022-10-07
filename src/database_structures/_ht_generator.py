@@ -14,8 +14,13 @@ from ._generator import Generator
 # -----------------------------------------------------------
 class HtGenerator:
     """The class HtGenerator: Creates a Hipertraining dataset from a generator."""
-    def __init__(self, generator: Generator, queue: multiprocessing.Queue = None, scale: int = 255):
-        self.options: Generator = generator
+    def __init__(self, generator: Generator = None, queue: multiprocessing.Queue = None, scale: int = 255, **kwargs):
+        if generator is not None:
+            self.options: Generator = generator
+        else:
+            self.options = Generator(**kwargs)
+        if not self.options:
+            raise ValueError('HtGenerator: The generator is not valid. Check the input parameters.')
         self.segs: list[np.array] = []
         self.mtxs: list[np.array] = []
         self.queue: multiprocessing.Queue = queue
@@ -23,7 +28,7 @@ class HtGenerator:
         if queue is not None:
             queue.put('The connection with HTGenerator is sucessful.')
         self.build()
-        thedb = Database((self.mtxs, self.segs), generator)
+        thedb = Database((self.mtxs, self.segs), self.options)
         thedb.save()
         if queue is not None:
             queue.put('ENDC')

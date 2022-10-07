@@ -26,7 +26,7 @@ class Generator:
         keys = kwargs.keys()
         if 'path' in keys and 'distribution' in keys and 'tput' in keys and 'awgn_m' in keys \
                 and 'awgn_v' in keys and 'off_m' in keys and 'off_v' in keys and 'clust_m' in keys \
-                and 'clust_v' in keys and 'number' in keys and 'name' in keys and 'type' in keys:
+                and 'clust_v' in keys and 'number' in keys and 'name' in keys:
             self.is_valid = True
 
     def __getitem__(self, item):

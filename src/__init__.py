@@ -5,9 +5,14 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 from ._gui import gui
-from ._model import Model
-from ._compiler import Compiler
 from ._dbgui import dbgui
+
+from .database_structures import Database
+from .database_structures import HtGenerator
+from .database_structures import WkGenerator
+
+from .compiler_structures import Model
+from .compiler_structures import Compiler
 
 
 def info():

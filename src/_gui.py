@@ -7,16 +7,17 @@
 # Import statements:
 import os
 from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
-from .utils import HoverButton, ColorStyles, TYPEOFLAYERS, TYPEOFLOSES, layers_help
+from ttkwidgets.autocomplete import AutocompleteCombobox
+from .utils import HoverButton, ColorStyles, layers_help
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from PIL import Image
-from tensorflow import keras
 
-from ._compiler import Compiler
-from ._model import Model
-from src.database_structures._database_structure import load_database
+from .compiler_structures import Compiler
+from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS
+from .compiler_structures import Model
+from .database_structures import Database
 from ._dbgui import dbgui
-from ._model import fitmodel
+
 
 import time
 import graphviz as gv
@@ -31,7 +32,7 @@ ICO_LOCATION = r'../multimedia/uah.ico'
 LOGFILE_PATH = r'../temp/logfile.txt'
 LMS_PATH = r'../temp/lms.txt'
 DRAW_MODEL_PATH = r'../multimedia/render'
-COMPILER_LOCATION = r'../db/compilers'
+COMPILER_LIST_LOCATION = r'../db/model_lists'
 MODEL_LOCATION = r'../db/models'
 DATABASE_LOCATION = r'../db/db'
 MODEL_TEMP = r'../temp/tempmodel.h5'
@@ -85,7 +86,9 @@ class MainWindow:
         self.running = False
         self.history = []
         # Model variables:
-        self.typeoflayers = TYPEOFLAYERS
+        add_pipeline = ['open_pipeline', 'close_pipeline', '']
+        self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
+        self.typeoflayers.extend(add_pipeline)
         self.losses = TYPEOFLOSES
         self.metrics = ['accuracy', 'mse']
         self.optimizers = ['adadelta', 'adam', 'RMSprop', 'sgd', 'nadam', 'adamax', 'adagrad', 'ftlr']
@@ -199,7 +202,7 @@ class MainWindow:
         self.log_text = scrolledtext.ScrolledText(master, height=6, width=73, bd=5, bg='black')
         self.log_text.pack()
         self.log_text.place(x=5, y=5)
-        self.lowrite(f'[{time.ctime()}]\t\tWellcome to CORNET!', cat='Intro')
+        self.lowrite(f'[{time.ctime()}]\t\tWelcome to CORNET!', cat='Intro')
         self.list_devices()
         # -------------------------------------------------------------------------------------------------------------
         #                       TRAINING FRAME
@@ -245,7 +248,8 @@ class MainWindow:
         self.extras_label = Label(self.model_lf_add, text='Extras:')
         self.extras_label.place(x=5, y=55)
 
-        self.layer_selection = ttk.Combobox(self.model_lf_add, width=13, state='readonly')
+        self.layer_selection = AutocompleteCombobox(self.model_lf_add, width=13, state='readonly',
+                                                    completevalues=self.typeoflayers)
         self.layer_selection.place(x=90, y=5)
         self.layer_selection["values"] = self.typeoflayers
         self.layer_selection.set(self.typeoflayers[0])
@@ -337,7 +341,7 @@ class MainWindow:
         # Import the generated database.
         dbpath = filedialog.askopenfilename(filetypes=[('Database files', '*.ht')], initialdir=DATABASE_LOCATION)
         if dbpath:
-            database = load_database(dbpath)
+            database = Database.load_database(dbpath)
             self.database = database
             self.throughput = len(self.database.dataset.xtrain[0])
             self.training_label.config(text=f'Throughtput: {self.throughput}')
@@ -345,7 +349,7 @@ class MainWindow:
 
     def export_model(self):
         # Export the deep learning model.
-        filename = filedialog.asksaveasfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LOCATION)
+        filename = filedialog.asksaveasfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LIST_LOCATION)
         if filename:
             if self.model is None:
                 if not self.compile():
@@ -355,19 +359,21 @@ class MainWindow:
             with open(filename, 'wb') as file:
                 pickle.dump(self.current_model_list, file)
             _filename = filename.split('/')[-1]
-            self.model.model.save(f'{MODEL_LOCATION}/{_filename}.h5')
+            self.model.save(f'{MODEL_LOCATION}/{_filename}.h5')
             self._read_models()
             self.lowrite(_text=f'Model exported to {filename}.', cat='Info')
 
     def import_model(self):
         # Import the deep learning model.
-        filename = filedialog.askopenfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LOCATION)
+        filename = filedialog.askopenfilename(filetypes=[('Binary files', '*')], initialdir=COMPILER_LIST_LOCATION)
         if filename:
             with open(filename, 'rb') as file:
                 self.current_model_list = pickle.load(file)
                 self.listoflayers["values"] = [val[0] for val in self.current_model_list]
-            self.compile()
-            self.model.model = keras.models.load_model(f'{MODEL_LOCATION}/{filename.split("/")[-1]}.h5')
+            self.model = Model.load(f'{MODEL_LOCATION}/{filename.split("/")[-1]}.h5')
+            self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
+            self.draw_scheme()
+            self.throughput = self.model.compiler.tput
             self.lowrite(_text=f'Imported model {filename}.', cat='Info')
 
     def start_feed(self):
@@ -389,25 +395,27 @@ class MainWindow:
             self.running = True
             self.lowrite(_text='Training the current model.', cat='Info')
 
-            self.model.model.save(MODEL_TEMP)
+            self.model.save(MODEL_TEMP)
             self.model.model = None
             queue = multiprocessing.Queue()
-            p = multiprocessing.Process(target=fitmodel, args=(self.model, self.database, queue))
+            p = multiprocessing.Process(target=Model.fitmodel,
+                                        args=(self.model, self.database, queue),
+                                        kwargs={'bypass': MODEL_TEMP})
             p.start()
             while self.running:
                 self.master.update_idletasks()
                 self.master.update()
                 if not queue.empty():
-                    history = queue.get(False)
+                    history = queue.get()
                     self.history.append(history['loss'])
                     self._print_history()
             queue.put('MASTER:STOP')
-            self.model.model = keras.models.load_model(MODEL_TEMP)
+            self.model = Model.load(model_path=MODEL_TEMP)
 
     def _compile(self, compiler):
         # Compile the model into self.model.
         try:
-            self.model = Model(compiler)
+            self.model = compiler.compile()
             self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
             return True
         except Exception as ex:
@@ -563,7 +571,7 @@ class MainWindow:
         # Draw the model scheme.
         model_list = self.current_model_list
         if tf_draw:
-            self.model.model_print()
+            self.model.model_print(DRAW_MODEL_PATH)
         else:
             dot = gv.Digraph('compiled-model', comment=f'{time.ctime()}')
             dot.format = 'png'
@@ -632,7 +640,7 @@ class MainWindow:
         mycompiler = Compiler(tput=self.throughput, layers=layers, shapes=shapes, kwds=kwds, args=args,
                               compiler=compiler, devices=devices)
 
-        if mycompiler.compiled:
+        if mycompiler.is_valid:
             return mycompiler
         else:
             self.lowrite('The model compiled with errors... Check your parameters again.', cat='Error')
@@ -668,7 +676,7 @@ class MainWindow:
     def _read_models(self):
         # This function reads the current custom models and updates the model list.
         cmodels = [cmodel[:-3] for cmodel in os.listdir(MODEL_LOCATION)]
-        self.typeoflayers = TYPEOFLAYERS
+        self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
         self.typeoflayers.extend(cmodels)
         self.layer_selection["values"] = self.typeoflayers
 
