@@ -22,7 +22,10 @@ ISDEFE Chair of Research.
 
 ## Architecture
 
+### Model class
 ![arch](./multimedia/architecture.png)
+
+### Database class
 
 ## Usage
 

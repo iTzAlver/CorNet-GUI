@@ -16,10 +16,10 @@ from ._logger import Logger
 # -----------------------------------------------------------
 class Model:
     def __init__(self, compiler, model=None):
-        self.modell = None
+        self.model = None
         self.compiler = compiler
         self.devices: dict = compiler.devices
-        self.summary = None
+        self.summary: str = 'Uncompiled model.'
         if model is None:
             self.compile()
         else:
@@ -67,7 +67,7 @@ class Model:
                     _lastlay = this_lay(_lastlay)
 
             # Add the output of the model.
-            out = keras.layers.Dense(self.compiler.io_shape[1], activation="softmax", name='output')(_lastlay)
+            out = keras.layers.Dense(compiler.io_shape[1], activation="softmax", name='output')(_lastlay)
 
             _compile = compiler.compiler
             model = keras.Model(_inp, out)
@@ -75,8 +75,7 @@ class Model:
             self.model = model
 
     def model_print(self, print_path):
-        plot_model(self.model, to_file=f'{print_path}/compiled-model.gv.png', show_shapes=True,
-                   show_layer_names=True)
+        plot_model(self.model, to_file=f'{print_path}/compiled-model.gv.png', show_shapes=True)
 
     def fit(self, db, epoch=1, batch=1):
         self.is_trained = True
@@ -114,6 +113,7 @@ class Model:
 
     @staticmethod
     def _model_scope(_devices):
+        # Cretes a scope from the current devices.
         devices = []
         for _dev, role in _devices.items():
             if role == 1:
@@ -126,6 +126,7 @@ class Model:
         return scope
 
     def _logtracker(self):
+        # Extracts the summary of the current model.
         log = Logger()
         log.start()
         self.model.summary()

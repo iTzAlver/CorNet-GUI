@@ -25,8 +25,6 @@ import matplotlib.pyplot as plt
 import pickle
 import multiprocessing
 
-from tensorflow.python.client import device_lib
-
 
 ICO_LOCATION = r'../multimedia/uah.ico'
 LOGFILE_PATH = r'../temp/logfile.txt'
@@ -70,7 +68,7 @@ class MainWindow:
                               'Error': self.colors.red,
                               'Note': self.colors.green}
         # Tensorflow devices:
-        self.devices = device_lib.list_local_devices()
+        self.devices = Compiler.show_devs()
         self.devices_list = []
         self.devices_role = {}
         self.device_roles = ['None', 'Train', 'Feed']
@@ -373,7 +371,7 @@ class MainWindow:
             self.model = Model.load(f'{MODEL_LOCATION}/{filename.split("/")[-1]}.h5')
             self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
             self.draw_scheme()
-            self.throughput = self.model.compiler.tput
+            self.throughput = self.model.compiler.io_shape[1]
             self.lowrite(_text=f'Imported model {filename}.', cat='Info')
 
     def start_feed(self):
@@ -637,8 +635,8 @@ class MainWindow:
                 kwds.append([None])
                 args.append([None])
 
-        mycompiler = Compiler(tput=self.throughput, layers=layers, shapes=shapes, kwds=kwds, args=args,
-                              compiler=compiler, devices=devices)
+        mycompiler = Compiler(io_shape=((self.throughput, self.throughput, 1), self.throughput), layers=layers,
+                              shapes=shapes, kwds=kwds, args=args, compiler=compiler, devices=devices)
 
         if mycompiler.is_valid:
             return mycompiler
@@ -659,8 +657,8 @@ class MainWindow:
         help_msg = layers_help(self.layer_selection.get())
         self.help_text.delete('1.0', END)
         self.help_text.insert(END, help_msg)
-        self.help_text.tag_add(0, f'0.1', END)
-        self.help_text.tag_config(0, foreground=self.colors.green)
+        self.help_text.tag_add('0', f'0.1', END)
+        self.help_text.tag_config('0', foreground=self.colors.green)
         self.help_text.see('0.0')
         return event
 

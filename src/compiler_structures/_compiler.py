@@ -5,25 +5,22 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
+import pickle
 from ._model import Model
+from tensorflow.python.client import device_lib
 
 
 # -----------------------------------------------------------
 class Compiler:
-    def __init__(self, tput: int, layers: list, shapes: list[tuple], kwds: list[list], args: list[dict], compiler: dict,
-                 devices: dict, io_shape: tuple = (), verbose: bool = True):
-        self.tput: int = tput
+    def __init__(self, io_shape: tuple, layers: list, shapes: list[tuple], kwds: list[list], args: list[dict],
+                 compiler: dict, devices: dict, verbose: bool = True):
         self.layers: list[str] = layers
         self.shapes: list[tuple] = shapes
         self.args: list[dict] = []
         self.compiler: dict = compiler
         self.is_valid: bool = True
         self.devices: dict = devices
-
-        if not io_shape:
-            self.io_shape = ((tput, tput, 1), tput)
-        else:
-            self.io_shape = io_shape
+        self.io_shape: tuple = io_shape
 
         self._verbose = verbose
 
@@ -52,8 +49,26 @@ class Compiler:
                 print('The model is not valid for compiling.')
             return None
 
-    def save(self):
-        pass
+    @staticmethod
+    def show_devs():
+        return device_lib.list_local_devices()
+
+    def save(self, _compiler_path):
+        if _compiler_path:
+            with open(_compiler_path, 'wb') as file:
+                pickle.dump(self, file)
+            return True
+        else:
+            return False
+
+    @staticmethod
+    def load(_compiler_path):
+        if _compiler_path:
+            with open(_compiler_path, 'rb') as file:
+                compiler = pickle.load(file)
+            return compiler
+        else:
+            return None
 
     def __repr__(self):
         return f'Compiler with {len(self.layers)} layers, options:\n{self.compiler}'

@@ -121,7 +121,6 @@ TYPEOFLOSES = [
             'categorical_crossentropy', 'categorical_hinge', 'cosine_similarity', 'deserialize', 'get', 'hinge',
             'huber_loss', 'log_cosh', 'poisson', 'serialize', 'sparse_categorical_crossentropy', 'squared_hinge'
         ]
-
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
