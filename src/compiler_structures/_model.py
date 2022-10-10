@@ -7,6 +7,7 @@
 # Import statements:
 import random
 import pickle
+import numpy as np
 from tensorflow import keras, convert_to_tensor, distribute
 from keras.utils.vis_utils import plot_model
 from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS
@@ -16,6 +17,12 @@ from ._logger import Logger
 # -----------------------------------------------------------
 class Model:
     def __init__(self, compiler, model=None):
+        """
+        The Class model implements an API that makes use of keras and tensorflow to build Deep Learning Models.
+        :param compiler: Compiler object to build the model.
+        :param model: If a keras.model is already compiled, you can import it in the model parameter, so the compiler
+        will not be used.
+        """
         self.model = None
         self.compiler = compiler
         self.devices: dict = compiler.devices
@@ -27,12 +34,13 @@ class Model:
         self._logtracker()
         self.history: list = []
         self.is_trained: bool = False
+        self._scope = None
 
     def compile(self):
         compiler = self.compiler
-        scope = self._model_scope(self.devices)
+        self._scope = self._model_scope(self.devices)
 
-        with scope:
+        with self._scope:
             # Add the input of the model.
             _inp = keras.Input(shape=compiler.io_shape[0])
             _inp._name = 'compiled-model-keras'
@@ -79,9 +87,9 @@ class Model:
 
     def fit(self, db, epoch=1, batch=1):
         self.is_trained = True
-        xtrain = convert_to_tensor(db.dataset.xtrain)
+        xtrain = convert_to_tensor(np.array(db.dataset.xtrain).astype("float32") / 255)
         ytrain = convert_to_tensor(db.dataset.ytrain)
-        xval = convert_to_tensor(db.dataset.xval)
+        xval = convert_to_tensor(np.array(db.dataset.xval).astype("float32") / 255)
         yval = convert_to_tensor(db.dataset.yval)
         history = self.model.fit(xtrain, ytrain, batch_size=batch, epochs=epoch, validation_data=(xval, yval))
         self.history.append(history.history)
@@ -119,7 +127,7 @@ class Model:
             if role == 1:
                 devices.append(_dev)
         if len(devices) > 0:
-            strategy = distribute.MirroredStrategy(devices)
+            strategy = distribute.MirroredStrategy(devices=devices)
             scope = strategy.scope()
         else:
             raise ValueError('There are no training devices...')
@@ -158,6 +166,12 @@ class Model:
 
     def __bool__(self):
         return self.is_trained
+
+    def __sizeof__(self):
+        return len(self.compiler.layers)
+
+    def __eq__(self, other):
+        return self.compiler.layers == other.compiler.layers
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

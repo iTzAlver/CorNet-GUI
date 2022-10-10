@@ -29,6 +29,17 @@ ISDEFE Chair of Research.
 
 ## Usage
 
+The basic us
+
+> model = Compiler(
+>	io_shape= ((8, 8, 1), 8),
+>	layers=['Conv2D', 'Flatten', 'Dense'],
+>	shapes=[(64, 3), (None,), (80,)],
+>	kwds=[[None], [None], [None]],
+>	args=[[None], [None], [None]],
+>	compiler={'loss': 'mean_squared_error', 'optimizer': 'adam', 'metrics': 'accuracy'},
+>	devices=Compiler.show_devs()).compile()
+
 ### Install
 
 ### Basic usage

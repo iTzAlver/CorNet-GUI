@@ -67,7 +67,7 @@ class Database:
                f'{self.distribution}.'
 
     @staticmethod
-    def load_database(path):
+    def load_database(path):  # TODO Change to load.
         with open(path, 'rb') as file:
             self = pickle.load(file)
         return self

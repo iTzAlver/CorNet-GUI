@@ -74,11 +74,8 @@ class MainWindow:
         self.device_roles = ['None', 'Train', 'Feed']
         self.device_role2num = {'None': 0, 'Train': 1, 'Feed': 2}
         for dev in self.devices:
-            if dev.device_type == 'GPU':
-                self.devices_list.append(f'GPU: {dev.name}')
-            else:
-                self.devices_list.append(dev.name)
-            self.devices_role[dev.name] = 0
+            self.devices_list.append(dev)
+            self.devices_role[dev] = 0
         # Training variables:
         self.throughput = None
         self.running = False
