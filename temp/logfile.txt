@@ -7881,4 +7881,259 @@ _________________________________________________________________
 <Tue Oct 11 15:20:08 2022>	[Info]:	Device /device:CPU:0 set up for Train.
 <Tue Oct 11 15:20:08 2022>	[Info]:	Training the current model.
 <Tue Oct 11 15:20:33 2022>	[Info]:	Training stopped.
-<Tue Oct 11 15:20:38 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 15:20:38 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:16:17 2022]		Welcome to CORNET!
+<Tue Oct 11 16:16:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:16:22 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:16:24 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:16:25 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:16:25 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:16:29 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:16:31 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:17:13 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:17:32 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:21:13 2022]		Welcome to CORNET!
+<Tue Oct 11 16:21:13 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:24:20 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:24:22 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:24:23 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:24:23 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:24:24 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:24:26 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:24:35 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:24:40 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:26:36 2022]		Welcome to CORNET!
+<Tue Oct 11 16:26:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:26:49 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:26:51 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:26:52 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:26:52 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:26:56 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:27:08 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:27:13 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:33:09 2022]		Welcome to CORNET!
+<Tue Oct 11 16:33:09 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:33:14 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:33:16 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:33:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:33:16 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:33:18 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:33:19 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:33:33 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:33:39 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:35:39 2022]		Welcome to CORNET!
+<Tue Oct 11 16:35:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:35:47 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:35:50 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:35:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:35:51 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:35:53 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:35:53 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:36:10 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:36:15 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:43:52 2022]		Welcome to CORNET!
+<Tue Oct 11 16:43:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:44:10 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:44:12 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:44:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:44:13 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:44:16 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:44:17 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:44:36 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:44:41 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:48:28 2022]		Welcome to CORNET!
+<Tue Oct 11 16:48:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:49:11 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:49:13 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:49:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:49:13 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:49:16 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:49:16 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:49:27 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:49:32 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:51:33 2022]		Welcome to CORNET!
+<Tue Oct 11 16:51:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:51:40 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:51:42 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:51:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:51:42 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:51:45 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:51:48 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:52:13 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:52:20 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
