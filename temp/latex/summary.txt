@@ -1,17 +1,42 @@
-Model: "compiled-model-keras"
+Model: "model"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- conv2d (Conv2D)             (None, 30, 30, 64)        640       
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
                                                                  
- flatten (Flatten)           (None, 57600)             0         
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
                                                                  
- dense (Dense)               (None, 80)                4608080   
+ flatten (Flatten)           (None, 3136)              0         
                                                                  
- output (Dense)              (None, 32)                2592      
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
                                                                  
 =================================================================
-Total params: 4,611,312
-Trainable params: 4,611,312
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
 Non-trainable params: 0
 _________________________________________________________________

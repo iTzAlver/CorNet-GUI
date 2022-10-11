@@ -683,7 +683,7 @@ class MainWindow:
 
     def _print_history(self):
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(self.history)
+        plt.plot(self.history, 'k')
         plt.title('Learning curve')
         plt.grid()
         if self.canvas2 is not None:

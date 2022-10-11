@@ -1,18 +1,19 @@
 \newcommand{\authorx}{Palomo Alonso, Alberto}
-\newcommand{\noreport}{CNET0000}
-\newcommand{\name}{compiled-model-0}
-
-\newcommand{\dbname}{name-of-db}
+\newcommand{\noreport}{CNET0002}
+\newcommand{\name}{model}
+\newcommand{\dbname}{test_dusan}
 \newcommand{\dbtype}{hypertrain}
-\newcommand{\dbsize}{(2000, 1000, 1000)}
-\newcommand{\dbdist}{(50, 25, 25)}
-
-\newcommand{\modeli}{180, 180, 1}
-\newcommand{\modelo}{80}
+\newcommand{\dbsize}{(1024, 512, 512)}
+\newcommand{\dbdist}{{'train': 50, 'validation': 25, 'test': 25}}
+\newcommand{\modeli}{(8, 8, 1)}
+\newcommand{\modelo}{8}
 \newcommand{\modelloss}{mean squared error}
 \newcommand{\modelopt}{adam}
-\newcommand{\modeldevs}{2}
-\newcommand{\modeltab}{Input & 180, 180, 1 & input\_layer\\}
-
-\newcommand{\maxloss}{0.28}
-\newcommand{\minloss}{0.86}
+\newcommand{\modeldevs}{1}
+\newcommand{\modeltab}{Conv2D & (64, 2) &  \\ 
+Flatten & (None,) &  \\ 
+Dense & (180,) &  \\ 
+Dense & (80,) &  \\ 
+}
+\newcommand{\maxloss}{0.1261}
+\newcommand{\minloss}{0.0699}
