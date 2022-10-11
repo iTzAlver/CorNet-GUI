@@ -17,6 +17,7 @@ from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS
 from .compiler_structures import Model
 from .database_structures import Database
 from ._dbgui import dbgui
+from .report_utils import Report
 
 
 import time
@@ -357,6 +358,11 @@ class MainWindow:
             self.model.save(f'{MODEL_LOCATION}/{_filename}.h5')
             self._read_models()
             self.lowrite(_text=f'Model exported to {filename}.', cat='Info')
+        Report(image_path='../multimedia/render/compiled-model.gv.png',
+               latex_path='../temp/latex',
+               model=self.model,
+               db=self.database,
+               history=self.history)
 
     def import_model(self):
         # Import the deep learning model.

@@ -11,3 +11,4 @@ pydot~=1.4.2
 # Graphviz.
 # CUDA.
 # CuDNN.
+# pdflatex.

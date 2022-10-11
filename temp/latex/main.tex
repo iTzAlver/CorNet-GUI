@@ -1,0 +1,82 @@
+\documentclass[a4paper, 11pt, margin=1in]{journal}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+ %
+ frame=lines,  % top and bottom rule only
+ framesep=2em, % separation between frame and text
+ %
+ label=\fbox{Model summary},
+ labelposition=topline,
+ %
+ commandchars=\|\(\), % escape character and argument delimiters for
+                      % commands within the verbatim
+ commentchar=*        % comment character
+}
+\setlength{\textheight}{674pt}
+
+
+\input{commands}
+
+\title{\textbf{Automatic generated report \noreport.}}
+\author{Author: \authorx\\ Date of submission: \today.}
+
+\begin{document}
+\pagestyle{empty}
+\maketitle
+\vspace{1cm}
+\raggedright
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=16cm]{imgs/model.png}
+    \caption{Model visualization}
+\end{figure}
+
+\section{Model}
+
+The model has been compiled successfully with the following parameters:\\
+\vspace{1cm}
+
+\begin{table*}[h!]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Layer}                 & \textbf{Shape}                 & \textbf{Attributes}                              \\
+        \hline
+         \modeltab
+         \hline
+    \end{tabular}
+    \caption{Model architecture and attributes.}
+\end{table*}
+
+\vspace{1cm}
+\VerbatimInput{summary.txt}
+
+\newpage
+\subsection{Compiler}
+
+\begin{itemize}
+    \item \textit{Problem specifications.} The input shape mesh is (\textit{\modeli}), while the output shape is (\textit{\modelo}).
+    \item \textit{Compiling options.} The model makes use of the \textit{\modelloss} loss function and the \textit{\modelopt} optimizer. The metrics taken into account are accuracy and loss.
+    \item \textit{Devices.} The model was trained with \modeldevs GPUs.
+\end{itemize}
+\section{Database}
+
+The database \textbf{\dbname} was generated with \textit{\dbtype}. The training - validation - test distribution is \textit{\dbdist} and the total size of the database is \textit{\dbsize}. 
+
+\section{Performance}
+
+The obtained learning curve is shown below. With \textbf{maxloss}: \maxloss, and \textbf{minloss}: \minloss.\\
+\end{document}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=6cm]{imgs/learning.png}
+    \caption{Learning curve with the introduced database.}
+\end{figure}
