@@ -15,9 +15,9 @@ class Report:
         self.author = 'Palomo Alonso, Alberto'
         self._latex_path = latex_path
         self.noreport = self._getnumber()
-        self.model_name = model.model._name
-        self.dbname = db.name
-        self.dbtype = db.type
+        self.model_name = model.model._name.replace('_', ' ')
+        self.dbname = db.name.replace('_', ' ')
+        self.dbtype = db.type.replace('_', ' ')
         self.dbsize = db.size
         self.dbdist = db.distribution
         self.model_input = model.compiler.io_shape[0]
@@ -38,10 +38,15 @@ class Report:
         self.model_in_tab = self._tabularize(model.compiler.layers, model.compiler.shapes, model.compiler.args)
 
         self._movefiles(latex_path, image_path, self._print_report(), model.summary, history)
-        # self._compile()
+        self._compile()
 
     def _compile(self):
-        os.system(f'pdflatex {self._latex_path}/main.tex')
+        try:
+            os.remove('../temp/latex/main.pdf')
+        except Exception as ex:
+            print(ex)
+        os.system(f'cd ../temp/latex & pdflatex main.tex')
+        shutil.copyfile('../temp/latex/main.pdf', f'../doc/reports/{self.noreport}.pdf')
 
     def _print_report(self):
         _text = r'\newcommand{\authorx}{' \

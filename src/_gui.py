@@ -475,7 +475,7 @@ class MainWindow:
         # List the current devices in the current sesion.
         self.lowrite(f'Current available devices:\n', cat='Info')
         for ix, dev in enumerate(self.devices_list):
-            self.lowrite(f'\tDevice {ix}:\t{dev}\t\tRole: {self.device_roles[self.devices_role[dev]]}', cat='Intro')
+            self.lowrite(f'\tDevice {ix}:\t{dev}\t\tRole: {self.device_roles[self.devices_role[dev]]}\n', cat='Intro')
 
     def add_layer(self, idx=None):
         # Add the layer button.

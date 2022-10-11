@@ -7881,4 +7881,1564 @@ _________________________________________________________________
 <Tue Oct 11 15:20:08 2022>	[Info]:	Device /device:CPU:0 set up for Train.
 <Tue Oct 11 15:20:08 2022>	[Info]:	Training the current model.
 <Tue Oct 11 15:20:33 2022>	[Info]:	Training stopped.
-<Tue Oct 11 15:20:38 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 15:20:38 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:16:17 2022]		Welcome to CORNET!
+<Tue Oct 11 16:16:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:16:22 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:16:24 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:16:25 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:16:25 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:16:29 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:16:31 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:17:13 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:17:32 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:21:13 2022]		Welcome to CORNET!
+<Tue Oct 11 16:21:13 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:24:20 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:24:22 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:24:23 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:24:23 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:24:24 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:24:26 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:24:35 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:24:40 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:26:36 2022]		Welcome to CORNET!
+<Tue Oct 11 16:26:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:26:49 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:26:51 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:26:52 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:26:52 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:26:56 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:27:08 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:27:13 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:33:09 2022]		Welcome to CORNET!
+<Tue Oct 11 16:33:09 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:33:14 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:33:16 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:33:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:33:16 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:33:18 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:33:19 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:33:33 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:33:39 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:35:39 2022]		Welcome to CORNET!
+<Tue Oct 11 16:35:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:35:47 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:35:50 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:35:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:35:51 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:35:53 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:35:53 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:36:10 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:36:15 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:43:52 2022]		Welcome to CORNET!
+<Tue Oct 11 16:43:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:44:10 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:44:12 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:44:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:44:13 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:44:16 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:44:17 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:44:36 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:44:41 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:48:28 2022]		Welcome to CORNET!
+<Tue Oct 11 16:48:28 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:49:11 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:49:13 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:49:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:49:13 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:49:16 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:49:16 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:49:27 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:49:32 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 16:51:33 2022]		Welcome to CORNET!
+<Tue Oct 11 16:51:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 16:51:40 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 16:51:42 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 16:51:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 16:51:42 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Tue Oct 11 16:51:45 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 16:51:48 2022>	[Info]:	Training the current model.
+<Tue Oct 11 16:52:13 2022>	[Info]:	Training stopped.
+<Tue Oct 11 16:52:20 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Tue Oct 11 18:20:21 2022]		Welcome to CORNET!
+<Tue Oct 11 18:20:21 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+<Tue Oct 11 18:20:53 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+[Tue Oct 11 18:20:55 2022]		Finishing the current session.
+
+[Tue Oct 11 18:26:42 2022]		Welcome to CORNET!
+<Tue Oct 11 18:26:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 18:27:07 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 18:27:09 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Oct 11 18:27:10 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Oct 11 18:27:12 2022>	[Info]:	Device /device:GPU:3 set up for Train.
+<Tue Oct 11 18:27:15 2022>	[Info]:	Database test_dusan loaded.[Tue Oct 11 18:29:42 2022]		Welcome to CORNET!
+<Tue Oct 11 18:29:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 18:31:40 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 18:31:42 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Tue Oct 11 18:31:44 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 18:31:47 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Oct 11 18:31:48 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Oct 11 18:31:50 2022>	[Info]:	Device /device:GPU:3 set up for Train.
+<Tue Oct 11 18:31:52 2022>	[Info]:	Device /device:CPU:0 set up for None.[Tue Oct 11 18:34:42 2022]		Welcome to CORNET!
+<Tue Oct 11 18:34:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 18:34:52 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 18:34:54 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Oct 11 18:34:56 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Oct 11 18:34:57 2022>	[Info]:	Device /device:GPU:3 set up for Train.
+<Tue Oct 11 18:35:00 2022>	[Info]:	Database test_dusan loaded.[Tue Oct 11 18:39:52 2022]		Welcome to CORNET!
+<Tue Oct 11 18:39:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 18:41:01 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 18:41:05 2022>	[Info]:	Database test_dusan loaded.[Tue Oct 11 18:43:51 2022]		Welcome to CORNET!
+<Tue Oct 11 18:43:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 18:44:24 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 18:44:28 2022>	[Info]:	Database test_dusan loaded.[Tue Oct 11 18:55:24 2022]		Welcome to CORNET!
+<Tue Oct 11 18:55:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+[Tue Oct 11 19:01:29 2022]		Finishing the current session.
+
+[Tue Oct 11 19:06:27 2022]		Welcome to CORNET!
+<Tue Oct 11 19:06:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 19:06:38 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 19:06:41 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 19:06:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 19:06:42 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Tue Oct 11 19:07:11 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 19:07:13 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Tue Oct 11 19:07:14 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 11 19:07:14 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Oct 11 19:07:14 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 11 19:07:18 2022>	[Info]:	Training the current model.[Tue Oct 11 19:15:33 2022]		Welcome to CORNET!
+<Tue Oct 11 19:15:33 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Tue Oct 11 19:15:53 2022>	[Info]:	Database test_dusan loaded.
+<Tue Oct 11 19:16:23 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 11 19:16:27 2022>	[Info]:	Database test_dusan loaded.[Thu Oct 13 09:31:31 2022]		Welcome to CORNET!
+<Thu Oct 13 09:31:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Thu Oct 13 09:31:36 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:31:39 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:31:40 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:31:40 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:31:48 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:31:52 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:31:53 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:31:53 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 09:31:53 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:31:54 2022>	[Info]:	Training the current model.[Thu Oct 13 09:37:43 2022]		Welcome to CORNET!
+<Thu Oct 13 09:37:43 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: None	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None
+<Thu Oct 13 09:38:14 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:38:17 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:38:17 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:38:17 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:38:20 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:38:22 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:38:22 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:CPU:0'
+<Thu Oct 13 09:38:22 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 09:38:38 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:38:38 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:CPU:0'
+<Thu Oct 13 09:38:38 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 09:38:48 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None	Device 1:	/device:GPU:0		Role: Train	Device 2:	/device:GPU:1		Role: None	Device 3:	/device:GPU:2		Role: None	Device 4:	/device:GPU:3		Role: None[Thu Oct 13 09:39:17 2022]		Welcome to CORNET!
+<Thu Oct 13 09:39:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:39:35 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:39:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:39:41 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:39:43 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:39:44 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:39:44 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:39:46 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:39:46 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:CPU:0'
+<Thu Oct 13 09:39:46 2022>	[Info]:	The model compiled with errors.[Thu Oct 13 09:40:20 2022]		Welcome to CORNET!
+<Thu Oct 13 09:40:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:40:34 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:40:38 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:40:45 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:40:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:40:45 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:40:54 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:40:54 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:CPU:0'
+<Thu Oct 13 09:40:54 2022>	[Info]:	The model compiled with errors.[Thu Oct 13 09:41:20 2022]		Welcome to CORNET!
+<Thu Oct 13 09:41:20 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:41:25 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:41:28 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:41:28 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:41:28 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:41:30 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Thu Oct 13 09:41:33 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:41:36 2022>	[Info]:	Device /device:CPU:0 set up for None.
+<Thu Oct 13 09:41:38 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+[Thu Oct 13 09:43:05 2022]		Welcome to CORNET!
+<Thu Oct 13 09:43:05 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:43:10 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:43:13 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:43:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:43:13 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:43:17 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:43:19 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:43:19 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:GPU:0'
+<Thu Oct 13 09:43:19 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 09:43:25 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:43:47 2022>	[Error]:	The model has the following errors:
+Unrecognized device: '/device:GPU:0'[Thu Oct 13 09:46:40 2022]		Welcome to CORNET!
+<Thu Oct 13 09:46:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:46:44 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:46:46 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:46:46 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:46:46 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:46:50 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:46:51 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:46:51 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:46:51 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 09:46:52 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:46:54 2022>	[Info]:	Training the current model.[Thu Oct 13 09:47:38 2022]		Welcome to CORNET!
+<Thu Oct 13 09:47:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+[Thu Oct 13 09:50:13 2022]		Welcome to CORNET!
+<Thu Oct 13 09:50:13 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+[Thu Oct 13 09:50:22 2022]		Finishing the current session.
+
+[Thu Oct 13 09:50:30 2022]		Welcome to CORNET!
+<Thu Oct 13 09:50:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:50:34 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:50:39 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:50:40 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:50:40 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.[Thu Oct 13 09:52:55 2022]		Welcome to CORNET!
+<Thu Oct 13 09:52:55 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:52:59 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:53:02 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:53:02 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:53:02 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:53:14 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:53:15 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+[Thu Oct 13 09:54:36 2022]		Welcome to CORNET!
+<Thu Oct 13 09:54:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:54:41 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:54:43 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 09:54:43 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 09:54:43 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 09:54:46 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:54:49 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:55:24 2022>	[Error]:	The model has the following errors:
+Unrecognized device: name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 7801405440
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 10716690319629875352
+physical_device_desc: "device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:23:00.0, compute capability: 8.6"
+xla_global_id: 416903419
+
+<Thu Oct 13 09:55:34 2022>	[Info]:	The model compiled with errors.[Thu Oct 13 09:57:27 2022]		Welcome to CORNET!
+<Thu Oct 13 09:57:27 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:57:45 2022>	[Info]:	Database test_dusan loaded.
+[Thu Oct 13 09:58:34 2022]		Finishing the current session.
+
+[Thu Oct 13 09:59:00 2022]		Welcome to CORNET!
+<Thu Oct 13 09:59:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:59:05 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 09:59:15 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Thu Oct 13 09:59:29 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Thu Oct 13 09:59:34 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Thu Oct 13 09:59:35 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Thu Oct 13 09:59:46 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 09:59:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+	Device 4:	/device:GPU:3		Role: None
+
+<Thu Oct 13 09:59:51 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 09:59:51 2022>	[Error]:	The model has the following errors:
+Memory growth cannot differ between GPU devices
+<Thu Oct 13 09:59:51 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 10:00:01 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 10:00:01 2022>	[Error]:	The model has the following errors:
+Memory growth cannot differ between GPU devices
+<Thu Oct 13 10:00:01 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 10:00:02 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 10:00:02 2022>	[Error]:	The model has the following errors:
+Memory growth cannot differ between GPU devices
+<Thu Oct 13 10:00:02 2022>	[Info]:	The model compiled with errors.[Thu Oct 13 10:01:11 2022]		Welcome to CORNET!
+<Thu Oct 13 10:01:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Thu Oct 13 10:01:15 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:01:23 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Thu Oct 13 10:01:25 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Thu Oct 13 10:01:30 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Thu Oct 13 10:01:31 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 10:01:31 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Thu Oct 13 10:01:31 2022>	[Info]:	The model compiled with errors.
+<Thu Oct 13 10:01:38 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:01:41 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 10:01:41 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:01:41 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:01:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:01:51 2022>	[Info]:	Training the current model.
+<Thu Oct 13 10:03:22 2022>	[Info]:	Training stopped.
+<Thu Oct 13 10:03:27 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.[Thu Oct 13 10:05:57 2022]		Welcome to CORNET!
+<Thu Oct 13 10:05:57 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Thu Oct 13 10:06:00 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:06:04 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:06:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:06:04 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Thu Oct 13 10:06:10 2022>	[Info]:	Device /device:GPU:0 set up for Train.[Thu Oct 13 10:08:17 2022]		Welcome to CORNET!
+<Thu Oct 13 10:08:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+
+<Thu Oct 13 10:08:25 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:08:28 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:08:28 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:08:28 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Thu Oct 13 10:08:33 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:08:38 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 10:08:38 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:08:38 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:08:38 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:08:40 2022>	[Info]:	Training the current model.
+<Thu Oct 13 10:09:16 2022>	[Info]:	Training stopped.[Thu Oct 13 10:09:52 2022]		Welcome to CORNET!
+<Thu Oct 13 10:09:52 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+	Device 3:	/device:GPU:2		Role: None
+
+<Thu Oct 13 10:10:06 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:10:21 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:10:21 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:10:21 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Thu Oct 13 10:10:27 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:10:33 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 10:10:33 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:10:33 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:10:33 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:10:34 2022>	[Info]:	Training the current model.[Thu Oct 13 10:21:11 2022]		Welcome to CORNET!
+<Thu Oct 13 10:21:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+
+<Thu Oct 13 10:21:17 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:21:19 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:21:20 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:21:20 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 10:21:23 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:21:27 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Thu Oct 13 10:21:29 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 10:21:29 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:21:29 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:21:29 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:21:31 2022>	[Info]:	Training the current model.[Thu Oct 13 10:22:30 2022]		Welcome to CORNET!
+<Thu Oct 13 10:22:30 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+
+<Thu Oct 13 10:22:52 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:22:55 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:22:55 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:22:55 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 10:22:58 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:23:00 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Thu Oct 13 10:23:05 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 10:23:05 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:23:05 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:23:06 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:23:07 2022>	[Info]:	Training the current model.[Thu Oct 13 10:25:40 2022]		Welcome to CORNET!
+<Thu Oct 13 10:25:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+	Device 2:	/device:GPU:1		Role: None
+
+<Thu Oct 13 10:25:44 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:25:46 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 580,108
+Trainable params: 580,108
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:25:47 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:25:47 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test.
+<Thu Oct 13 10:25:50 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:25:55 2022>	[Info]:	Training the current model.[Thu Oct 13 10:26:26 2022]		Welcome to CORNET!
+<Thu Oct 13 10:26:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Thu Oct 13 10:26:33 2022>	[Info]:	Database test_dusan loaded.
+<Thu Oct 13 10:26:36 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:26:36 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:26:36 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.
+<Thu Oct 13 10:26:40 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 10:26:41 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 10:26:41 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 10:26:41 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 10:26:42 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 10:26:43 2022>	[Info]:	Training the current model.
+<Thu Oct 13 10:27:38 2022>	[Info]:	Training stopped.
+<Thu Oct 13 10:27:43 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/test_2.

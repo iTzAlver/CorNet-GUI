@@ -5,13 +5,18 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-import random
 import pickle
 import numpy as np
 from tensorflow import keras, convert_to_tensor, distribute
 from keras.utils.vis_utils import plot_model
 from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS
 from ._logger import Logger
+# -----------------------------------------------------------
+import os
+import json
+with open('../config/config.json', 'r') as file:
+    cfg = json.load(file)
+    os.environ["CUDA_VISIBLE_DEVICES"] = cfg['tensorflow']['devices_listing']
 
 
 # -----------------------------------------------------------
@@ -153,7 +158,7 @@ class Model:
             model = _model
         msg = ''
         while msg != 'MASTER:STOP':
-            hist = model.fit(db, epoch, 2 ** random.randint(0, 5))
+            hist = model.fit(db, epoch, 32)
             if not queue.empty():
                 msg = queue.get()
             queue.put(hist)
