@@ -63,3 +63,4 @@ packages:
 - path: past
 - path: absl
 - path: clang
+- path: src
