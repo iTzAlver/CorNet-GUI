@@ -96,7 +96,7 @@ class Model:
         ytrain = convert_to_tensor(db.dataset.ytrain)
         xval = convert_to_tensor(np.array(db.dataset.xval).astype("float32") / 255)
         yval = convert_to_tensor(db.dataset.yval)
-        history = self.model.fit(xtrain, ytrain, batch_size=db.batchsize, epochs=epoch, validation_data=(xval, yval))
+        history = self.model.fit(xtrain, ytrain, batch_size=db.batch_size, epochs=epoch, validation_data=(xval, yval))
         self.history.append(history.history)
         return history.history
 

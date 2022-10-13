@@ -118,9 +118,11 @@ class Report:
         with open(f'{latex}/summary.txt', 'w', encoding='utf-8') as file:
             file.write(summary)
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(history, 'k')
+        plt.plot(history, 'b')
         plt.title('Learning curve')
-        plt.grid()
+        plt.grid(b=True, which='major', color='#555555', linestyle='-')
+        plt.minorticks_on()
+        plt.grid(b=True, which='minor', color='#BBBBBB', linestyle='-')
         plt.savefig(saveas)
         plt.close(myfig)
 

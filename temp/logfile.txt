@@ -9557,3 +9557,91 @@ _________________________________________________________________
 	Device 1:	/device:GPU:0		Role: None
 
 <Thu Oct 13 11:56:11 2022>	[Info]:	Opening dual interface for database building.
+<Thu Oct 13 13:32:21 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Thu Oct 13 13:32:25 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 13:32:32 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [62, 2]
+<Thu Oct 13 13:32:35 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Thu Oct 13 13:32:40 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Thu Oct 13 13:32:42 2022>	[Info]:	Adding new layer to the model:
+		Dense [80]
+<Thu Oct 13 13:32:47 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [62, 2]
+		Flatten 
+		Dense [180]
+		Dense [80]
+		Output:8
+
+<Thu Oct 13 13:32:47 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 62)          310       
+                                                                 
+ flatten (Flatten)           (None, 3038)              0         
+                                                                 
+ dense (Dense)               (None, 180)               547020    
+                                                                 
+ dense_1 (Dense)             (None, 80)                14480     
+                                                                 
+ output (Dense)              (None, 8)                 648       
+                                                                 
+=================================================================
+Total params: 562,458
+Trainable params: 562,458
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 13:32:47 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 13:32:48 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 13:32:50 2022>	[Info]:	Training the current model.[Thu Oct 13 13:33:23 2022]		Welcome to CORNET!
+<Thu Oct 13 13:33:23 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Thu Oct 13 13:34:43 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Thu Oct 13 13:34:48 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Thu Oct 13 13:35:05 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Thu Oct 13 13:35:12 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Thu Oct 13 13:35:17 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Thu Oct 13 13:35:23 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Thu Oct 13 13:35:24 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Thu Oct 13 13:35:24 2022>	[Info]:	The model compiled sucessfuly.
+<Thu Oct 13 13:35:24 2022>	[Info]:	Scheme drawn sucessfuly.
+<Thu Oct 13 13:35:25 2022>	[Info]:	Training the current model.
+<Thu Oct 13 13:36:32 2022>	[Info]:	Opening dual interface for database building.
