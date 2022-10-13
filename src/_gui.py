@@ -25,16 +25,20 @@ import graphviz as gv
 import matplotlib.pyplot as plt
 import pickle
 import multiprocessing
+import json
 
 
-ICO_LOCATION = r'../multimedia/uah.ico'
-LOGFILE_PATH = r'../temp/logfile.txt'
-LMS_PATH = r'../temp/lms.txt'
-DRAW_MODEL_PATH = r'../multimedia/render'
-COMPILER_LIST_LOCATION = r'../db/model_lists'
-MODEL_LOCATION = r'../db/models'
-DATABASE_LOCATION = r'../db/db'
-MODEL_TEMP = r'../temp/tempmodel.h5'
+# -----------------------------------------------------------
+with open('../config/config.json', 'r') as file:
+    cfg = json.load(file)
+ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
+LOGFILE_PATH = cfg["path"]["LOGFILE_PATH"]
+LMS_PATH = cfg["path"]["LMS_PATH"]
+DRAW_MODEL_PATH = cfg["path"]["DRAW_MODEL_PATH"]
+COMPILER_LIST_LOCATION = cfg["path"]["COMPILER_LIST_LOCATION"]
+MODEL_LOCATION = cfg["path"]["MODEL_LOCATION"]
+DATABASE_LOCATION = cfg["path"]["DATABASE_LOCATION"]
+MODEL_TEMP = cfg["path"]["MODEL_TEMP"]
 # -----------------------------------------------------------
 
 

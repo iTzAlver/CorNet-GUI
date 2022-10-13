@@ -1,5 +1,20 @@
 {
   "tensorflow": {
     "devices_listing": "0"
+  },
+  "path": {
+    "TO_LATEX": "../temp/latex/",
+    "TO_REPORTS": "../doc/reports/",
+    "ICO_LOCATION": "../multimedia/uah.ico",
+    "LOGFILE_PATH": "../temp/logfile.txt",
+    "LMS_PATH": "../temp/lms.txt",
+    "DRAW_MODEL_PATH": "../multimedia/render",
+    "COMPILER_LIST_LOCATION": "../db/model_lists",
+    "MODEL_LOCATION": "../db/models",
+    "DATABASE_LOCATION": "../db/db",
+    "MODEL_TEMP": "../temp/tempmodel.h5"
+  },
+  "commands": {
+    "latex_compiler": "pdflatex main.tex"
   }
 }

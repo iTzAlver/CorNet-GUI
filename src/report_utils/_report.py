@@ -8,8 +8,9 @@
 import os
 import shutil
 import matplotlib.pyplot as plt
-    
-    
+import json
+
+
 class Report:
     def __init__(self, image_path, latex_path, model, db, history):
         self.author = 'Palomo Alonso, Alberto'
@@ -41,12 +42,14 @@ class Report:
         self._compile()
 
     def _compile(self):
+        with open('../config/config.json', 'r') as file:
+            cfg = json.load(file)
         try:
-            os.remove('../temp/latex/main.pdf')
+            os.remove(f'{cfg["path"]["TO_LATEX"]}main.pdf')
         except Exception as ex:
             print(ex)
-        os.system(f'cd ../temp/latex & pdflatex main.tex')
-        shutil.copyfile('../temp/latex/main.pdf', f'../doc/reports/{self.noreport}.pdf')
+        os.system(f'cd {cfg["path"]["TO_LATEX"]} & {cfg["commands"]["latex_compiler"]}')
+        shutil.copyfile(f'{cfg["path"]["TO_LATEX"]}main.pdf', f'{cfg["path"]["TO_REPORTS"]}{self.noreport}.pdf')
 
     def _print_report(self):
         _text = r'\newcommand{\authorx}{' \
