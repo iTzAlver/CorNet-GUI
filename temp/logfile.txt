@@ -9644,4 +9644,9 @@ _________________________________________________________________
 <Thu Oct 13 13:35:24 2022>	[Info]:	The model compiled sucessfuly.
 <Thu Oct 13 13:35:24 2022>	[Info]:	Scheme drawn sucessfuly.
 <Thu Oct 13 13:35:25 2022>	[Info]:	Training the current model.
-<Thu Oct 13 13:36:32 2022>	[Info]:	Opening dual interface for database building.
+<Thu Oct 13 13:36:32 2022>	[Info]:	Opening dual interface for database building.[Thu Oct 13 15:40:38 2022]		Welcome to CORNET!
+<Thu Oct 13 15:40:38 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Thu Oct 13 15:40:47 2022>	[Info]:	Opening dual interface for database building.
