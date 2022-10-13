@@ -90,13 +90,13 @@ class Model:
     def model_print(self, print_path):
         plot_model(self.model, to_file=f'{print_path}/compiled-model.gv.png', show_shapes=True)
 
-    def fit(self, db, epoch=1, batch=1):
+    def fit(self, db, epoch=1):
         self.is_trained = True
         xtrain = convert_to_tensor(np.array(db.dataset.xtrain).astype("float32") / 255)
         ytrain = convert_to_tensor(db.dataset.ytrain)
         xval = convert_to_tensor(np.array(db.dataset.xval).astype("float32") / 255)
         yval = convert_to_tensor(db.dataset.yval)
-        history = self.model.fit(xtrain, ytrain, batch_size=batch, epochs=epoch, validation_data=(xval, yval))
+        history = self.model.fit(xtrain, ytrain, batch_size=db.batchsize, epochs=epoch, validation_data=(xval, yval))
         self.history.append(history.history)
         return history.history
 
@@ -158,7 +158,7 @@ class Model:
             model = _model
         msg = ''
         while msg != 'MASTER:STOP':
-            hist = model.fit(db, epoch, 32)
+            hist = model.fit(db, epoch)
             if not queue.empty():
                 msg = queue.get()
             queue.put(hist)

@@ -13,7 +13,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from PIL import Image
 
 from .compiler_structures import Compiler
-from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS
+from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS
 from .compiler_structures import Model
 from .database_structures import Database
 from ._dbgui import dbgui
@@ -88,6 +88,7 @@ class MainWindow:
         # Model variables:
         add_pipeline = ['open_pipeline', 'close_pipeline', '']
         self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
+        self.typeoflayers.extend(PREBUILT_LAYERS)
         self.typeoflayers.extend(add_pipeline)
         self.losses = TYPEOFLOSES
         self.metrics = ['accuracy', 'mse']
@@ -689,7 +690,9 @@ class MainWindow:
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
         plt.plot(self.history, 'k')
         plt.title('Learning curve')
-        plt.grid()
+        plt.grid(b=True, which='major', color='#666666', linestyle='-')
+        plt.minorticks_on()
+        plt.grid(b=True, which='minor', color='#999999', linestyle='-')
         if self.canvas2 is not None:
             self.canvas2.get_tk_widget().pack_forget()
             self.toolbar2.destroy()

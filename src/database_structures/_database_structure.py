@@ -27,6 +27,7 @@ class Database:
                                            len(self.dataset.xtest))
         self.path: str = generator['path']
         self.type: str = dbtype
+        self.batch_size = 64
 
     @staticmethod
     def _splitdb(setz: tuple[list, list], split: tuple):

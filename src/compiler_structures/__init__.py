@@ -7,7 +7,7 @@
 # Import statements:
 from ._compiler import Compiler
 from ._model import Model
-from ._typeoflayers import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS
+from ._typeoflayers import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

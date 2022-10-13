@@ -115,6 +115,9 @@ KERAS_LISTOF_TYPEOFLAYERS = ['Dense',
                              'ThresholdedReLU',
                              ''
                              ]
+PREBUILT_LAYERS = [
+    ''
+]
 TYPEOFLOSES = [
             'kld', 'mean_absolute_error', 'mean_absolute_percentage_error', 'mean_squared_error',
             'mean_squared_logarithmic_error', 'binary_crossentropy', 'binary_focal_crossentropy',
