@@ -688,7 +688,7 @@ class MainWindow:
 
     def _print_history(self):
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(self.history, 'k')
+        plt.plot(self.history, 'b')
         plt.title('Learning curve')
         plt.grid(b=True, which='major', color='#666666', linestyle='-')
         plt.minorticks_on()
