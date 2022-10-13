@@ -14,9 +14,13 @@ from ._logger import Logger
 # -----------------------------------------------------------
 import os
 import json
-with open('../config/config.json', 'r') as file:
-    cfg = json.load(file)
-    os.environ["CUDA_VISIBLE_DEVICES"] = cfg['tensorflow']['devices_listing']
+try:
+    with open(f'{os.path.dirname(os.path.abspath(__file__))}/config/config.json', 'r') as file:
+        cfg = json.load(file)
+        os.environ["CUDA_VISIBLE_DEVICES"] = cfg['tensorflow']['devices_listing']
+except Exception as ex:
+    print('Traceback: _model.py. Path to config corrupted, try to run the script from the proper path.')
+    print(f'{ex}.\nCuda did not start properly.')
 
 
 # -----------------------------------------------------------

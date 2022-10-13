@@ -57,11 +57,16 @@ class HtGenerator:
     def _awgn_off(self, _mtx):
         # Adds offset and AWGN to the matrix.
         mtx = np.copy(_mtx)
-        off = self.options['off_m'] + self.options['off_v'] * (np.random.random() - 0.5)
+        off = self.scale * (self.options['off_m'] + self.options['off_v'] * (np.random.random() - 0.5))
         for row, rowe in enumerate(_mtx):
             for col, element in enumerate(rowe):
-                awgn = self.options['awgn_m'] + self.options['awgn_v'] * (np.random.random() - 0.5)
-                mtx[row, col] = abs(element + awgn + off)
+                awgn = self.scale * (self.options['awgn_m'] + self.options['awgn_v'] * (np.random.random() - 0.5))
+                if element + awgn + off < 0:
+                    mtx[row, col] = abs(element + abs(awgn) + off)
+                elif element + awgn + off > self.scale:
+                    mtx[row, col] = abs(element - abs(awgn))
+                else:
+                    mtx[row, col] = abs(element + awgn + off)
         return mtx
 
     @staticmethod

@@ -42,7 +42,7 @@ class Report:
         self._compile()
 
     def _compile(self):
-        with open('../config/config.json', 'r') as file:
+        with open(f'{os.path.dirname(os.path.abspath(__file__))}/config/config.json', 'r') as file:
             cfg = json.load(file)
         try:
             os.remove(f'{cfg["path"]["TO_LATEX"]}main.pdf')
