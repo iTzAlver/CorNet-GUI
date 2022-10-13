@@ -31602,3 +31602,5 @@ Welcome to the database generator!
 <Thu Oct 13 16:36:09 2022>	[Info]:	Building HT database 953 / 32768.
 <Thu Oct 13 16:36:10 2022>	[Info]:	Building HT database 32768 / 32768.
 <Thu Oct 13 16:36:11 2022>	[Info]:	Database 32k_32t_005w_8c created sucessfuly.
+[Thu Oct 13 16:37:02 2022]		Finishing the current DB session.
+

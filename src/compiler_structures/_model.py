@@ -11,11 +11,12 @@ from tensorflow import keras, convert_to_tensor, distribute
 from keras.utils.vis_utils import plot_model
 from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS
 from ._logger import Logger
+from ..__path_to_config__ import PATH_TO_CONFIG
 # -----------------------------------------------------------
 import os
 import json
 try:
-    with open(f'{os.path.dirname(os.path.abspath(__file__))}/config/config.json', 'r') as file:
+    with open(PATH_TO_CONFIG, 'r') as file:
         cfg = json.load(file)
         os.environ["CUDA_VISIBLE_DEVICES"] = cfg['tensorflow']['devices_listing']
 except Exception as ex:

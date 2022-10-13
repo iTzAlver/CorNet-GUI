@@ -9,6 +9,7 @@ import os
 import shutil
 import matplotlib.pyplot as plt
 import json
+from ..__path_to_config__ import PATH_TO_CONFIG
 
 
 class Report:
@@ -42,7 +43,7 @@ class Report:
         self._compile()
 
     def _compile(self):
-        with open(f'{os.path.dirname(os.path.abspath(__file__))}/config/config.json', 'r') as file:
+        with open(PATH_TO_CONFIG, 'r') as file:
             cfg = json.load(file)
         try:
             os.remove(f'{cfg["path"]["TO_LATEX"]}main.pdf')

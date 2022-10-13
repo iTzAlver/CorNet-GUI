@@ -5,7 +5,7 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-import os
+import os, sys
 from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
 from ttkwidgets.autocomplete import AutocompleteCombobox
 from .utils import HoverButton, ColorStyles, layers_help
@@ -18,6 +18,7 @@ from .compiler_structures import Model
 from .database_structures import Database
 from ._dbgui import dbgui
 from .report_utils import Report
+from .__path_to_config__ import PATH_TO_CONFIG
 
 
 import time
@@ -30,7 +31,7 @@ import json
 
 # -----------------------------------------------------------
 try:
-    with open(f'{os.path.dirname(os.path.abspath(__file__))}/config/config.json', 'r') as file:
+    with open(PATH_TO_CONFIG, 'r') as file:
         cfg = json.load(file)
         ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
         LOGFILE_PATH = cfg["path"]["LOGFILE_PATH"]
