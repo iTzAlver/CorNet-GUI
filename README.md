@@ -282,7 +282,6 @@ If, somehow, you already have a dataset (````other_dataset````), you can build a
       
       other_database.dataset = dataset
       other_database.batch_size = batch_size
-
       #  Or:
       other_database.__dict__.update({dataset: dataset, batch_size: batch_size})
 
