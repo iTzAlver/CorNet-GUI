@@ -28,8 +28,6 @@ class HtGenerator:
         if queue is not None:
             queue.put('The connection with HTGenerator is sucessful.')
         self.build()
-        thedb = Database((self.mtxs, self.segs), self.options)
-        thedb.save()
         if queue is not None:
             queue.put('ENDC')
 
@@ -45,6 +43,10 @@ class HtGenerator:
                     self.queue.put(f'Building HT database {i} / {self.options["number"]}.')
         if self.queue is not None:
             self.queue.put(f'Building HT database {self.options["number"]} / {self.options["number"]}.')
+        thedb = Database((self.mtxs, self.segs), self.options)
+        if self.options['path']:
+            thedb.save()
+        return thedb
 
     def _single_build(self):
         # Builds only a pair of matrix.

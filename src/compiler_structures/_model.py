@@ -16,8 +16,8 @@ from ..__path_to_config__ import PATH_TO_CONFIG
 import os
 import json
 try:
-    with open(PATH_TO_CONFIG, 'r') as file:
-        cfg = json.load(file)
+    with open(PATH_TO_CONFIG, 'r') as file_:
+        cfg = json.load(file_)
         os.environ["CUDA_VISIBLE_DEVICES"] = cfg['tensorflow']['devices_listing']
 except Exception as ex:
     print('Traceback: _model.py. Path to config corrupted, try to run the script from the proper path.')
@@ -33,24 +33,39 @@ class Model:
         :param model: If a keras.model is already compiled, you can import it in the model parameter, so the compiler
         will not be used.
         """
+        self._bypass = False
         self.model = None
         self.compiler = compiler
-        self.devices: dict = compiler.devices
         self.summary: str = 'Uncompiled model.'
         if model is None:
-            self.compile()
+            if self.compiler is not None:
+                self.devices: dict = compiler.devices
+                self.compile()
+            else:
+                self.devices: dict = {}
         else:
             self.model = model
-        self._logtracker()
+            if self.compiler is not None:
+                self.devices: dict = compiler.devices
+            else:
+                self.devices: dict = {}
+            self._logtracker()
+
         self.history: list = []
         self.is_trained: bool = False
-        self._scope = None
 
     def compile(self):
-        compiler = self.compiler
-        self._scope = self._model_scope(self.devices)
+        if self.compiler is not None:
+            self._compile()
+            self._logtracker()
+        else:
+            print('Warning: Compiled failed because there was no compiler.')
 
-        with self._scope:
+    def _compile(self):
+        compiler = self.compiler
+        _scope = self._model_scope(self.devices)
+
+        with _scope:
             # Add the input of the model.
             _inp = keras.Input(shape=compiler.io_shape[0])
             _inp._name = 'compiled-model-keras'
@@ -92,7 +107,7 @@ class Model:
             model.compile(**_compile)
             self.model = model
 
-    def model_print(self, print_path):
+    def model_print(self, print_path='.'):
         plot_model(self.model, to_file=f'{print_path}/compiled-model.gv.png', show_shapes=True)
 
     def fit(self, db, epoch=1):
@@ -113,8 +128,9 @@ class Model:
             _compiler_path = compiler_path
         else:
             _compiler_path = f'{compiler_path}.cpl'
-        with open(_compiler_path, 'wb') as file:
-            pickle.dump(self.compiler, file)
+        if self.compiler:
+            with open(_compiler_path, 'wb') as file:
+                pickle.dump(self.compiler, file)
 
     @staticmethod
     def load(model_path, compiler_path=''):
@@ -125,8 +141,12 @@ class Model:
             _compiler_path = compiler_path
         else:
             _compiler_path = f'{compiler_path}.cpl'
-        with open(_compiler_path, 'rb') as file:
-            compiler = pickle.load(file)
+        if os.path.exists(_compiler_path):
+            with open(_compiler_path, 'rb') as file:
+                compiler = pickle.load(file)
+        else:
+            print('Warining: The compiler path is empty, the current model has no compiler.')
+            compiler = None
         return Model(compiler, model=model)
 
     @staticmethod
@@ -157,18 +177,19 @@ class Model:
 
     @staticmethod
     def fitmodel(_model, db, queue, bypass='', epoch=1):
+        model = _model
         if bypass:
-            model = Model.load(bypass)
-        else:
-            model = _model
+            model.bypass(bypass)
+        # Recieve the messages from master.
         msg = ''
         while msg != 'MASTER:STOP':
             hist = model.fit(db, epoch)
             if not queue.empty():
                 msg = queue.get()
             queue.put(hist)
+        # Bypassing again.
         if bypass:
-            model.save(bypass)
+            model.bypass(bypass)
         return
 
     def __repr__(self):
@@ -182,6 +203,21 @@ class Model:
 
     def __eq__(self, other):
         return self.compiler.layers == other.compiler.layers
+
+    def bypass(self, path='.'):
+        if not self._bypass:
+            self.model.save(path)
+            self.model = None
+            self._bypass = True
+        else:
+            self.model = keras.models.load_model(path)
+            self._bypass = False
+            if '.h5' not in path:
+                _path = f'{path}.h5'
+            else:
+                _path = path
+            os.remove(_path)
+        return path
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

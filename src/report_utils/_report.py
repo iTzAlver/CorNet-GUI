@@ -13,10 +13,13 @@ from ..__path_to_config__ import PATH_TO_CONFIG
 
 
 class Report:
-    def __init__(self, image_path, latex_path, model, db, history):
-        self.author = 'Palomo Alonso, Alberto'
+    def __init__(self, image_path, latex_path, model, db, history, author='Palomo Alonso, Alberto', number=None):
+        self.author = author
         self._latex_path = latex_path
-        self.noreport = self._getnumber()
+        if number:
+            self.noreport = number
+        else:
+            self.noreport = self._getnumber()
         self.model_name = model.model._name.replace('_', ' ')
         self.dbname = db.name.replace('_', ' ')
         self.dbtype = db.type.replace('_', ' ')

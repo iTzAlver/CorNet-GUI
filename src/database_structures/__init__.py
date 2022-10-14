@@ -6,6 +6,7 @@
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 from ._ht_generator import HtGenerator
 from ._generator import Generator
+from ._dataset import Dataset
 from ._wk_generator import WkGenerator
 from ._database_structure import Database
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

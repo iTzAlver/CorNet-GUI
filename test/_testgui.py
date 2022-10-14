@@ -12,12 +12,17 @@ from src import gui
 def main() -> None:
     gui()
     return
+
+
+def test2():
+    pass
 # -----------------------------------------------------------
 # Main:
 
 
 if __name__ == '__main__':
     main()
+    test2()
 
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #

@@ -8,11 +8,15 @@ from ._gui import gui
 from ._dbgui import dbgui
 
 from .database_structures import Database
+from .database_structures import Generator
+from .database_structures import Dataset
 from .database_structures import HtGenerator
 from .database_structures import WkGenerator
 
 from .compiler_structures import Model
 from .compiler_structures import Compiler
+
+from .report_utils import Report
 
 
 def info():

@@ -5,7 +5,7 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-import os, sys
+import os
 from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
 from ttkwidgets.autocomplete import AutocompleteCombobox
 from .utils import HoverButton, ColorStyles, layers_help
@@ -31,8 +31,8 @@ import json
 
 # -----------------------------------------------------------
 try:
-    with open(PATH_TO_CONFIG, 'r') as file:
-        cfg = json.load(file)
+    with open(PATH_TO_CONFIG, 'r') as _file:
+        cfg = json.load(_file)
         ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
         LOGFILE_PATH = cfg["path"]["LOGFILE_PATH"]
         LMS_PATH = cfg["path"]["LMS_PATH"]
@@ -41,9 +41,11 @@ try:
         MODEL_LOCATION = cfg["path"]["MODEL_LOCATION"]
         DATABASE_LOCATION = cfg["path"]["DATABASE_LOCATION"]
         MODEL_TEMP = cfg["path"]["MODEL_TEMP"]
-except Exception as ex:
+    del _file
+except Exception as _ex:
     print('Traceback: _gui.py. Path to config corrupted, try to run the gui from the proper executable.')
-    raise ex
+    raise _ex
+
 # -----------------------------------------------------------
 
 
@@ -347,7 +349,7 @@ class MainWindow:
         # Import the generated database.
         dbpath = filedialog.askopenfilename(filetypes=[('Database files', '*.ht')], initialdir=DATABASE_LOCATION)
         if dbpath:
-            database = Database.load_database(dbpath)
+            database = Database.load(dbpath)
             self.database = database
             self.throughput = len(self.database.dataset.xtrain[0])
             self.training_label.config(text=f'Throughtput: {self.throughput}')
@@ -406,12 +408,11 @@ class MainWindow:
             self.running = True
             self.lowrite(_text='Training the current model.', cat='Info')
 
-            self.model.save(MODEL_TEMP)
-            self.model.model = None
+            bypass = self.model.bypass(MODEL_TEMP)
             queue = multiprocessing.Queue()
             p = multiprocessing.Process(target=Model.fitmodel,
                                         args=(self.model, self.database, queue),
-                                        kwargs={'bypass': MODEL_TEMP})
+                                        kwargs={'bypass': bypass})
             p.start()
             while self.running:
                 self.master.update_idletasks()
@@ -421,7 +422,7 @@ class MainWindow:
                     self.history.append(history['loss'])
                     self._print_history()
             queue.put('MASTER:STOP')
-            self.model = Model.load(model_path=MODEL_TEMP)
+            self.model.bypass(bypass)
 
     def _compile(self, compiler):
         # Compile the model into self.model.

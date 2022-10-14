@@ -31604,3 +31604,105 @@ Welcome to the database generator!
 <Thu Oct 13 16:36:11 2022>	[Info]:	Database 32k_32t_005w_8c created sucessfuly.
 [Thu Oct 13 16:37:02 2022]		Finishing the current DB session.
 
+Welcome to the database generator!
+=================================================================================
+
+<Fri Oct 14 16:56:49 2022>	[Info]:	Creating a database with the following parameters:
+{'path': 'C:/Users/ialve/Desktop/cnet/db/db/ht/test_ht.ht', 'distribution': (60, 20, 20), 'tput': 8, 'awgn_m': 0, 'awgn_v': 0, 'off_m': 0, 'off_v': 0, 'clust_m': 2, 'clust_v': 1, 'number': 1024, 'name': 'test_ht'}
+<Fri Oct 14 16:56:57 2022>	[Info]:	The connection with HTGenerator is sucessful.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 0 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 1 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 2 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 3 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 4 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 5 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 6 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 7 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 8 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 9 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 10 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 11 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 12 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 13 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 14 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 15 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 16 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 17 / 1024.
+<Fri Oct 14 16:56:57 2022>	[Info]:	Building HT database 18 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 19 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 20 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 21 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 22 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 23 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 24 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 25 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 26 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 27 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 28 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 29 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 30 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 31 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 32 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 33 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 34 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 35 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 36 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 37 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 38 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 39 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 40 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 41 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 42 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 43 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 44 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 45 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 46 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 47 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 48 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 49 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 50 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 51 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 52 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 53 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 54 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 55 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 56 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 57 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 58 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 59 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 60 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 61 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 62 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 63 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 64 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 65 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 66 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 67 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 68 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 69 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 70 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 71 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 72 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 73 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 74 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 75 / 1024.
+<Fri Oct 14 16:56:58 2022>	[Info]:	Building HT database 76 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 77 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 78 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 79 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 80 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 81 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 82 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 83 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 84 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 85 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 86 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 87 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 88 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 89 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 90 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 91 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Building HT database 1024 / 1024.
+<Fri Oct 14 16:56:59 2022>	[Info]:	Database test_ht created sucessfuly.
+[Fri Oct 14 16:57:15 2022]		Finishing the current DB session.
+
