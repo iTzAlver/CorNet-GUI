@@ -266,6 +266,7 @@ If, somehow, you already have a dataset (````other_dataset````), you can build a
    * ytest: The solutions of the test dataset.
 2. ````batch_size````: It is an integer with the batch size of the database.
 
+In the proposed example:
 
       from cornet_api import Dataset
       other_database = get_other_database()
@@ -282,7 +283,9 @@ If, somehow, you already have a dataset (````other_dataset````), you can build a
       
       other_database.dataset = dataset
       other_database.batch_size = batch_size
+      # Or:
       other_database.__dict__.update({dataset: dataset, batch_size: batch_size})
+
 
 Now the external database is valid for training.
 
