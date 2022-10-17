@@ -6,12 +6,15 @@
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
 import pickle
+import copy
 import numpy as np
 from tensorflow import keras, convert_to_tensor, distribute
 from keras.utils.vis_utils import plot_model
-from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS
+from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS, CUSTOM_LOSES
 from ._logger import Logger
 from ..__path_to_config__ import PATH_TO_CONFIG
+from .algorithms import Subkeras
+from .loss_functions import Sublosses
 # -----------------------------------------------------------
 import os
 import json
@@ -90,8 +93,10 @@ class Model:
                     _lastlay = keras.layers.concatenate(towers, **layer_args)
                     towers = []
                 else:
-                    if layer_type in KERAS_LISTOF_TYPEOFLAYERS:
+                    if layer_type in KERAS_LISTOF_TYPEOFLAYERS and layer_type not in PREBUILT_LAYERS:
                         this_lay = getattr(keras.layers, layer_type)(*layer_shape, **layer_args)
+                    elif layer_type in KERAS_LISTOF_TYPEOFLAYERS:
+                        this_lay = getattr(Subkeras, layer_type)(*layer_shape, **layer_args)
                     else:
                         importmodel = keras.models.load_model(f'{layer_type}.h5')
                         importmodel._name = layer_type
@@ -101,8 +106,12 @@ class Model:
 
             # Add the output of the model.
             out = keras.layers.Dense(compiler.io_shape[1], activation="softmax", name='output')(_lastlay)
+            # out = keras.layers.ThresholdedReLU(0.2)(out)
 
-            _compile = compiler.compiler
+            _compile = copy.copy(compiler.compiler)
+            if _compile['loss'] in CUSTOM_LOSES:
+                _compile['loss'] = getattr(Sublosses, compiler.compiler['loss'])
+
             model = keras.Model(_inp, out)
             model.compile(**_compile)
             self.model = model
@@ -117,6 +126,7 @@ class Model:
         xval = convert_to_tensor(np.array(db.dataset.xval).astype("float32") / 255)
         yval = convert_to_tensor(db.dataset.yval)
         history = self.model.fit(xtrain, ytrain, batch_size=db.batch_size, epochs=epoch, validation_data=(xval, yval))
+        history['eval'] = self._eval(xval, yval)
         self.history.append(history.history)
         return history.history
 
@@ -132,9 +142,8 @@ class Model:
             with open(_compiler_path, 'wb') as file:
                 pickle.dump(self.compiler, file)
 
-    @staticmethod
-    def load(model_path, compiler_path=''):
-        model = keras.models.load_model(model_path)
+    def load(self, model_path, compiler_path=''):
+        custom_obj = {}
         if not compiler_path:
             _compiler_path = model_path.replace('.h5', '.cpl')
         elif '.cpl' in compiler_path:
@@ -144,9 +153,12 @@ class Model:
         if os.path.exists(_compiler_path):
             with open(_compiler_path, 'rb') as file:
                 compiler = pickle.load(file)
+            custom_obj = self._get_customs(compiler)
         else:
             print('Warining: The compiler path is empty, the current model has no compiler.')
             compiler = None
+
+        model = keras.models.load_model(model_path, custom_objects=custom_obj)
         return Model(compiler, model=model)
 
     @staticmethod
@@ -190,7 +202,30 @@ class Model:
         # Bypassing again.
         if bypass:
             model.bypass(bypass)
+        queue.put('SLAVE:STOPPED')
         return
+
+    def bypass(self, path='.'):
+        if not self._bypass:
+            self.model.save(path)
+            self.model = None
+            self._bypass = True
+        else:
+            self.model = keras.models.load_model(path, custom_objects=self._get_customs(self.compiler))
+            self._bypass = False
+            if '.h5' not in path:
+                _path = f'{path}.h5'
+            else:
+                _path = path
+            os.remove(_path)
+        return path
+
+    @staticmethod
+    def _get_customs(compiler):
+        custom_obj = {}
+        if compiler.compiler['loss'] in CUSTOM_LOSES:
+            custom_obj[compiler.compiler['loss']] = getattr(Sublosses, compiler.compiler['loss'])
+        return custom_obj
 
     def __repr__(self):
         return f'Model object with the following parameters:\nCompiler: {self.compiler}\nSummary: {self.summary}'
@@ -204,20 +239,8 @@ class Model:
     def __eq__(self, other):
         return self.compiler.layers == other.compiler.layers
 
-    def bypass(self, path='.'):
-        if not self._bypass:
-            self.model.save(path)
-            self.model = None
-            self._bypass = True
-        else:
-            self.model = keras.models.load_model(path)
-            self._bypass = False
-            if '.h5' not in path:
-                _path = f'{path}.h5'
-            else:
-                _path = path
-            os.remove(_path)
-        return path
+    def _eval(self, xval, yval):
+        return Sublosses.window_diff(self.model.predict(xval), yval)
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

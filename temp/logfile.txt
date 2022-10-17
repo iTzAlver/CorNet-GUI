@@ -9697,3 +9697,1480 @@ _________________________________________________________________
 <Fri Oct 14 12:28:34 2022>	[Info]:	Opening dual interface for database building.
 [Fri Oct 14 20:30:54 2022]		Finishing the current session.
 
+[Mon Oct 17 09:14:10 2022]		Welcome to CORNET!
+<Mon Oct 17 09:14:10 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:14:14 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:14:24 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:14:31 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:14:32 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Pbmm 
+		Output:8
+[Mon Oct 17 09:15:00 2022]		Welcome to CORNET!
+<Mon Oct 17 09:15:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:15:05 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:15:08 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:15:16 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 09:15:18 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 09:15:25 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 09:15:27 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:15:28 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 09:15:30 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 09:15:30 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 09:15:31 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 09:15:53 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:15:54 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:15:54 2022>	[Error]:	The model has the following errors:
+__init__() takes 1 positional argument but 2 were given
+<Mon Oct 17 09:15:54 2022>	[Info]:	The model compiled with errors.
+<Mon Oct 17 09:16:16 2022>	[Info]:	Removed ('Pbmm ', ('', '')) from the layer list.
+<Mon Oct 17 09:16:20 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:16:21 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:16:21 2022>	[Error]:	The model has the following errors:
+__init__() takes 1 positional argument but 2 were given
+<Mon Oct 17 09:16:21 2022>	[Info]:	The model compiled with errors.[Mon Oct 17 09:20:32 2022]		Welcome to CORNET!
+<Mon Oct 17 09:20:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:20:37 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:20:41 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:20:46 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:20:49 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:20:50 2022>	[Error]:	The model has the following errors:
+Exception encountered when calling layer "pbmm" (type Pbmm).
+
+len is not well defined for a symbolic Tensor (Placeholder:0). Please call `x.shape` rather than `len(x)` for shape information.
+
+Call arguments received by layer "pbmm" (type Pbmm):
+  • inputs=tf.Tensor(shape=(None, 8, 8, 1), dtype=float32)
+  • args=<class 'inspect._empty'>
+  • kwargs={'training': 'None'}
+<Mon Oct 17 09:20:50 2022>	[Info]:	The model compiled with errors.[Mon Oct 17 09:25:04 2022]		Welcome to CORNET!
+<Mon Oct 17 09:25:04 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:25:09 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:25:14 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:25:20 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:25:22 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:25:23 2022>	[Error]:	The model has the following errors:
+Exception encountered when calling layer "pbmm" (type Pbmm).
+
+'<' not supported between instances of 'int' and 'NoneType'
+
+Call arguments received by layer "pbmm" (type Pbmm):
+  • inputs=tf.Tensor(shape=(None, 8, 8, 1), dtype=float32)
+  • args=<class 'inspect._empty'>
+  • kwargs={'training': 'None'}
+<Mon Oct 17 09:25:23 2022>	[Info]:	The model compiled with errors.
+[Mon Oct 17 09:30:02 2022]		Finishing the current session.
+
+[Mon Oct 17 09:30:36 2022]		Welcome to CORNET!
+<Mon Oct 17 09:30:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:30:41 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:30:44 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:30:55 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:30:56 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:30:56 2022>	[Error]:	The model has the following errors:
+Exception encountered when calling layer "pbmm" (type Pbmm).
+
+Tried to convert 'y' to a tensor and failed. Error: None values not supported.
+
+Call arguments received by layer "pbmm" (type Pbmm):
+  • inputs=tf.Tensor(shape=(None, 8, 8, 1), dtype=float32)
+  • args=<class 'inspect._empty'>
+  • kwargs={'training': 'None'}
+<Mon Oct 17 09:30:56 2022>	[Info]:	The model compiled with errors.[Mon Oct 17 09:37:26 2022]		Welcome to CORNET!
+<Mon Oct 17 09:37:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 09:37:31 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 09:37:35 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 09:37:41 2022>	[Info]:	Adding new layer to the model:
+		Pbmm 
+<Mon Oct 17 09:37:41 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Pbmm 
+		Output:8
+
+<Mon Oct 17 09:37:42 2022>	[Error]:	The model has the following errors:
+Exception encountered when calling layer "pbmm" (type Pbmm).
+
+Tried to convert 'y' to a tensor and failed. Error: None values not supported.
+
+Call arguments received by layer "pbmm" (type Pbmm):
+  • inputs=tf.Tensor(shape=(None, 8, 8, 1), dtype=float32)
+  • args=<class 'inspect._empty'>
+  • kwargs={'training': 'None'}
+<Mon Oct 17 09:37:42 2022>	[Info]:	The model compiled with errors.[Mon Oct 17 13:48:49 2022]		Welcome to CORNET!
+<Mon Oct 17 13:48:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+[Mon Oct 17 13:49:54 2022]		Finishing the current session.
+
+[Mon Oct 17 13:50:00 2022]		Welcome to CORNET!
+<Mon Oct 17 13:50:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 13:50:20 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 13:50:27 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [62, 2]
+<Mon Oct 17 13:50:29 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 13:50:33 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 13:50:35 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 13:50:36 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [62, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 13:50:37 2022>	[Error]:	The model has the following errors:
+type object 'Sublosses' has no attribute 'windiff'
+<Mon Oct 17 13:50:37 2022>	[Info]:	The model compiled with errors.[Mon Oct 17 13:51:11 2022]		Welcome to CORNET!
+<Mon Oct 17 13:51:11 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 13:51:40 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 13:51:51 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 13:51:54 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 13:51:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 13:52:03 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 13:52:07 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 13:52:08 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 13:52:08 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 13:52:08 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 13:52:11 2022>	[Info]:	Training the current model.[Mon Oct 17 15:02:04 2022]		Welcome to CORNET!
+<Mon Oct 17 15:02:04 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:02:08 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:02:11 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:02:18 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:02:20 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:02:37 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:02:44 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+[Mon Oct 17 15:03:23 2022]		Welcome to CORNET!
+<Mon Oct 17 15:03:23 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:03:27 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:03:34 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:03:39 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:03:42 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:03:46 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:03:49 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:03:50 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:03:50 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:03:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:03:54 2022>	[Info]:	Training the current model.
+<Mon Oct 17 15:04:12 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:05:00 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:05:01 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:05:01 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:05:07 2022>	[Info]:	Training stopped.
+<Mon Oct 17 15:05:08 2022>	[Info]:	Training the current model.[Mon Oct 17 15:16:04 2022]		Welcome to CORNET!
+<Mon Oct 17 15:16:04 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:16:08 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:16:12 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:16:18 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:16:21 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:16:26 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:16:35 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:16:44 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:16:44 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:16:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:16:56 2022>	[Info]:	Training the current model.[Mon Oct 17 15:24:08 2022]		Welcome to CORNET!
+<Mon Oct 17 15:24:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:24:15 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:24:22 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:24:25 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:24:27 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:24:33 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:24:37 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:24:38 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:24:38 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:24:38 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:24:41 2022>	[Info]:	Training the current model.[Mon Oct 17 15:27:07 2022]		Welcome to CORNET!
+<Mon Oct 17 15:27:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:27:10 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:27:15 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:27:28 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:27:30 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:27:34 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:27:40 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:27:40 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:27:40 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:27:41 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:27:42 2022>	[Info]:	Training the current model.[Mon Oct 17 15:30:44 2022]		Welcome to CORNET!
+<Mon Oct 17 15:30:44 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:30:53 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:30:58 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:31:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:31:07 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:31:11 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:31:14 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:31:14 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:31:14 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:31:15 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:31:16 2022>	[Info]:	Training the current model.[Mon Oct 17 15:33:19 2022]		Welcome to CORNET!
+<Mon Oct 17 15:33:19 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:33:26 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:33:28 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:33:33 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:33:35 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:33:39 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:33:44 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:33:45 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:33:45 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:33:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:33:46 2022>	[Info]:	Training the current model.[Mon Oct 17 15:34:39 2022]		Welcome to CORNET!
+<Mon Oct 17 15:34:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:34:43 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:34:52 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:34:55 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:35:03 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 15:35:05 2022>	[Info]:	Training the current model.
+<Mon Oct 17 15:35:09 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:35:10 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:35:10 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:35:11 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:35:22 2022>	[Info]:	Training stopped.
+<Mon Oct 17 15:35:23 2022>	[Info]:	Training the current model.[Mon Oct 17 15:38:05 2022]		Welcome to CORNET!
+<Mon Oct 17 15:38:05 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:38:09 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:38:15 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:38:17 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:38:20 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:38:20 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Mon Oct 17 15:38:20 2022>	[Info]:	The model compiled with errors.
+<Mon Oct 17 15:38:21 2022>	[Info]:	Training the current model.
+<Mon Oct 17 15:38:31 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 15:38:33 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:38:33 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:38:33 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:38:34 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:38:38 2022>	[Info]:	Training stopped.
+<Mon Oct 17 15:38:39 2022>	[Info]:	Training the current model.[Mon Oct 17 15:40:40 2022]		Welcome to CORNET!
+<Mon Oct 17 15:40:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:40:42 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:40:47 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 15:40:52 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:40:57 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:41:01 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:41:01 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:41:01 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:41:01 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:41:04 2022>	[Info]:	Training the current model.[Mon Oct 17 15:42:51 2022]		Welcome to CORNET!
+<Mon Oct 17 15:42:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:43:02 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:43:05 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 15:43:11 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:43:13 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:43:17 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:43:17 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:43:17 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:43:18 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:43:19 2022>	[Info]:	Training the current model.[Mon Oct 17 15:44:48 2022]		Welcome to CORNET!
+<Mon Oct 17 15:44:48 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:44:58 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:45:25 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:45:27 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 15:45:32 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:45:34 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:45:39 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 15:45:39 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:45:39 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:45:40 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:45:41 2022>	[Info]:	Training the current model.[Mon Oct 17 15:59:10 2022]		Welcome to CORNET!
+<Mon Oct 17 15:59:10 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 15:59:23 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 15:59:26 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 15:59:32 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 15:59:34 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 15:59:38 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 15:59:45 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 15:59:45 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 15:59:45 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 15:59:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 15:59:46 2022>	[Info]:	Training the current model.
+<Mon Oct 17 15:59:54 2022>	[Info]:	Training stopped.
+<Mon Oct 17 16:00:09 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 16:00:09 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 16:00:09 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 16:00:09 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 16:00:12 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 16:00:12 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_2 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_2 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 16:00:12 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 16:00:13 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 16:00:18 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 16:00:18 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_2 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_2 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_3 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_3 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_3 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 16:00:18 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 16:00:19 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 16:00:20 2022>	[Info]:	Training the current model.
+<Mon Oct 17 16:00:30 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 16:00:30 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_1 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_2 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_2 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_3 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_3 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_3 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_5 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_4 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_4 (Flatten)         (None, 3136)              0         
+                                                                 
+ dense_4 (Dense)             (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 16:00:30 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 16:00:30 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 16:00:32 2022>	[Info]:	Training stopped.
+<Mon Oct 17 16:00:32 2022>	[Info]:	Training the current model.[Mon Oct 17 16:03:45 2022]		Welcome to CORNET!
+<Mon Oct 17 16:03:45 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+[Mon Oct 17 16:42:08 2022]		Welcome to CORNET!
+<Mon Oct 17 16:42:08 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 16:42:11 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 16:42:17 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 16:42:22 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 16:42:24 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 16:42:28 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 16:42:28 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 16:42:28 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 16:42:29 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 16:42:30 2022>	[Info]:	Training the current model.[Mon Oct 17 17:08:47 2022]		Welcome to CORNET!
+<Mon Oct 17 17:08:47 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 17:08:54 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 17:08:58 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 17:09:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 17:09:06 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 17:09:10 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 17:09:11 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 17:09:11 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 17:09:12 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 17:09:14 2022>	[Info]:	Training the current model.[Mon Oct 17 17:11:17 2022]		Welcome to CORNET!
+<Mon Oct 17 17:11:17 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 17:11:25 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 17:11:28 2022>	[Info]:	Device /device:CPU:0 set up for Train.
+<Mon Oct 17 17:11:33 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 17:11:36 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 17:11:40 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 17:11:40 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 17:11:40 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 17:11:40 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 17:11:43 2022>	[Info]:	Training the current model.
+<Mon Oct 17 17:11:50 2022>	[Info]:	Training stopped.[Mon Oct 17 18:35:56 2022]		Welcome to CORNET!
+<Mon Oct 17 18:35:56 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:36:13 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:36:17 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:36:27 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:36:30 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:36:32 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 18:36:33 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:36:33 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:36:33 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:36:34 2022>	[Info]:	Training the current model.
+<Mon Oct 17 18:38:25 2022>	[Info]:	Training stopped.[Mon Oct 17 18:41:22 2022]		Welcome to CORNET!
+<Mon Oct 17 18:41:22 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:41:29 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:41:32 2022>	[Info]:	Device /device:GPU:0 set up for Train.[Mon Oct 17 18:42:24 2022]		Welcome to CORNET!
+<Mon Oct 17 18:42:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:42:34 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:42:37 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:42:43 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:42:46 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:42:47 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 18:42:48 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+ thresholded_re_lu (Threshol  (None, 8)                0         
+ dedReLU)                                                        
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:42:48 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:42:48 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:42:50 2022>	[Info]:	Training the current model.[Mon Oct 17 18:43:48 2022]		Welcome to CORNET!
+<Mon Oct 17 18:43:48 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:43:55 2022>	[Info]:	Device /device:GPU:0 set up for Train.[Mon Oct 17 18:50:40 2022]		Welcome to CORNET!
+<Mon Oct 17 18:50:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:50:46 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:50:51 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:50:58 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:51:04 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:51:09 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 18:51:10 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 18:51:11 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:51:11 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:51:11 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:51:12 2022>	[Info]:	Training the current model.[Mon Oct 17 18:54:25 2022]		Welcome to CORNET!
+<Mon Oct 17 18:54:25 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:54:28 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:54:31 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:54:39 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:54:41 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:54:45 2022>	[Info]:	Adding new layer to the model:
+		Dense [180]
+<Mon Oct 17 18:54:46 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Dense [180]
+		Output:8
+
+<Mon Oct 17 18:54:46 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ dense (Dense)               (None, 180)               564660    
+                                                                 
+ output (Dense)              (None, 8)                 1448      
+                                                                 
+=================================================================
+Total params: 566,428
+Trainable params: 566,428
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:54:46 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:54:47 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:54:47 2022>	[Info]:	Training the current model.[Mon Oct 17 18:56:16 2022]		Welcome to CORNET!
+<Mon Oct 17 18:56:16 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:56:23 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:56:27 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:56:35 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:56:38 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:56:39 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 18:56:40 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:56:40 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:56:40 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:56:41 2022>	[Info]:	Training the current model.[Mon Oct 17 18:57:51 2022]		Welcome to CORNET!
+<Mon Oct 17 18:57:51 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None

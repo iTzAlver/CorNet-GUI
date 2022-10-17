@@ -13,7 +13,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from PIL import Image
 
 from .compiler_structures import Compiler
-from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS
+from .compiler_structures import TYPEOFLOSES, KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS, CUSTOM_LOSES
 from .compiler_structures import Model
 from .database_structures import Database
 from ._dbgui import dbgui
@@ -92,12 +92,14 @@ class MainWindow:
         self.throughput = None
         self.running = False
         self.history = []
+        self.eval = []
         # Model variables:
         add_pipeline = ['open_pipeline', 'close_pipeline', '']
         self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
         self.typeoflayers.extend(PREBUILT_LAYERS)
         self.typeoflayers.extend(add_pipeline)
         self.losses = TYPEOFLOSES
+        self.losses.extend(CUSTOM_LOSES)
         self.metrics = ['accuracy', 'mse']
         self.optimizers = ['adadelta', 'adam', 'RMSprop', 'sgd', 'nadam', 'adamax', 'adagrad', 'ftlr']
         self.current_model_list = []
@@ -420,8 +422,13 @@ class MainWindow:
                 if not queue.empty():
                     history = queue.get()
                     self.history.append(history['loss'])
+                    self.eval.append(history['eval'])
                     self._print_history()
             queue.put('MASTER:STOP')
+            msg = ''
+            while msg != 'SLAVE:STOPPED':
+                if not queue.empty():
+                    msg = queue.get()
             self.model.bypass(bypass)
 
     def _compile(self, compiler):
@@ -694,7 +701,9 @@ class MainWindow:
 
     def _print_history(self):
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(self.history, 'b')
+        plt.plot(self.history, 'b', label='Loss')
+        plt.plot(self.eval, 'r', label='WD')
+        plt.legend()
         plt.title('Learning curve')
         plt.grid(b=True, which='major', color='#666666', linestyle='-')
         plt.minorticks_on()
