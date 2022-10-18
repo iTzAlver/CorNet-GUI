@@ -731,7 +731,7 @@ class MainWindow:
         plt.title('Learning curve')
         plt.grid(b=True, color='#666666', linestyle='-')
         plt.minorticks_on()
-        plt.grid(b=True, color='#999999', linestyle='-')
+        plt.grid(b=True, which='minor', color='#999999', linestyle='-')
         plt.ylim(0, max(self.history[name])[0] * 1.05)
         if self.canvas2 is not None:
             self.canvas2.get_tk_widget().pack_forget()

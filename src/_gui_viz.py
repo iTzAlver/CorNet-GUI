@@ -21,13 +21,8 @@ try:
     with open(PATH_TO_CONFIG, 'r') as _file:
         cfg = json.load(_file)
         ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
-        # LOGFILE_PATH = cfg["path"]["LOGFILE_PATH"]
-        # LMS_PATH = cfg["path"]["LMS_PATH"]
-        # DRAW_MODEL_PATH = cfg["path"]["DRAW_MODEL_PATH"]
-        # COMPILER_LIST_LOCATION = cfg["path"]["COMPILER_LIST_LOCATION"]
         MODEL_LOCATION = cfg["path"]["MODEL_LOCATION"]
         DATABASE_LOCATION = cfg["path"]["DATABASE_LOCATION"]
-        # MODEL_TEMP = cfg["path"]["MODEL_TEMP"]
 except Exception as _ex:
     print('Traceback: _gui.py. Path to config corrupted, try to run the gui from the proper executable.')
     raise _ex
@@ -140,6 +135,7 @@ class MainWindow:
         _type, no, x, y = self.db.randget()
         self.x = x
         self.y = y
+        self.guess = np.zeros(y.shape)
         _x, _y = self.render_mat(x, y)
         self.print_canvas(_x, _y, title=f'{_type} matrix, number {no}')
 

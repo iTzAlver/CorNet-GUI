@@ -53,7 +53,13 @@ class Report:
         except Exception as ex:
             print(ex)
         os.system(f'cd {cfg["path"]["TO_LATEX"]} & {cfg["commands"]["latex_compiler"]}')
-        shutil.copyfile(f'{cfg["path"]["TO_LATEX"]}main.pdf', f'{cfg["path"]["TO_REPORTS"]}{self.noreport}.pdf')
+        try:
+            shutil.copyfile(f'{cfg["path"]["TO_LATEX"]}main.pdf', f'{cfg["path"]["TO_REPORTS"]}{self.noreport}.pdf')
+        except Exception as ex:
+            print(ex)
+            print('It looks like you did not install LiveTeX correctly. Make sure that the command '
+                  f'{cfg["commands"]["latex_compiler"]} is actually working on your machine. Don\'t worry if not, '
+                  f'this feature is not mandatory.')
 
     def _print_report(self):
         _text = r'\newcommand{\authorx}{' \
@@ -126,7 +132,7 @@ class Report:
             plt.plot(history, 'b', label='Loss')
             plt.legend()
             plt.title('Learning curve')
-            plt.grid(b=True, which='major', color='#666666', linestyle='-')
+            plt.grid(b=True, color='#666666', linestyle='-')
             plt.minorticks_on()
             plt.grid(b=True, which='minor', color='#999999', linestyle='-')
             plt.ylim(0, max(history)[0] * 1.05)

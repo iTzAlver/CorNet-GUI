@@ -106,7 +106,7 @@ class Model:
                     _lastlay = this_lay(_lastlay)
 
             # Add the output of the model.
-            out = keras.layers.Dense(compiler.io_shape[1], activation="softmax", name='output')(_lastlay)
+            out = keras.layers.Dense(compiler.io_shape[1], activation="sigmoid", name='output')(_lastlay)
             # out = keras.layers.ThresholdedReLU(0.2)(out)
 
             _compile = copy.copy(compiler.compiler)
