@@ -20,7 +20,7 @@ class Report:
             self.noreport = number
         else:
             self.noreport = self._getnumber()
-        self.model_name = model.model._name.replace('_', ' ')
+        self.model_name = model.model.name.replace('_', ' ')
         self.dbname = db.name.replace('_', ' ')
         self.dbtype = db.type.replace('_', ' ')
         self.dbsize = db.size

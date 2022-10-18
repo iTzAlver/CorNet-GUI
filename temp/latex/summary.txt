@@ -2,16 +2,24 @@ Model: "model"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
                                                                  
- conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+ flatten (Flatten)           (None, 64)                0         
                                                                  
- flatten_1 (Flatten)         (None, 3136)              0         
+ dense (Dense)               (None, 128)               8320      
                                                                  
- output (Dense)              (None, 8)                 25096     
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
                                                                  
 =================================================================
-Total params: 25,416
-Trainable params: 25,416
+Total params: 30,120
+Trainable params: 30,120
 Non-trainable params: 0
 _________________________________________________________________

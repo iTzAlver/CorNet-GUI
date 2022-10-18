@@ -404,6 +404,9 @@ class MainWindow:
 
     def train_static(self):
         # Training the model with the database.
+        if self.model is None:
+            self.lowrite(_text='Unable to train a non-compiled model. Try to compile it first.', cat='Info')
+            return
         if self.running:
             self.running = False
             self.lowrite(_text='Training stopped.', cat='Info')
@@ -496,20 +499,21 @@ class MainWindow:
     def add_layer(self, idx=None):
         # Add the layer button.
         typ = self.layer_selection.get()
-        shape = self.shape_entry.get().split(', ')
+        shape: list = self.shape_entry.get().split(', ')
 
         if shape[0]:
             for index, shap in enumerate(shape):
                 shape[index] = self._tonum(shap)
         else:
-            shape = ''
+            shape = []
 
         extras = self.extra_name_entry.get()
-        values = self.extra_value_entry.get()
+        _values = self.extra_value_entry.get()
+        values: list = list()
         if extras:
             extras = extras.split(', ')
-        if values:
-            values = values.split(', ')
+        if _values:
+            values = _values.split(', ')
             for i, value in enumerate(values):
                 if value[0] == "\'":
                     values[i] = value.replace('\'', '')
@@ -523,9 +527,15 @@ class MainWindow:
         else:
             self.lowrite(_text=f'Adding new layer to the model:\n\t\t{typ} {shape}', cat='Info')
             if idx is None:
-                self.current_model_list.append((f'{typ} {shape}', (extras, values)))
+                if shape:
+                    self.current_model_list.append((f'{typ} {shape}', (extras, values)))
+                else:
+                    self.current_model_list.append((f'{typ} ', (extras, values)))
             else:
-                self.current_model_list[idx] = (f'{typ} {shape}', (extras, values))
+                if shape:
+                    self.current_model_list[idx] = (f'{typ} {shape}', (extras, values))
+                else:
+                    self.current_model_list.append((f'{typ} ', (extras, values)))
             self.listoflayers["values"] = [val[0] for val in self.current_model_list]
 
         self.shape_entry.delete(0, END)
@@ -692,7 +702,10 @@ class MainWindow:
 
     def _read_models(self):
         # This function reads the current custom models and updates the model list.
-        cmodels = [cmodel[:-3] for cmodel in os.listdir(MODEL_LOCATION)]
+        cmodels = []
+        for cmodel in os.listdir(MODEL_LOCATION):
+            if '.h5' in cmodel:
+                cmodels.append(cmodel[:-3])
         self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
         self.typeoflayers.extend(cmodels)
         self.layer_selection["values"] = self.typeoflayers

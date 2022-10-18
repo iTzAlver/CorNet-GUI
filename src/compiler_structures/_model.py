@@ -40,6 +40,7 @@ class Model:
         self.model = None
         self.compiler = compiler
         self.summary: str = 'Uncompiled model.'
+        self.name = 'Unnamed'
         if model is None:
             if self.compiler is not None:
                 self.devices: dict = compiler.devices
@@ -53,6 +54,7 @@ class Model:
             else:
                 self.devices: dict = {}
             self._logtracker()
+            self.name = model.model.name
 
         self.history: list = []
         self.is_trained: bool = False

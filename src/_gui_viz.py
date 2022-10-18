@@ -8,7 +8,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
+from tkinter import Tk, LabelFrame, filedialog
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 
 from .utils import HoverButton, ColorStyles

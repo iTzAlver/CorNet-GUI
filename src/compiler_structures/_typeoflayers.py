@@ -121,10 +121,10 @@ KERAS_LISTOF_TYPEOFLAYERS = ['Dense',
                              ''
                              ]
 PREBUILT_LAYERS = [
-    '',
-    'RandomForest',
-    'DecisionTree',
-    'Pbmm'
+    '(!) RandomForest',
+    '(!) DecisionTree',
+    '(!) Pbmm',
+    ''
 ]
 
 TYPEOFLOSES = [
@@ -134,7 +134,7 @@ TYPEOFLOSES = [
             'huber_loss', 'log_cosh', 'poisson', 'serialize', 'sparse_categorical_crossentropy', 'squared_hinge', ''
         ]
 
-CUSTOM_LOSES = ['window_diff']
+CUSTOM_LOSES = ['(!) window_diff']
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

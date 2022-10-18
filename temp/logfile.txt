@@ -11756,4 +11756,75 @@ _________________________________________________________________
 <Tue Oct 18 16:54:39 2022>	[Info]:	The model compiled sucessfuly.
 <Tue Oct 18 16:54:39 2022>	[Info]:	Scheme drawn sucessfuly.
 <Tue Oct 18 16:54:40 2022>	[Info]:	Training the current model.
-<Tue Oct 18 16:57:12 2022>	[Info]:	Training stopped.
+<Tue Oct 18 16:57:12 2022>	[Info]:	Training stopped.[Tue Oct 18 17:25:32 2022]		Welcome to CORNET!
+<Tue Oct 18 17:25:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Tue Oct 18 17:25:55 2022>	[Info]:	Database 32k_8t_0w loaded.
+<Tue Oct 18 17:26:04 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 18 17:26:08 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Tue Oct 18 17:26:11 2022>	[Info]:	Adding new layer to the model:
+		Flatten [128]
+<Tue Oct 18 17:26:14 2022>	[Info]:	Adding new layer to the model:
+		Flatten [64]
+<Tue Oct 18 17:26:17 2022>	[Info]:	Adding new layer to the model:
+		Flatten [32]
+<Tue Oct 18 17:26:44 2022>	[Info]:	Removed ('Flatten [128]', ('', '')) from the layer list.
+<Tue Oct 18 17:26:45 2022>	[Info]:	Removed ('Flatten [32]', ('', '')) from the layer list.
+<Tue Oct 18 17:26:46 2022>	[Info]:	Removed ('Flatten [64]', ('', '')) from the layer list.
+<Tue Oct 18 17:26:51 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Oct 18 17:26:54 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Oct 18 17:26:57 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Tue Oct 18 17:26:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Oct 18 17:27:03 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Oct 18 17:27:07 2022>	[Info]:	Training the current model.
+<Tue Oct 18 17:27:24 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Dense [64]
+		Dense [128]
+		Output:8
+
+<Tue Oct 18 17:27:25 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
+                                                                 
+=================================================================
+Total params: 30,120
+Trainable params: 30,120
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 18 17:27:25 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Oct 18 17:27:25 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 18 17:27:26 2022>	[Info]:	Training stopped.
+<Tue Oct 18 17:27:26 2022>	[Info]:	Training the current model.
+<Tue Oct 18 17:28:47 2022>	[Info]:	Training stopped.
+<Tue Oct 18 17:29:34 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/autoencoder_2n.

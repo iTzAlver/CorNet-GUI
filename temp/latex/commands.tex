@@ -1,7 +1,7 @@
 \newcommand{\authorx}{Palomo Alonso, Alberto}
-\newcommand{\noreport}{CNET0014}
+\newcommand{\noreport}{CNET0015}
 \newcommand{\name}{model}
-\newcommand{\dbname}{32k 8t 0w 2c}
+\newcommand{\dbname}{32k 8t 0w}
 \newcommand{\dbtype}{hypertrain}
 \newcommand{\dbsize}{(22938, 6554, 3276)}
 \newcommand{\dbdist}{{'train': 70, 'validation': 20, 'test': 10}}
@@ -10,8 +10,12 @@
 \newcommand{\modelloss}{mean squared error}
 \newcommand{\modelopt}{adam}
 \newcommand{\modeldevs}{1}
-\newcommand{\modeltab}{Conv2D & (64, 2) &  \\ 
-Flatten & (None,) &  \\ 
+\newcommand{\modeltab}{Flatten & (None,) &  \\ 
+Dense & (128,) &  \\ 
+Dense & (64,) &  \\ 
+Dense & (32,) &  \\ 
+Dense & (64,) &  \\ 
+Dense & (128,) &  \\ 
 }
-\newcommand{\maxloss}{???}
-\newcommand{\minloss}{???}
+\newcommand{\maxloss}{0.0977}
+\newcommand{\minloss}{0.0872}
