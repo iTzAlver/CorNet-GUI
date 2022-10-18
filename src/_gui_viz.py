@@ -48,6 +48,8 @@ class MainWindow:
         self.master = master
         self.master.title("Database Visualization")
         self.master.geometry('415x535')
+        self.master.minsize(415, 430)
+        self.master.maxsize(415, 535)
         self.master.configure(bg='black')
         self.colors = ColorStyles
         self.db = None
@@ -128,10 +130,11 @@ class MainWindow:
 
     def infere(self):
         model_path = filedialog.askopenfilename(filetypes=[('Keras Model', '*.h5')], initialdir=MODEL_LOCATION)
-        model = Model.load(model_path)
-        self.guess = np.array(model.predict([self.x])[0])
-        _x, _y = self.render_mat(self.x, self.y)
-        self.print_canvas(_x, _y)
+        if model_path:
+            model = Model.load(model_path)
+            self.guess = np.array(model.predict([self.x])[0])
+            _x, _y = self.render_mat(self.x, self.y)
+            self.print_canvas(_x, _y)
 
     def get_new_mat(self):
         _type, no, x, y = self.db.randget()
@@ -142,8 +145,9 @@ class MainWindow:
 
     def new_db(self):
         new_path = filedialog.askopenfilename(filetypes=[('Database files', '*.ht')], initialdir=DATABASE_LOCATION)
-        self.db = Database.load(new_path)
-        self.get_new_mat()
+        if new_path:
+            self.db = Database.load(new_path)
+            self.get_new_mat()
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

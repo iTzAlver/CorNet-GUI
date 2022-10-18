@@ -51,19 +51,19 @@ class HtGenerator:
     def _single_build(self):
         # Builds only a pair of matrix.
         segmentation = np.zeros(self.options['tput'], dtype=np.uint8)
-        no_splits = np.round(self.options['clust_m'] + self.options['clust_v'] * 2 * (np.random.normal() - 0.5))
-        for _ in range(int(no_splits)):
+        no_splits = np.round(np.random.normal(self.options['clust_m'], self.options['clust_v']))
+        for _ in range(int(abs(no_splits - 1))):
             segmentation = self._insert_1(segmentation)
+        segmentation[0] = 1
         return segmentation, self._seg2mat(segmentation)
 
     def _awgn_off(self, _mtx):
         # Adds offset and AWGN to the matrix.
         mtx = np.copy(_mtx)
-        off = self.scale * (self.options['off_m'] + self.options['off_v'] ** 0.5 * 2 * (np.random.normal() - 0.5))
+        off = self.scale * np.random.normal(self.options['off_m'], self.options['off_v'])
         for row, rowe in enumerate(_mtx):
             for col, element in enumerate(rowe):
-                awgn = self.scale * (self.options['awgn_m'] + self.options['awgn_v'] ** 0.5 * 2 *
-                                     (np.random.normal() - 0.5))
+                awgn = self.scale * np.random.normal(self.options['awgn_m'], self.options['awgn_v'])
                 if element + awgn + off < 0:
                     mtx[row, col] = abs(element + abs(awgn) + off)
                 elif element + awgn + off > self.scale:
@@ -90,7 +90,7 @@ class HtGenerator:
         base = 0
         placix = 0
         for idx, element in enumerate(seg):
-            mat[idx, idx] = 1
+            mat[idx, idx] = self.scale
             if element == 0:
                 for ix in range(base, placix + base + 1):
                     mat[idx, ix] = np.array([self.scale])

@@ -36,6 +36,8 @@ class MainWindow:
         self.master = master
         self.master.title("DATABASE GENERATOR")
         self.master.geometry('690x420')
+        self.master.minsize(690, 420)
+        self.master.maxsize(690, 420)
         self.colors = ColorStyles
         # -------------------------------------------------------------------------------------------------------------
         #                       VARIABLES

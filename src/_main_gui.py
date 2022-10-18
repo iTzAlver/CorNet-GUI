@@ -38,6 +38,8 @@ class MainWindow:
         self.master = master
         self.master.title("Cornet API v0")
         self.master.geometry('300x400')
+        self.master.minsize(300, 400)
+        self.master.maxsize(300, 400)
         self.master.configure(bg='black')
         self.colors = ColorStyles
 

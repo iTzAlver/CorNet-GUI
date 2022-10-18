@@ -65,6 +65,8 @@ class MainWindow:
         self.master = master
         self.master.title("CORNET")
         self.master.geometry('620x810')
+        self.master.minsize(620, 810)
+        self.master.maxsize(1290, 810)
         self.windowsize = '620x810'
         self.colors = ColorStyles
         self.model_list = self._readmodels_slm()
