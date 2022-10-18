@@ -426,10 +426,7 @@ class MainWindow:
                     self.eval.append(history['eval'])
                     self._print_history()
             queue.put('MASTER:STOP')
-            msg = ''
-            while msg != 'SLAVE:STOPPED':
-                if not queue.empty():
-                    msg = queue.get()
+            p.join()
             self.model.bypass(bypass)
 
     def _compile(self, compiler):
@@ -709,6 +706,7 @@ class MainWindow:
         plt.grid(b=True, which='major', color='#666666', linestyle='-')
         plt.minorticks_on()
         plt.grid(b=True, which='minor', color='#999999', linestyle='-')
+        plt.ylim(0, max(self.history)[0] * 1.05)
         if self.canvas2 is not None:
             self.canvas2.get_tk_widget().pack_forget()
             self.toolbar2.destroy()

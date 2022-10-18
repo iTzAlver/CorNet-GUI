@@ -198,6 +198,7 @@ class Model:
         # Recieve the messages from master.
         msg = ''
         while msg != 'MASTER:STOP':
+            print(f'Process fitting model: {msg}')
             hist = model.fit(db, epoch)
             if not queue.empty():
                 msg = queue.get()
@@ -205,8 +206,6 @@ class Model:
         # Bypassing again.
         if bypass:
             model.bypass(bypass)
-        queue.put('SLAVE:STOPPED')
-        return
 
     def bypass(self, path='.'):
         if not self._bypass:
