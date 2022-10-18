@@ -92,8 +92,8 @@ class MainWindow:
         # Training variables:
         self.throughput = None
         self.running = False
-        self.history = []
-        self.eval = []
+        self.history = {}
+        self.eval = {}
         # Model variables:
         add_pipeline = ['open_pipeline', 'close_pipeline', '']
         self.typeoflayers = KERAS_LISTOF_TYPEOFLAYERS
@@ -105,6 +105,7 @@ class MainWindow:
         self.optimizers = ['adadelta', 'adam', 'RMSprop', 'sgd', 'nadam', 'adamax', 'adagrad', 'ftlr']
         self.current_model_list = []
         self.model = None
+        self.nmodel = 0
         # Canvas:
         self.canvas1 = None
         self.toolbar1 = None
@@ -377,7 +378,7 @@ class MainWindow:
                latex_path='../temp/latex',
                model=self.model,
                db=self.database,
-               history=self.history)
+               history=self.history[self.model.name])
 
     def import_model(self):
         # Import the deep learning model.
@@ -387,6 +388,8 @@ class MainWindow:
                 self.current_model_list = pickle.load(file)
                 self.listoflayers["values"] = [val[0] for val in self.current_model_list]
             self.model = Model.load(f'{MODEL_LOCATION}/{filename.split("/")[-1]}.h5')
+            self.history[self.model.name] = []
+            self.eval[self.model.name] = []
             self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
             self.draw_scheme()
             self.throughput = self.model.compiler.io_shape[1]
@@ -425,8 +428,8 @@ class MainWindow:
                 self.master.update()
                 if not queue.empty():
                     history = queue.get()
-                    self.history.append(history['loss'])
-                    self.eval.append(history['eval'])
+                    self.history[self.model.name].append(history['loss'])
+                    self.eval[self.model.name].append(history['eval'])
                     self._print_history()
             queue.put('MASTER:STOP')
             p.join()
@@ -435,7 +438,10 @@ class MainWindow:
     def _compile(self, compiler):
         # Compile the model into self.model.
         try:
-            self.model = compiler.compile()
+            self.model = compiler.compile(name=f'model_{self.nmodel}')
+            self.nmodel += 1
+            self.history[self.model.name] = []
+            self.eval[self.model.name] = []
             self.lowrite(f'Model summary:\n{self.model.summary}', cat='Info')
             return True
         except Exception as ex:
@@ -711,15 +717,21 @@ class MainWindow:
         self.layer_selection["values"] = self.typeoflayers
 
     def _print_history(self):
+        name = self.model.name
         myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(self.history, 'b', label='Loss')
-        plt.plot(self.eval, 'r', label='WD')
+        for key, history in self.history.items():
+            if key == name:
+                if history:
+                    plt.plot(history, 'b', label=key)
+            else:
+                plt.plot(history, '--', label=key)
+        plt.plot(self.eval[name], 'r', label='WD')
         plt.legend()
         plt.title('Learning curve')
         plt.grid(b=True, which='major', color='#666666', linestyle='-')
         plt.minorticks_on()
         plt.grid(b=True, which='minor', color='#999999', linestyle='-')
-        plt.ylim(0, max(self.history)[0] * 1.05)
+        plt.ylim(0, max(self.history[name])[0] * 1.05)
         if self.canvas2 is not None:
             self.canvas2.get_tk_widget().pack_forget()
             self.toolbar2.destroy()

@@ -29,7 +29,7 @@ except Exception as ex:
 
 # -----------------------------------------------------------
 class Model:
-    def __init__(self, compiler, model=None):
+    def __init__(self, compiler, model=None, name='current_model'):
         """
         The Class model implements an API that makes use of keras and tensorflow to build Deep Learning Models.
         :param compiler: Compiler object to build the model.
@@ -40,7 +40,7 @@ class Model:
         self.model = None
         self.compiler = compiler
         self.summary: str = 'Uncompiled model.'
-        self.name = 'Unnamed'
+        self.name = name
         if model is None:
             if self.compiler is not None:
                 self.devices: dict = compiler.devices
@@ -54,7 +54,6 @@ class Model:
             else:
                 self.devices: dict = {}
             self._logtracker()
-            self.name = model.model.name
 
         self.history: list = []
         self.is_trained: bool = False
@@ -114,7 +113,7 @@ class Model:
             if _compile['loss'] in CUSTOM_LOSES:
                 _compile['loss'] = getattr(Sublosses, compiler.compiler['loss'])
 
-            model = keras.Model(_inp, out)
+            model = keras.Model(_inp, out, name=self.name)
             model.compile(**_compile)
             self.model = model
 
@@ -164,7 +163,8 @@ class Model:
             compiler = None
 
         model = keras.models.load_model(model_path, custom_objects=custom_obj)
-        return Model(compiler, model=model)
+        name = model_path.split('/')[-1].replace('.h5', '')
+        return Model(compiler, model=model, name=name)
 
     @staticmethod
     def _model_scope(_devices):
@@ -200,7 +200,6 @@ class Model:
         # Recieve the messages from master.
         msg = ''
         while msg != 'MASTER:STOP':
-            print(f'Process fitting model: {msg}')
             hist = model.fit(db, epoch)
             if not queue.empty():
                 msg = queue.get()

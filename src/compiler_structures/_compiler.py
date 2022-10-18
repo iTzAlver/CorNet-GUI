@@ -52,9 +52,9 @@ class Compiler:
                             dik[kwd] = arg
                 self.args.append(dik)
 
-    def compile(self):
+    def compile(self, name='current_model'):
         if self.is_valid:
-            return Model(self)
+            return Model(self, name=name)
         else:
             if self._verbose:
                 print('The model is not valid for compiling.')
