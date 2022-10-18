@@ -120,7 +120,7 @@ class Model:
     def model_print(self, print_path='.'):
         plot_model(self.model, to_file=f'{print_path}/compiled-model.gv.png', show_shapes=True)
 
-    def fit(self, db, epoch=1):
+    def fit(self, db, epoch=1, evaluate=True):
         self.is_trained = True
         xtrain = convert_to_tensor(np.array(db.dataset.xtrain).astype("float32") / 255)
         ytrain = convert_to_tensor(db.dataset.ytrain)
@@ -129,7 +129,8 @@ class Model:
         _history = self.model.fit(xtrain, ytrain, batch_size=db.batch_size, epochs=epoch, validation_data=(xval, yval))
         history = dict()
         history['loss'] = _history.history['loss']
-        history['eval'] = self._eval(xval, yval)
+        if evaluate:
+            history['eval'] = self._eval(xval, yval)
         self.history.append(_history.history)
         return history
 
@@ -236,7 +237,9 @@ class Model:
         return self.compiler.layers == other.compiler.layers
 
     def _eval(self, xval, yval):
-        return Sublosses.window_diff(self.model.predict(xval), yval)
+        pred = self.model.predict(xval)
+        wd = Sublosses.window_diff(pred, yval)
+        return wd
 
     def predict(self, x):
         _x_ = convert_to_tensor(np.array(x).astype("float32") / 255)
