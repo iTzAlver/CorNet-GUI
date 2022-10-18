@@ -724,7 +724,8 @@ class MainWindow:
                 if history:
                     plt.plot(history, 'b', label=key)
             else:
-                plt.plot(history, '--', label=key)
+                if history:
+                    plt.plot(history, '--', label=key)
         plt.plot(self.eval[name], 'r', label='WD')
         plt.legend()
         plt.title('Learning curve')

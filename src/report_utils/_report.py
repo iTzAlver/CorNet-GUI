@@ -121,16 +121,17 @@ class Report:
             file.write(report)
         with open(f'{latex}/summary.txt', 'w', encoding='utf-8') as file:
             file.write(summary)
-        myfig = plt.figure(figsize=(4.86, 3), dpi=80)
-        plt.plot(history, 'b', label='Loss')
-        plt.legend()
-        plt.title('Learning curve')
-        plt.grid(b=True, which='major', color='#666666', linestyle='-')
-        plt.minorticks_on()
-        plt.grid(b=True, which='minor', color='#999999', linestyle='-')
-        plt.ylim(0, max(history)[0] * 1.05)
-        plt.savefig(saveas)
-        plt.close(myfig)
+        if history:
+            myfig = plt.figure(figsize=(4.86, 3), dpi=80)
+            plt.plot(history, 'b', label='Loss')
+            plt.legend()
+            plt.title('Learning curve')
+            plt.grid(b=True, which='major', color='#666666', linestyle='-')
+            plt.minorticks_on()
+            plt.grid(b=True, which='minor', color='#999999', linestyle='-')
+            plt.ylim(0, max(history)[0] * 1.05)
+            plt.savefig(saveas)
+            plt.close(myfig)
 
     def _getnumber(self):
         with open(f'{self._latex_path}/number', 'r', encoding='utf-8') as file:

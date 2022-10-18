@@ -12781,4 +12781,132 @@ _________________________________________________________________
 <Tue Oct 18 18:26:52 2022>	[Info]:	Training stopped.
 <Tue Oct 18 18:27:04 2022>	[Info]:	Database 32k_8t_01w loaded.
 <Tue Oct 18 18:27:05 2022>	[Info]:	Training the current model.
-<Tue Oct 18 18:27:31 2022>	[Info]:	Training stopped.
+<Tue Oct 18 18:27:31 2022>	[Info]:	Training stopped.[Tue Oct 18 18:29:59 2022]		Welcome to CORNET!
+<Tue Oct 18 18:29:59 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Tue Oct 18 18:30:03 2022>	[Info]:	Database 32k_8t_0w loaded.
+<Tue Oct 18 18:30:10 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Oct 18 18:30:22 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Oct 18 18:30:25 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Oct 18 18:30:27 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Tue Oct 18 18:30:30 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Oct 18 18:30:32 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Oct 18 18:30:37 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Dense [64]
+		Dense [128]
+		Output:8
+
+<Tue Oct 18 18:30:37 2022>	[Error]:	The model has the following errors:
+There are no training devices...
+<Tue Oct 18 18:30:37 2022>	[Info]:	The model compiled with errors.
+<Tue Oct 18 18:30:41 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 18 18:30:44 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Dense [64]
+		Dense [128]
+		Output:8
+
+<Tue Oct 18 18:30:44 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
+                                                                 
+=================================================================
+Total params: 30,120
+Trainable params: 30,120
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 18 18:30:44 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Oct 18 18:30:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 18 18:31:07 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/autoencoder_2n_0.
+<Tue Oct 18 18:33:29 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
+                                                                 
+=================================================================
+Total params: 30,120
+Trainable params: 30,120
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
+                                                                 
+=================================================================
+Total params: 30,120
+Trainable params: 30,120
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 18 18:33:30 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 18 18:33:30 2022>	[Info]:	Imported model C:/Users/ialve/Desktop/cnet/db/model_lists/autoencoder_2n_0.
+<Tue Oct 18 18:33:32 2022>	[Info]:	Training the current model.
+<Tue Oct 18 18:34:53 2022>	[Info]:	Training stopped.
+<Tue Oct 18 18:35:02 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/autoencoder_trained.
