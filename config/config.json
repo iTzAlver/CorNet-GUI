@@ -12,9 +12,11 @@
     "COMPILER_LIST_LOCATION": "../db/model_lists",
     "MODEL_LOCATION": "../db/models",
     "DATABASE_LOCATION": "../db/db",
-    "MODEL_TEMP": "../temp/tempmodel.h5"
+    "MODEL_TEMP": "../temp/tempmodel.h5",
+    "LOGO_LOCATION": "../multimedia/cornet.png"
   },
   "commands": {
     "latex_compiler": "pdflatex main.tex"
-  }
+  },
+  "version": "0.1.1"
 }

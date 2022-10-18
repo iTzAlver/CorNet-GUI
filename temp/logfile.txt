@@ -11174,3 +11174,140 @@ _________________________________________________________________
 <Mon Oct 17 18:57:51 2022>	[Info]:	Current available devices:
 	Device 0:	/device:CPU:0		Role: None
 	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 18:58:39 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 18:58:42 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 18:58:48 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 18:58:50 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 18:58:50 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 18:58:51 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 18:58:51 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 18:58:51 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 18:58:52 2022>	[Info]:	Training the current model.[Mon Oct 17 19:00:39 2022]		Welcome to CORNET!
+<Mon Oct 17 19:00:39 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Mon Oct 17 19:00:50 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Mon Oct 17 19:00:53 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Mon Oct 17 19:01:01 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Mon Oct 17 19:01:03 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Mon Oct 17 19:01:03 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Mon Oct 17 19:01:04 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d (Conv2D)             (None, 7, 7, 64)          320       
+                                                                 
+ flatten (Flatten)           (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Oct 17 19:01:04 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Oct 17 19:01:04 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Oct 17 19:01:05 2022>	[Info]:	Training the current model.[Tue Oct 18 11:48:03 2022]		Welcome to CORNET!
+<Tue Oct 18 11:48:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+[Tue Oct 18 11:48:14 2022]		Finishing the current session.
+
+[Tue Oct 18 13:33:03 2022]		Welcome to CORNET!
+<Tue Oct 18 13:33:03 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+<Tue Oct 18 13:33:10 2022>	[Info]:	Device /device:GPU:0 set up for Train.
+<Tue Oct 18 13:33:17 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 2]
+<Tue Oct 18 13:33:22 2022>	[Info]:	Adding new layer to the model:
+		Flatten 
+<Tue Oct 18 13:33:24 2022>	[Info]:	Compiling the current model:
+		Input:None
+		Conv2D [64, 2]
+		Flatten 
+		Output:None
+
+<Tue Oct 18 13:33:25 2022>	[Error]:	The model has the following errors:
+int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+<Tue Oct 18 13:33:25 2022>	[Info]:	The model compiled with errors.
+<Tue Oct 18 13:33:38 2022>	[Info]:	Database 32k_8t_0w_2c loaded.
+<Tue Oct 18 13:33:41 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Conv2D [64, 2]
+		Flatten 
+		Output:8
+
+<Tue Oct 18 13:33:41 2022>	[Info]:	Model summary:
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 7, 7, 64)          320       
+                                                                 
+ flatten_1 (Flatten)         (None, 3136)              0         
+                                                                 
+ output (Dense)              (None, 8)                 25096     
+                                                                 
+=================================================================
+Total params: 25,416
+Trainable params: 25,416
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Oct 18 13:33:41 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Oct 18 13:33:41 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Oct 18 13:33:54 2022>	[Info]:	Model exported to C:/Users/ialve/Desktop/cnet/db/model_lists/tesmodel.[Tue Oct 18 13:39:36 2022]		Welcome to CORNET!
+<Tue Oct 18 13:39:36 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+[Tue Oct 18 13:47:37 2022]		Welcome to CORNET!
+<Tue Oct 18 13:47:37 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+[Tue Oct 18 13:47:55 2022]		Finishing the current session.
+

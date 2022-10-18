@@ -72,6 +72,28 @@ class Database:
         with open(path, 'rb') as file:
             self = pickle.load(file)
         return self
+
+    def randget(self):
+        types = random.randint(0, 2)
+        if types == 0:
+            tlen = len(self.dataset.xtrain)
+            _type = 'Train'
+            no = random.randint(0, tlen)
+            mat = self.dataset.xtrain[no]
+            ref = self.dataset.ytrain[no]
+        elif types == 1:
+            tlen = len(self.dataset.xval)
+            _type = 'Validation'
+            no = random.randint(0, tlen)
+            mat = self.dataset.xval[no]
+            ref = self.dataset.yval[no]
+        else:
+            tlen = len(self.dataset.xtest)
+            _type = 'Test'
+            no = random.randint(0, tlen)
+            mat = self.dataset.xtest[no]
+            ref = self.dataset.ytest[no]
+        return _type, no, mat, ref
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

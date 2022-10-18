@@ -4,8 +4,10 @@
 # Universidad de Alcalá - Escuela Politécnica Superior      #
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
-from ._gui import gui
-from ._dbgui import dbgui
+from ._gui import gui as _gui
+from ._dbgui import dbgui as _dbgui
+from ._main_gui import main_gui as gui
+from ._gui_viz import guiviz as _guiviz
 
 from .database_structures import Database
 from .database_structures import Generator

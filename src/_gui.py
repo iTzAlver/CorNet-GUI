@@ -5,7 +5,6 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-import os
 from tkinter import Tk, LabelFrame, Label, Entry, ttk, END, scrolledtext, filedialog
 from ttkwidgets.autocomplete import AutocompleteCombobox
 from .utils import HoverButton, ColorStyles, layers_help
@@ -20,7 +19,7 @@ from ._dbgui import dbgui
 from .report_utils import Report
 from .__path_to_config__ import PATH_TO_CONFIG
 
-
+import os
 import time
 import graphviz as gv
 import matplotlib.pyplot as plt

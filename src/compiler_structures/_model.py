@@ -125,10 +125,12 @@ class Model:
         ytrain = convert_to_tensor(db.dataset.ytrain)
         xval = convert_to_tensor(np.array(db.dataset.xval).astype("float32") / 255)
         yval = convert_to_tensor(db.dataset.yval)
-        history = self.model.fit(xtrain, ytrain, batch_size=db.batch_size, epochs=epoch, validation_data=(xval, yval))
+        _history = self.model.fit(xtrain, ytrain, batch_size=db.batch_size, epochs=epoch, validation_data=(xval, yval))
+        history = dict()
+        history['loss'] = _history.history['loss']
         history['eval'] = self._eval(xval, yval)
-        self.history.append(history.history)
-        return history.history
+        self.history.append(_history.history)
+        return history
 
     def save(self, model_path, compiler_path=''):
         self.model.save(model_path)
@@ -142,7 +144,8 @@ class Model:
             with open(_compiler_path, 'wb') as file:
                 pickle.dump(self.compiler, file)
 
-    def load(self, model_path, compiler_path=''):
+    @staticmethod
+    def load(model_path, compiler_path=''):
         custom_obj = {}
         if not compiler_path:
             _compiler_path = model_path.replace('.h5', '.cpl')
@@ -153,7 +156,7 @@ class Model:
         if os.path.exists(_compiler_path):
             with open(_compiler_path, 'rb') as file:
                 compiler = pickle.load(file)
-            custom_obj = self._get_customs(compiler)
+            custom_obj = _get_customs(compiler)
         else:
             print('Warining: The compiler path is empty, the current model has no compiler.')
             compiler = None
@@ -211,7 +214,7 @@ class Model:
             self.model = None
             self._bypass = True
         else:
-            self.model = keras.models.load_model(path, custom_objects=self._get_customs(self.compiler))
+            self.model = keras.models.load_model(path, custom_objects=_get_customs(self.compiler))
             self._bypass = False
             if '.h5' not in path:
                 _path = f'{path}.h5'
@@ -219,13 +222,6 @@ class Model:
                 _path = path
             os.remove(_path)
         return path
-
-    @staticmethod
-    def _get_customs(compiler):
-        custom_obj = {}
-        if compiler.compiler['loss'] in CUSTOM_LOSES:
-            custom_obj[compiler.compiler['loss']] = getattr(Sublosses, compiler.compiler['loss'])
-        return custom_obj
 
     def __repr__(self):
         return f'Model object with the following parameters:\nCompiler: {self.compiler}\nSummary: {self.summary}'
@@ -241,6 +237,19 @@ class Model:
 
     def _eval(self, xval, yval):
         return Sublosses.window_diff(self.model.predict(xval), yval)
+
+    def predict(self, x):
+        _x_ = convert_to_tensor(np.array(x).astype("float32") / 255)
+        _y_ = self.model.predict(_x_)
+        return _y_
+
+
+# -----------------------------------------------------------
+def _get_customs(compiler):
+    custom_obj = {}
+    if compiler.compiler['loss'] in CUSTOM_LOSES:
+        custom_obj[compiler.compiler['loss']] = getattr(Sublosses, compiler.compiler['loss'])
+    return custom_obj
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

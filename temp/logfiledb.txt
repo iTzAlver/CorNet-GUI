@@ -46280,3 +46280,13 @@ Welcome to the database generator!
 <Fri Oct 14 13:25:49 2022>	[Info]:	Database 32k_64t_01w_12c created sucessfuly.
 [Fri Oct 14 13:26:33 2022]		Finishing the current DB session.
 
+Welcome to the database generator!
+=================================================================================
+Welcome to the database generator!
+=================================================================================
+
+[Tue Oct 18 11:48:14 2022]		Finishing the current DB session.
+
+
+[Tue Oct 18 11:48:14 2022]		Finishing the current DB session.
+
