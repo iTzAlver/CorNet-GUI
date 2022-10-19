@@ -48,3 +48,53 @@ Total params: 30,120
 Trainable params: 30,120
 Non-trainable params: 0
 _________________________________________________________________
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 8)                 1032      
+                                                                 
+=================================================================
+Total params: 30,120
+Trainable params: 30,120
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 16, 16, 1)]       0         
+                                                                 
+ flatten (Flatten)           (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 128)               32896     
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_3 (Dense)             (None, 64)                2112      
+                                                                 
+ dense_4 (Dense)             (None, 128)               8320      
+                                                                 
+ output (Dense)              (None, 16)                2064      
+                                                                 
+=================================================================
+Total params: 55,728
+Trainable params: 55,728
+Non-trainable params: 0
+_________________________________________________________________
