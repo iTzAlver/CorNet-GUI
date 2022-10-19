@@ -217,6 +217,7 @@ class Model:
                         raise __ex
         except Exception as _ex:
             print(f'Exception received from the training worker at bypassing level: {_ex}')
+            queue.put('SLAVE:RETRY')
         finally:
             # Bypassing again.
             if bypass:

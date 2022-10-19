@@ -429,16 +429,25 @@ class MainWindow:
                 if not queue.empty():
                     history = queue.get()
                     if history == 'SLAVE:RETRY':
+                        self.lowrite(f'Error found in the worker, retrying training...', cat='Warning')
+                        p.join()
                         print('Retrying training...')
                         bypass = self.model.bypass(bypass)
+                        print('Recover successful...')
                         bypass = self.model.bypass(bypass)
+                        print('Re-bypassing successful...')
+                        print('Retrying in 10ms.')
+                        time.sleep(0.01)
                         queue = multiprocessing.Queue()
                         p = multiprocessing.Process(target=Model.fitmodel,
                                                     args=(self.model, self.database, queue),
                                                     kwargs={'bypass': bypass})
+                        p.start()
+                        print('Training is now up.')
                     else:
                         self.history[self.model.name].append(history['loss'])
                         self.eval[self.model.name].append(history['eval'])
+                        self.lowrite(f'Epoch finished, evaluation metric (WinDiff) = {history["eval"]}.', cat='Info')
                         self._print_history()
 
             queue.put('MASTER:STOP')
