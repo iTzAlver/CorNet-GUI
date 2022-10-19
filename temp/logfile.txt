@@ -13391,4 +13391,10 @@ _________________________________________________________________
 
 <Tue Oct 18 21:51:00 2022>	[Info]:	The model compiled sucessfuly.
 <Tue Oct 18 21:51:01 2022>	[Info]:	Scheme drawn sucessfuly.
-<Tue Oct 18 21:51:08 2022>	[Info]:	Training the current model.
+<Tue Oct 18 21:51:08 2022>	[Info]:	Training the current model.[Wed Oct 19 13:42:49 2022]		Welcome to CORNET!
+<Wed Oct 19 13:42:49 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: None
+	Device 1:	/device:GPU:0		Role: None
+
+[Wed Oct 19 14:47:19 2022]		Finishing the current session.
+

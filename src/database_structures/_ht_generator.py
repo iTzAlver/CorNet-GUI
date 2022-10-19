@@ -43,7 +43,13 @@ class HtGenerator:
                     self.queue.put(f'Building HT database {i} / {self.options["number"]}.')
         if self.queue is not None:
             self.queue.put(f'Building HT database {self.options["number"]} / {self.options["number"]}.')
-        thedb = Database((self.mtxs, self.segs), self.options)
+
+        if self.options['sym']:
+            _mtxs = self._sym(self.mtxs)
+        else:
+            _mtxs = self.mtxs
+
+        thedb = Database((_mtxs, self.segs), self.options)
         if self.options['path']:
             thedb.save()
         return thedb
@@ -100,6 +106,20 @@ class HtGenerator:
                 base = idx
                 placix = 0
         return mat
+
+    def _sym(self, mats: np.array):
+        _mats = mats.copy()
+        # Set of matrix:
+        for nm, _mat in enumerate(_mats):
+            for nr, row in enumerate(_mat):
+                for nc, element in enumerate(row):
+                    if nc == nr:
+                        _mats[nm][nc, nr, 0] = self.scale
+                    if nc < nr:
+                        _mats[nm][nc, nr, 0] = element
+                    else:
+                        break
+        return _mats
 
     def __repr__(self):
         return 'Warning: HtGenerator objects are not designed to be stored. Consider calling only ' \

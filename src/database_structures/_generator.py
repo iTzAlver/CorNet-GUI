@@ -8,6 +8,7 @@ class Generator:
     """Generator class creates a generator for a database."""
     def __init__(self, **kwargs):
         self.is_valid = False
+        self.sym = True
         self.add(**kwargs)
 
     def __repr__(self):
