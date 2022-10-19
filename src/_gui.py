@@ -428,9 +428,19 @@ class MainWindow:
                 self.master.update()
                 if not queue.empty():
                     history = queue.get()
-                    self.history[self.model.name].append(history['loss'])
-                    self.eval[self.model.name].append(history['eval'])
-                    self._print_history()
+                    if history == 'SLAVE:RETRY':
+                        print('Retrying training...')
+                        bypass = self.model.bypass(bypass)
+                        bypass = self.model.bypass(bypass)
+                        queue = multiprocessing.Queue()
+                        p = multiprocessing.Process(target=Model.fitmodel,
+                                                    args=(self.model, self.database, queue),
+                                                    kwargs={'bypass': bypass})
+                    else:
+                        self.history[self.model.name].append(history['loss'])
+                        self.eval[self.model.name].append(history['eval'])
+                        self._print_history()
+
             queue.put('MASTER:STOP')
             p.join()
             self.model.bypass(bypass)

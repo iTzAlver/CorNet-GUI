@@ -196,18 +196,31 @@ class Model:
     @staticmethod
     def fitmodel(_model, db, queue, bypass='', epoch=1):
         model = _model
-        if bypass:
-            model.bypass(bypass)
-        # Recieve the messages from master.
-        msg = ''
-        while msg != 'MASTER:STOP':
-            hist = model.fit(db, epoch)
-            if not queue.empty():
-                msg = queue.get()
-            queue.put(hist)
-        # Bypassing again.
-        if bypass:
-            model.bypass(bypass)
+        cex = 0
+        try:
+            if bypass:
+                model.bypass(bypass)
+            # Receive the messages from master.
+            msg = ''
+            while msg != 'MASTER:STOP':
+                try:
+                    hist = model.fit(db, epoch)
+                    cex = 0
+                    if not queue.empty():
+                        msg = queue.get()
+                    queue.put(hist)
+                except Exception as __ex:
+                    cex += 1
+                    print(f'{cex} Consecutive exceptions received from the training worker...')
+                    if cex > 2:
+                        print(f'Exception received from the training worker at training level: {__ex}')
+                        raise __ex
+        except Exception as _ex:
+            print(f'Exception received from the training worker at bypassing level: {_ex}')
+        finally:
+            # Bypassing again.
+            if bypass:
+                model.bypass(bypass)
 
     def bypass(self, path='.'):
         if not self._bypass:
