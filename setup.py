@@ -6,7 +6,8 @@
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 import setuptools
 import json
-with open(f'{__file__.replace(f"setup.py", "")}/config/config.json', 'r') as _file:
+print(f'\n\n{__file__}\n\n')
+with open(f'{__file__.replace(f"setup.py", "")}/./config/config.json', 'r') as _file:
     cfg = json.load(_file)
     __version__ = cfg["version"]
 
