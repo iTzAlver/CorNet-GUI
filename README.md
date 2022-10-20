@@ -26,6 +26,13 @@ ISDEFE Chair of Research.
    * LaTeX Reports.
    * Adaptation with Keras.
 
+### 0.1.1
+1. Created an overall api.
+2. Bug fixing.
+
+### 0.1.2
+1. Setuptools auto-build.
+
 ## Install
 
 To install the API you need to install the following software:
