@@ -10,7 +10,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='cornet_api',
-    version='0.1.2',
+    version='0.1.3',
     author='Palomo-Alonso, Alberto',
     author_email='a.palomo@edu.uah',
     description='CorNet API: Package for solving correlation matrix clustering.',
@@ -20,8 +20,7 @@ setuptools.setup(
     url='https://github.com/iTzAlver/cnet.git',
     project_urls={
         'Documentation': 'https://github.com/iTzAlver/cnet/blob/master/README.md',
-        'Bug Reports':
-        'https://github.com/iTzAlver/cnet/issues',
+        'Bug Reports': 'https://github.com/iTzAlver/cnet/issues',
         'Source Code': 'https://github.com/iTzAlver/cnet.git',
         # 'Funding': '',
         # 'Say Thanks!': '',
@@ -32,7 +31,6 @@ setuptools.setup(
         # see https://pypi.org/classifiers/
         'Development Status :: 5 - Production/Stable',
 
-        'Intended Audience :: Researchers',
         'Topic :: Software Development :: Build Tools',
 
         'Programming Language :: Python :: 3',

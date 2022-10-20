@@ -8,7 +8,7 @@
 import pickle
 import copy
 import numpy as np
-from tensorflow import keras, convert_to_tensor, distribute
+from tensorflow import keras, convert_to_tensor, distribute, expand_dims
 from keras.utils.vis_utils import plot_model
 from ._typeoflayers import KERAS_LISTOF_TYPEOFLAYERS, PREBUILT_LAYERS, CUSTOM_LOSES
 from ._logger import Logger
@@ -265,10 +265,28 @@ class Model:
             print(f'An Exception occurred while evaluation: {_ex_}')
             return 1
 
-    def predict(self, x):
+    def predict(self, x, expand: bool = False, th: (None, float) = None):
         _x_ = convert_to_tensor(np.array(x).astype("float32") / 255)
-        _y_ = self.model.predict(_x_)
-        return _y_
+        if expand:
+            __x = expand_dims(_x_, axis=-1)
+        else:
+            __x = _x_
+        _y_ = self.model.predict(__x)
+        if th is not None:
+            __y__ = self.threshold(_y_, th)
+        else:
+            __y__ = _y_
+        return __y__
+
+    @staticmethod
+    def threshold(y, th):
+        __y__ = []
+        for element in y:
+            if element > th:
+                __y__.append(1)
+            else:
+                __y__.append(0)
+        return convert_to_tensor(__y__)
 
 
 # -----------------------------------------------------------
