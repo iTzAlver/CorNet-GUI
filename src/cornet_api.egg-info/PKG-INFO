@@ -1,16 +1,24 @@
 Metadata-Version: 2.1
 Name: cornet-api
-Version: 0.1.0
-Summary: Package for solving correlation matrix clustering.
-Home-page: https://github.com/iTzAlver/cnet
-Author: Alberto Palomo Alonso
-Author-email: alberto.palomo@uah.es
-Project-URL: Bug Tracker, https://github.com/iTzAlver/cnet/issues
+Version: 0.1.2
+Summary: CorNet API: Package for solving correlation matrix clustering.
+Home-page: https://github.com/iTzAlver/cnet.git
+Author: Palomo-Alonso, Alberto
+Author-email: a.palomo@edu.uah
+Project-URL: Documentation, https://github.com/iTzAlver/cnet/blob/master/README.md
+Project-URL: Bug Reports, https://github.com/iTzAlver/cnet/issues
+Project-URL: Source Code, https://github.com/iTzAlver/cnet.git
+Keywords: deeplearning,ml,api
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Researchers
+Classifier: Topic :: Software Development :: Build Tools
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache License
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
+Provides-Extra: dev
 License-File: LICENSE
 
 # CorNet: Correlation solving methods based on Deep Learning Models.

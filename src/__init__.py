@@ -4,6 +4,8 @@
 # Universidad de Alcalá - Escuela Politécnica Superior      #
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
+import __version__
+
 from ._gui import gui as _gui
 from ._dbgui import dbgui as _dbgui
 from ._main_gui import main_gui as gui

@@ -5,25 +5,16 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-from src import gui
-
-
 # -----------------------------------------------------------
-def main() -> None:
-    gui()
-    return
 
 
-def test2():
+def test_ns():
     pass
+
+
 # -----------------------------------------------------------
-# Main:
-
-
 if __name__ == '__main__':
-    main()
-    test2()
-
+    test_ns()
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

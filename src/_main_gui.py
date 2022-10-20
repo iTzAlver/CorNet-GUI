@@ -10,15 +10,17 @@ from .utils import HoverButton, ColorStyles
 from ._dbgui import dbgui
 from ._gui import gui
 from ._gui_viz import guiviz
+from ._angui import angui
 # -----------------------------------------------------------
 import json
 from .__path_to_config__ import PATH_TO_CONFIG
+from .__version__ import version
 try:
     with open(PATH_TO_CONFIG, 'r') as _file:
         cfg = json.load(_file)
         ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
         LOGO_LOCATION = cfg["path"]["LOGO_LOCATION"]
-        VERSION = cfg["version"]
+        VERSION = version
 except Exception as _ex:
     print('Traceback: _gui.py. Path to config corrupted, try to run the gui from the proper executable.')
     raise _ex
@@ -37,9 +39,9 @@ class MainWindow:
     def __init__(self, master):
         self.master = master
         self.master.title("Cornet API v0")
-        self.master.geometry('300x400')
-        self.master.minsize(300, 400)
-        self.master.maxsize(300, 400)
+        self.master.geometry('300x440')
+        self.master.minsize(300, 440)
+        self.master.maxsize(300, 440)
         self.master.configure(bg='black')
         self.colors = ColorStyles
 
@@ -78,6 +80,14 @@ class MainWindow:
                                        width=25, bg=self.colors.orange)
         self.dviz_button.place(x=7, y=340)
 
+        self.comp_button = HoverButton(self.master,
+                                       text='ANALYZE MODEL',
+                                       command=self.start_comp,
+                                       font='Bahnschrift 14 bold',
+                                       fg='black',
+                                       width=25, bg=self.colors.blue)
+        self.comp_button.place(x=7, y=390)
+
     @staticmethod
     def start_gui():
         gui()
@@ -90,9 +100,9 @@ class MainWindow:
     def start_viz():
         guiviz()
 
-
-if __name__ == '__main__':
-    main_gui()
+    @staticmethod
+    def start_comp():
+        angui()
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

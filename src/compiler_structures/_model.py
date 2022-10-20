@@ -250,10 +250,20 @@ class Model:
     def __eq__(self, other):
         return self.compiler.layers == other.compiler.layers
 
-    def _eval(self, xval, yval):
+    def _eval(self, xval, yval, th=0.5):
         pred = self.model.predict(xval)
-        wd = Sublosses.window_diff(pred, yval)
+        wd = Sublosses.window_diff(pred, yval, th=th)
         return wd
+
+    def eval(self, xval, yval, th=0.5):
+        try:
+            _xval = convert_to_tensor(np.array(xval).astype("float32") / 255)
+            _yval = convert_to_tensor(yval)
+            wd = self._eval(_xval, _yval, th=th)
+            return wd
+        except Exception as _ex_:
+            print(f'An Exception occurred while evaluation: {_ex_}')
+            return 1
 
     def predict(self, x):
         _x_ = convert_to_tensor(np.array(x).astype("float32") / 255)

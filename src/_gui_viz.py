@@ -43,7 +43,7 @@ class MainWindow:
         self.master = master
         self.master.title("Database Visualization")
         self.master.geometry('415x535')
-        self.master.minsize(415, 430)
+        self.master.minsize(415, 535)
         self.master.maxsize(415, 535)
         self.master.configure(bg='black')
         self.colors = ColorStyles
@@ -54,6 +54,7 @@ class MainWindow:
         self.guess = None
         self.x = None
         self.y = None
+        self.model = None
 
         self.canvas_lf = LabelFrame(self.master, width=400, height=430, bg='black')
         self.canvas_lf.place(x=5, y=5)
@@ -124,10 +125,12 @@ class MainWindow:
         plt.close()
 
     def infere(self):
-        model_path = filedialog.askopenfilename(filetypes=[('Keras Model', '*.h5')], initialdir=MODEL_LOCATION)
-        if model_path:
-            model = Model.load(model_path)
-            self.guess = np.array(model.predict([self.x])[0])
+        if self.model is None:
+            model_path = filedialog.askopenfilename(filetypes=[('Keras Model', '*.h5')], initialdir=MODEL_LOCATION)
+            if model_path:
+                self.model = Model.load(model_path)
+        else:
+            self.guess = np.array(self.model.predict([self.x])[0])
             _x, _y = self.render_mat(self.x, self.y)
             self.print_canvas(_x, _y)
 
