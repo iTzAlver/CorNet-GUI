@@ -5,19 +5,13 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 import setuptools
-import json
-print(f'\n\n{__file__}\n\n')
-with open(f'{__file__.replace(f"setup.py", "")}./config/config.json', 'r') as _file:
-    cfg = json.load(_file)
-    __version__ = cfg["version"]
-
 
 with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name='cornet_api',
-    version=__version__,
+    version='0.1.2',
     author='Palomo-Alonso, Alberto',
     author_email='a.palomo@edu.uah',
     description='CorNet API: Package for solving correlation matrix clustering.',

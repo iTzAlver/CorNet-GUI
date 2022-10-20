@@ -5,10 +5,12 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
+import os
 # -----------------------------------------------------------
 
 
 def test_ns():
+    print(os.getcwd())
     pass
 
 
