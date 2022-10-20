@@ -14,13 +14,12 @@ from ._angui import angui
 # -----------------------------------------------------------
 import json
 from .__path_to_config__ import PATH_TO_CONFIG
-from .__version__ import version
 try:
     with open(PATH_TO_CONFIG, 'r') as _file:
         cfg = json.load(_file)
         ICO_LOCATION = cfg["path"]["ICO_LOCATION"]
         LOGO_LOCATION = cfg["path"]["LOGO_LOCATION"]
-        VERSION = version
+        VERSION = cfg["version"]
 except Exception as _ex:
     print('Traceback: _gui.py. Path to config corrupted, try to run the gui from the proper executable.')
     raise _ex
