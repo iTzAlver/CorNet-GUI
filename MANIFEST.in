@@ -1,2 +1,1 @@
-include ./multimedia/*.png
-include ./multimedia/*.jpg
+recursive-include ./src/cornet_api/include *

@@ -1,0 +1,21 @@
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 64)                4160      
+                                                                 
+ dense_1 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_2 (Dense)             (None, 8)                 264       
+                                                                 
+ output (Dense)              (None, 8)                 72        
+                                                                 
+=================================================================
+Total params: 6,576
+Trainable params: 6,576
+Non-trainable params: 0
+_________________________________________________________________

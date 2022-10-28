@@ -1,4 +1,4 @@
-appmap>=1.1.0.dev0
+basenet-api>=1.4.6
 tensorflow~=2.10.0
 tensorflow-gpu==2.10.*
 keras == 2.10.0
@@ -13,3 +13,4 @@ pydot~=1.4.2
 # CUDA.
 # CuDNN.
 # pdflatex.
+setuptools~=60.2.0

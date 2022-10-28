@@ -5,7 +5,7 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-from src import gui
+from src.cornet_api import gui
 # -----------------------------------------------------------
 
 
