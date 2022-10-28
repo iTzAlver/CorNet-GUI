@@ -27,6 +27,8 @@ __reports_path__ = f'{__cnet_user_path__}/reports'
 __models_lists_path__ = f'{__cnet_user_path__}/model_lists'
 __models_location__ = f'{__cnet_user_path__}/models'
 __database_location__ = f'{__cnet_user_path__}/db'
+
+__wikipedia_random_path__ = 'http://es.wikipedia.org/wiki/Special:Random'
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
