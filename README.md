@@ -2,7 +2,7 @@
 
 ![Logo](./multimedia/cornet.png)
 
-# Cornet Api Package - 0.1.0
+# Cornet Api Package - 0.2.0
 
 This package implements an API over Keras and Tensorflow to build Deep Learning models easily. It implements a GUI
 that allows us to research in the Correlation Clustering problem.
