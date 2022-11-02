@@ -56,6 +56,10 @@ if not os.path.exists(__models_location__):
     os.mkdir(__models_location__)
 if not os.path.exists(__database_location__):
     os.mkdir(__database_location__)
+if not os.path.exists(f'{__database_location__}/ht'):
+    os.mkdir(f'{__database_location__}/ht')
+if not os.path.exists(f'{__database_location__}/wk'):
+    os.mkdir(f'{__database_location__}/wk')
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
