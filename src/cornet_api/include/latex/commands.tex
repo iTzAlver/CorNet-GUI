@@ -1,19 +1,21 @@
 \newcommand{\authorx}{Palomo Alonso, Alberto}
-\newcommand{\noreport}{CNET0042}
+\newcommand{\noreport}{CNET0044}
 \newcommand{\name}{model 0}
-\newcommand{\dbname}{32k 8t 0w}
+\newcommand{\dbname}{test wk}
 \newcommand{\dbtype}{BaseNetDatabase (BND) }
-\newcommand{\dbsize}{32768}
-\newcommand{\dbdist}{(70, 20, 10)}
-\newcommand{\modeli}{(8, 8, 1)}
-\newcommand{\modelo}{8}
+\newcommand{\dbsize}{256}
+\newcommand{\dbdist}{(60, 20, 20)}
+\newcommand{\modeli}{(16, 16, 1)}
+\newcommand{\modelo}{16}
 \newcommand{\modelloss}{mean squared error}
 \newcommand{\modelopt}{adam}
 \newcommand{\modeldevs}{1}
 \newcommand{\modeltab}{Flatten & (None,) &  \\ 
+Dropout & (0.7,) &  \\ 
+Dense & (128,) &  \\ 
+Dropout & (0.7,) &  \\ 
 Dense & (64,) &  \\ 
 Dense & (32,) &  \\ 
-Dense & (8,) &  \\ 
 }
-\newcommand{\maxloss}{0.0263}
-\newcommand{\minloss}{0.0}
+\newcommand{\maxloss}{0.1608}
+\newcommand{\minloss}{0.0839}

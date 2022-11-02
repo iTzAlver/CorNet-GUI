@@ -432,7 +432,8 @@ class MainWindow:
                     self.eval[self.model.name].append(history['val_loss'][-1])
                     self._print_history()
             self.lowrite(f'Last epoch finished, training stopped.', cat='Info')
-            # self.model.recover()
+            if self.model.model is None:
+                self.model.recover()
             self.running = False
 
     def _compile(self, compiler):
