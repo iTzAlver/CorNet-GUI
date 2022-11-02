@@ -5,12 +5,12 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
-from src.cornet_api import gui, _dbgui
+from src.cornet_api import gui
 # -----------------------------------------------------------
 
 
 def main() -> None:
-    _dbgui()
+    gui()
 
 
 # -----------------------------------------------------------
