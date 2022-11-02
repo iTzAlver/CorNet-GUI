@@ -1,1 +1,3 @@
 hiiamsid/sentence_similarity_spanish_es
+hackathon-pln-es/paraphrase-spanish-distilroberta
+jfarray/Model_dccuchile_bert-base-spanish-wwm-uncased_100_Epochs

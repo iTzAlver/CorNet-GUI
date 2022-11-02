@@ -7,9 +7,10 @@
 # Import statements:
 import multiprocessing
 import time
-from tkinter import Tk, LabelFrame, Label, Entry, END, scrolledtext, filedialog
+from sentence_transformers import SentenceTransformer
+from tkinter import Tk, LabelFrame, Label, Entry, END, scrolledtext, filedialog, ttk
 from ._utils import ColorStyles, HoverButton
-from .database_structures import HtGenerator
+from .database_structures import HtGenerator, WkGenerator
 from .database_structures import Generator
 
 # -----------------------------------------------------------
@@ -18,6 +19,7 @@ ICO_LOCATION = __gui_ico_path__
 LOGFILE_PATH = __db_logfile_path__
 LMS_PATH = __language_models_path__
 HT_PATH = f'{__database_location__}ht/'
+WK_PATH = f'{__database_location__}wk/'
 # -----------------------------------------------------------
 
 
@@ -53,7 +55,7 @@ class MainWindow:
                               'Note': self.colors.green}
         # Generators:
         self.htgenerator = None
-        self.wrgenerator = None
+        self.wkgenerator = None
         # -------------------------------------------------------------------------------------------------------------
         #                       HYPERTRAINING GENERATOR
         # -------------------------------------------------------------------------------------------------------------
@@ -146,6 +148,70 @@ class MainWindow:
 
         self.title_wr = Label(self.wikiread_lf, text='WikiRead Set Generator', font='Helvetica 12 bold')
         self.title_wr.place(x=70, y=0)
+
+        self.slm_select_label = Label(self.wikiread_lf, text='Select a Language Model:', font='Helvetica 9 bold')
+        self.slm_select_label.place(x=5, y=30)
+        self.slm_download_label = Label(self.wikiread_lf, text='Download a Language Model:', font='Helvetica 9')
+        self.slm_download_label.place(x=5, y=55)
+
+        self.model_list = []
+        with open(__language_models_path__, 'r', encoding='utf-8') as file:
+            for line in file:
+                self.model_list.append(line.replace('\n', ''))
+        self.slm_select = ttk.Combobox(self.wikiread_lf, width=25, state='readonly')
+        self.slm_select.place(x=160, y=30)
+        self.slm_select["values"] = self.model_list
+        self.slm_select.set(self.model_list[0])
+
+        self.tput_label_wk = Label(self.wikiread_lf, text='Throughput: ')
+        self.tput_label_wk.place(x=5, y=80)
+
+        self.tput_entry_wk = Entry(self.wikiread_lf, width=8)
+        self.tput_entry_wk.place(x=110, y=80)
+        self.tput_entry_wk.insert(-1, '256')
+
+        self.nomatrix_label_wk = Label(self.wikiread_lf, text='Number of matrix: ')
+        self.nomatrix_label_wk.place(x=5, y=105)
+
+        self.numberofmatrix_entry_wk = Entry(self.wikiread_lf, width=8)
+        self.numberofmatrix_entry_wk.place(x=110, y=105)
+        self.numberofmatrix_entry_wk.insert(-1, '1024')
+
+        self.train_label_wk = Label(self.wikiread_lf, text='Train: \t           %', font='Helvetica 9 bold')
+        self.train_label_wk.place(x=5, y=165)
+        self.validation_label_wk = Label(self.wikiread_lf, text='Validation: \t  %', font='Helvetica 9 bold')
+        self.validation_label_wk.place(x=150, y=165)
+        self.train_entry_wk = Entry(self.wikiread_lf, width=7)
+        self.train_entry_wk.place(x=45, y=165)
+        self.train_entry_wk.insert(-1, '60')
+        self.validation_entry_wk = Entry(self.wikiread_lf, width=7)
+        self.validation_entry_wk.place(x=220, y=165)
+        self.validation_entry_wk.insert(-1, '20')
+
+        self.nomatrix_label_wk = Label(self.wikiread_lf, text='Name: ')
+        self.nomatrix_label_wk.place(x=5, y=130)
+        self.name_entry_wk = Entry(self.wikiread_lf, width=15)
+        self.name_entry_wk.place(x=68, y=130)
+        self.name_entry_wk.insert(-1, 'test_wk')
+
+        self.min_words = Label(self.wikiread_lf, text='Min. words:')
+        self.min_words.place(x=170, y=105)
+
+        self.min_works_entry_wk = Entry(self.wikiread_lf, width=7)
+        self.min_works_entry_wk.place(x=240, y=105)
+        self.min_works_entry_wk.insert(-1, '40')
+
+        self.download_entry = Entry(self.wikiread_lf, width=25)
+        self.download_entry.place(x=175, y=55)
+        self.download_entry.insert(-1, '')
+
+        self.generate_wk_button = HoverButton(self.wikiread_lf, text='Generate dataset', command=self.generate_wk,
+                                              width=20, bg=self.colors.blue)
+        self.generate_wk_button.place(x=175, y=130)
+
+        self.download_button = HoverButton(self.wikiread_lf, text='Download model', command=self.download_model,
+                                           width=20, bg=self.colors.red)
+        self.download_button.place(x=177, y=75)
         # -------------------------------------------------------------------------------------------------------------
         #                       SCROLLED    TEXT
         # -------------------------------------------------------------------------------------------------------------
@@ -167,10 +233,10 @@ class MainWindow:
         if test < 0:
             self.lowrite('Train and validation sum must be under 100%.', cat='Error')
         else:
-            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.ht')],
+            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.db')],
                                                               initialdir=HT_PATH)
             if _generator['path']:
-                _generator['path'] = f'{_generator["path"]}.ht'
+                _generator['path'] = f'{_generator["path"]}.db'
                 _generator['distribution'] = (train, validation, test)
                 _generator['tput'] = self._tonum(self.tput_entry.get())
                 _generator['awgn_m'] = self._tonum(self.awgnmean_entry.get())
@@ -191,8 +257,9 @@ class MainWindow:
                 proc.start()
                 msg = queue.get()
                 while msg != 'ENDC':
-                    self.lowrite(msg, cat='Info')
-                    msg = queue.get()
+                    if not queue.empty():
+                        msg = queue.get()
+                        self.lowrite(msg, cat='Info')
                     self.master.update_idletasks()
                     self.master.update()
                 proc.join()
@@ -233,6 +300,61 @@ class MainWindow:
             return float(strg)
         else:
             return int(strg)
+
+    def generate_wk(self):
+        _generator = dict()
+        train = self._tonum(self.train_entry_wk.get())
+        validation = self._tonum(self.validation_entry_wk.get())
+        test = 100 - train - validation
+        if test < 0:
+            self.lowrite('Train and validation sum must be under 100%.', cat='Error')
+        else:
+            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.db')],
+                                                              initialdir=WK_PATH)
+            if _generator['path']:
+                _generator['path'] = f'{_generator["path"]}.db'
+                _generator['checkpoint_path'] = f'{_generator["path"]}_checkpoint.db'
+                _generator['distribution'] = (train, validation, test)
+                _generator['tput'] = self._tonum(self.tput_entry_wk.get())
+                _generator['number'] = self._tonum(self.numberofmatrix_entry_wk.get())
+                _generator['name'] = self.name_entry_wk.get()
+                _generator['model_url'] = self.slm_select.get()
+                _generator['minimum_words'] = self._tonum(self.min_works_entry_wk.get())
+                self.lowrite(f'Creating a database with the following parameters:\n{_generator}', cat='Info')
+
+                queue = multiprocessing.Queue()
+                generator = Generator(**_generator)
+
+                self.wkgenerator = (generator, queue)
+                proc = multiprocessing.Process(target=WkGenerator, args=self.wkgenerator)
+                proc.start()
+                msg = queue.get()
+                while msg != 'ENDC':
+                    if not queue.empty():
+                        msg = queue.get()
+                        self.lowrite(msg, cat='Info')
+                    self.master.update_idletasks()
+                    self.master.update()
+                proc.join()
+                self.lowrite(f'Database {generator["name"]} created sucessfuly.', cat='Info')
+
+    def download_model(self):
+        url = self.download_entry.get()
+        self.lowrite(f'Downloading the model: {url}.', cat='Info')
+        self.master.update_idletasks()
+        self.master.update()
+        try:
+            SentenceTransformer(url)
+            if url not in self.model_list:
+                self.model_list.append(url)
+                with open(__language_models_path__, 'a', encoding='utf-8') as file:
+                    file.writelines(f'\n{url}')
+                self.slm_select["values"] = self.model_list
+                self.lowrite(f'The model has been downloaded with no errors.', cat='Info')
+            else:
+                self.lowrite(f'The model is already downloaded, check the model list.', cat='Info')
+        except Exception as ex:
+            self.lowrite(f'The model does not exist: {ex}.', cat='Info')
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

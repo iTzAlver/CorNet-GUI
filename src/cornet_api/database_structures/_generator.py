@@ -29,6 +29,9 @@ class Generator:
                 and 'awgn_v' in keys and 'off_m' in keys and 'off_v' in keys and 'clust_m' in keys \
                 and 'clust_v' in keys and 'number' in keys and 'name' in keys:
             self.is_valid = True
+        elif 'path' in keys and 'distribution' in keys and 'tput' in keys and 'number' in keys and 'name' \
+                and 'checkpoint_path' in keys and 'model_url' in keys and 'minimum_words' in keys:
+            self.is_valid = True
 
     def __getitem__(self, item):
         return self.__dict__[item]

@@ -38,11 +38,11 @@ class MainWindow:
         self.colors = ColorStyles
 
         self.img = PhotoImage(file=LOGO_LOCATION)
-        self.img = self.img.subsample(2)
+        self.img = self.img.subsample(3)
         self.logo = Label(self.master, image=self.img, bg='black')
         self.logo.image = self.img
         self.logo.pack(fill=BOTH, expand=1)
-        self.logo.place(x=-20, y=0)
+        self.logo.place(x=80, y=20)
 
         self.labelcornet = Label(self.master, text=f'CorNet API v{VERSION}', fg='white', bg='black',
                                  font='Fixedsys 21 bold')
