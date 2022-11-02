@@ -6,6 +6,8 @@
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 # Import statements:
 import multiprocessing
+import os
+
 import bs4
 import requests
 import numpy as np
@@ -38,6 +40,11 @@ class WkGenerator:
 
         if self.options['path']:
             thedb.save(self.options['path'])
+            try:
+                os.remove(self.options['checkpoint_path'])
+            except Exception as ex:
+                if queue is not None:
+                    queue.put(f'WkGenerator: Delete raised an exception: {ex}.')
 
         if queue is not None:
             queue.put(f'Building WK database {self.options["number"]} / {self.options["number"]}.')
