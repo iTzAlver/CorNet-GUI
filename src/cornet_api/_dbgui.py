@@ -309,11 +309,11 @@ class MainWindow:
         if test < 0:
             self.lowrite('Train and validation sum must be under 100%.', cat='Error')
         else:
-            _generator['path'] = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.db')],
-                                                              initialdir=WK_PATH)
+            _generator_path = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.db')],
+                                                           initialdir=WK_PATH)
             if _generator['path']:
-                _generator['path'] = f'{_generator["path"]}.db'
-                _generator['checkpoint_path'] = f'{_generator["path"]}_checkpoint.db'
+                _generator['path'] = f'{_generator_path}.db'
+                _generator['checkpoint_path'] = f'{_generator_path}_checkpoint.db'
                 _generator['distribution'] = (train, validation, test)
                 _generator['tput'] = self._tonum(self.tput_entry_wk.get())
                 _generator['number'] = self._tonum(self.numberofmatrix_entry_wk.get())
