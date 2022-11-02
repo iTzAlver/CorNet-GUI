@@ -81,7 +81,7 @@ class WkGenerator:
                         else:
                             this_embeddings = embeddings_block
                 embeddings.append(this_embeddings)
-            print(sum([len(embedding) for embedding in embeddings]))
+            # print(sum([len(embedding) for embedding in embeddings]))  For debugging.
         return embeddings
 
     @staticmethod
