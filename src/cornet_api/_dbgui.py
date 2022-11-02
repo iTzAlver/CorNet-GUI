@@ -18,8 +18,8 @@ from .__special__ import __gui_ico_path__, __db_logfile_path__, __language_model
 ICO_LOCATION = __gui_ico_path__
 LOGFILE_PATH = __db_logfile_path__
 LMS_PATH = __language_models_path__
-HT_PATH = f'{__database_location__}ht/'
-WK_PATH = f'{__database_location__}wk/'
+HT_PATH = f'{__database_location__}/ht/'
+WK_PATH = f'{__database_location__}/wk/'
 # -----------------------------------------------------------
 
 
