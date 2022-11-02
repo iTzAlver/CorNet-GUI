@@ -311,7 +311,7 @@ class MainWindow:
         else:
             _generator_path = filedialog.asksaveasfilename(filetypes=[('Database Files', '*.db')],
                                                            initialdir=WK_PATH)
-            if _generator['path']:
+            if _generator_path:
                 _generator['path'] = f'{_generator_path}.db'
                 _generator['checkpoint_path'] = f'{_generator_path}_checkpoint.db'
                 _generator['distribution'] = (train, validation, test)
