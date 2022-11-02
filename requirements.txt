@@ -1,4 +1,4 @@
-basenet-api>=1.5.2
+basenet-api>=1.5.3
 tensorflow>=2.10.0
 tensorflow-gpu==2.10.*
 keras >= 2.10.0
