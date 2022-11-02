@@ -59,7 +59,7 @@ class WkGenerator:
             the_embedding_cut = self._reparse_embeddings(the_embedding, self.options['tput'])
             _y = self._create_solution([len(emb) for emb in the_embedding], self.options['tput'])
             _x = self._embedding_to_matrix(the_embedding_cut)
-            x.append(_x)
+            x.append(np.expand_dims(_x, axis=-1))
             y.append(_y)
             if self.queue is not None:
                 self.queue.put(f'Building WK database {i + 1} / {self.options["number"]}.')
