@@ -655,7 +655,7 @@ class MainWindow:
             if ls[1] != '':
                 _ls = []
                 for __ls in ls[1:]:
-                    _ls.append(int(__ls))
+                    _ls.append(self._tonum(__ls))
                 shapes.append(tuple(_ls))
             else:
                 shapes.append((None, ))
