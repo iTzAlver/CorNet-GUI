@@ -11,8 +11,8 @@ from src.cornet_api.__special__ import __database_location__
 
 # -----------------------------------------------------------
 if __name__ == '__main__':
-    split_database(f'{__database_location__}/wk/wikipedia_dataset_256.db', 32,
-                   f'{__database_location__}/wk/wikipedia_dataset_032.db')
+    split_database(f'{__database_location__}/wk/wikipedia_dataset_256.db', 8,
+                   f'{__database_location__}/wk/wikipedia_dataset_008.db')
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 #                        END OF FILE                        #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #

@@ -353,7 +353,7 @@ class MainWindow:
             self.database = database
             self.throughput = len(self.database.xtrain[0])
             self.training_label.config(text=f'Throughtput: {self.throughput}')
-            self.lowrite(_text=f'Database {database.name} loaded.', cat='Info')
+            self.lowrite(_text=f'Database {database.name} loaded. Batch size: {database.batch_size}.', cat='Info')
 
     def export_model(self):
         # Export the deep learning model.

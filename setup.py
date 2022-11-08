@@ -10,7 +10,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='cornet_api',
-    version='0.2.0',
+    version='0.3.3',
     author='Palomo-Alonso, Alberto',
     author_email='a.palomo@edu.uah',
     description='CorNet API: Package for solving correlation matrix clustering.',

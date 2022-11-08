@@ -5,7 +5,7 @@
 #                                                           #
 # - x - x - x - x - x - x - x - x - x - x - x - x - x - x - #
 import os
-__version__ = '0.3.0'
+__version__ = '0.3.3'
 __specials_path__ = os.path.abspath(f'{__file__.replace(f"__special__.py", "")}')
 __include_path__ = f'{__specials_path__}/include/'
 

@@ -25476,4 +25476,74 @@ _________________________________________________________________
 {{function_node __wrapped__StatelessRandomUniformV2_device_/job:localhost/replica:0/task:0/device:GPU:0}} OOM when allocating tensor with shape[4129024,1024] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:StatelessRandomUniformV2]
 <Thu Nov  3 12:46:57 2022>	[Info]:	The model compiled sucessfuly.
 <Thu Nov  3 12:46:57 2022>	[Info]:	Scheme drawn sucessfuly.
-<Thu Nov  3 12:47:21 2022>	[Info]:	Training the current model. Batch size: 2.
+<Thu Nov  3 12:47:21 2022>	[Info]:	Training the current model. Batch size: 2.[Mon Nov  7 14:10:40 2022]		Welcome to CORNET!
+<Mon Nov  7 14:10:40 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+[Mon Nov  7 14:11:23 2022]		Welcome to CORNET!
+<Mon Nov  7 14:11:23 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+
+[Mon Nov  7 14:12:08 2022]		Finishing the current session.
+
+
+[Mon Nov  7 14:12:08 2022]		Finishing the current session.
+
+[Mon Nov  7 14:13:13 2022]		Welcome to CORNET!
+<Mon Nov  7 14:13:13 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+
+<Mon Nov  7 14:13:20 2022>	[Info]:	Database wikipedia_dataset loaded.
+<Mon Nov  7 14:13:28 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Mon Nov  7 14:13:33 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Mon Nov  7 14:13:37 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Mon Nov  7 14:13:40 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Mon Nov  7 14:13:45 2022>	[Info]:	Compiling the current model:
+		Input:8
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Output:8
+
+<Mon Nov  7 14:13:46 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 8, 8, 1)]         0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 8)                 264       
+                                                                 
+=================================================================
+Total params: 18,920
+Trainable params: 18,920
+Non-trainable params: 0
+_________________________________________________________________
+
+<Mon Nov  7 14:13:46 2022>	[Info]:	The model compiled sucessfuly.
+<Mon Nov  7 14:13:46 2022>	[Info]:	Scheme drawn sucessfuly.
+<Mon Nov  7 14:13:48 2022>	[Info]:	Training the current model. Batch size: 16.
+<Mon Nov  7 14:14:53 2022>	[Info]:	Epoch finished, LOSS = 0.028.
+<Mon Nov  7 14:15:41 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Mon Nov  7 14:16:36 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Mon Nov  7 14:17:34 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Mon Nov  7 14:17:35 2022>	[Info]:	Training stopped.
+<Mon Nov  7 14:17:35 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Mon Nov  7 14:17:42 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Mon Nov  7 14:17:43 2022>	[Info]:	Last epoch finished, training stopped.
+<Mon Nov  7 14:19:24 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_8_2nprog.
