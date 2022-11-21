@@ -25546,4 +25546,850 @@ _________________________________________________________________
 <Mon Nov  7 14:17:35 2022>	[Info]:	Stopping training, waiting for last epoch.
 <Mon Nov  7 14:17:42 2022>	[Info]:	Epoch finished, LOSS = 0.026.
 <Mon Nov  7 14:17:43 2022>	[Info]:	Last epoch finished, training stopped.
-<Mon Nov  7 14:19:24 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_8_2nprog.
+<Mon Nov  7 14:19:24 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_8_2nprog.[Tue Nov  8 13:05:07 2022]		Welcome to CORNET!
+<Tue Nov  8 13:05:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 13:05:17 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Nov  8 13:05:20 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Nov  8 13:05:22 2022>	[Info]:	Device /device:GPU:3 set up for Train.
+<Tue Nov  8 13:05:23 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Train
+	Device 3:	/device:GPU:2		Role: Train
+	Device 4:	/device:GPU:3		Role: Train
+
+<Tue Nov  8 13:05:41 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 13:05:45 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 13:05:51 2022>	[Info]:	Adding new layer to the model:
+		Dense [256]
+<Tue Nov  8 13:05:53 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 13:05:55 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Nov  8 13:05:56 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Tue Nov  8 13:05:59 2022>	[Info]:	Compiling the current model:
+		Input:16
+		Flatten 
+		Dense [256]
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Output:16
+
+<Tue Nov  8 13:06:01 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 16, 16, 1)]       0         
+                                                                 
+ flatten (Flatten)           (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 256)               65792     
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dense_2 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_3 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 16)                528       
+                                                                 
+=================================================================
+Total params: 109,552
+Trainable params: 109,552
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 13:06:01 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 13:06:01 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 13:06:03 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 13:06:41 2022>	[Info]:	Epoch finished, LOSS = 0.03.
+<Tue Nov  8 13:07:10 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Tue Nov  8 13:07:38 2022>	[Info]:	Epoch finished, LOSS = 0.025.
+<Tue Nov  8 13:08:06 2022>	[Info]:	Epoch finished, LOSS = 0.025.
+<Tue Nov  8 13:08:34 2022>	[Info]:	Epoch finished, LOSS = 0.025.
+<Tue Nov  8 13:09:02 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 13:09:13 2022>	[Info]:	Training stopped.
+<Tue Nov  8 13:09:13 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 13:09:17 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 13:09:18 2022>	[Info]:	Last epoch finished, training stopped.
+<Tue Nov  8 13:10:16 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_16_2nprog.
+<Tue Nov  8 13:42:37 2022>	[Info]:	Removed ('Dense [32]', ('', [])) from the layer list.
+<Tue Nov  8 13:42:38 2022>	[Info]:	Removed ('Dense [64]', ('', [])) from the layer list.
+<Tue Nov  8 13:42:38 2022>	[Info]:	Removed ('Dense [128]', ('', [])) from the layer list.
+<Tue Nov  8 13:42:38 2022>	[Info]:	Removed ('Dense [256]', ('', [])) from the layer list.
+<Tue Nov  8 13:42:38 2022>	[Info]:	Removed ('Flatten ', ('', [])) from the layer list.
+<Tue Nov  8 13:42:38 2022>	[Warning]:	Target not removed: the list is empty.
+<Tue Nov  8 13:42:46 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 13:42:48 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 13:42:57 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 13:42:58 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Nov  8 13:43:00 2022>	[Info]:	Compiling the current model:
+		Input:16
+		Conv2D [32, 3]
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Output:16
+
+<Tue Nov  8 13:43:00 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 16, 16, 1)]       0         
+                                                                 
+ flatten (Flatten)           (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 256)               65792     
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dense_2 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_3 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 16)                528       
+                                                                 
+=================================================================
+Total params: 109,552
+Trainable params: 109,552
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 16, 16, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 14, 14, 32)        320       
+                                                                 
+ flatten_1 (Flatten)         (None, 6272)              0         
+                                                                 
+ dense_4 (Dense)             (None, 128)               802944    
+                                                                 
+ dense_5 (Dense)             (None, 64)                8256      
+                                                                 
+ output (Dense)              (None, 16)                1040      
+                                                                 
+=================================================================
+Total params: 812,560
+Trainable params: 812,560
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 13:43:00 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 13:43:00 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 13:43:04 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 13:43:55 2022>	[Info]:	Epoch finished, LOSS = 0.027.
+<Tue Nov  8 13:44:27 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 13:44:59 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 13:45:30 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 13:46:02 2022>	[Info]:	Epoch finished, LOSS = 0.023.
+<Tue Nov  8 13:46:30 2022>	[Info]:	Epoch finished, LOSS = 0.023.
+<Tue Nov  8 13:46:49 2022>	[Info]:	Training stopped.
+<Tue Nov  8 13:46:49 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 13:46:54 2022>	[Info]:	Epoch finished, LOSS = 0.023.
+<Tue Nov  8 13:46:55 2022>	[Info]:	Last epoch finished, training stopped.
+<Tue Nov  8 13:47:07 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_16_conv2d.[Tue Nov  8 15:27:42 2022]		Welcome to CORNET!
+<Tue Nov  8 15:27:42 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+
+<Tue Nov  8 15:27:49 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 15:28:03 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 15:28:05 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 15:28:09 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 15:28:10 2022>	[Info]:	Adding new layer to the model:
+		Dense [64]
+<Tue Nov  8 15:28:12 2022>	[Info]:	Adding new layer to the model:
+		Dense [32]
+<Tue Nov  8 15:28:16 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Conv2D [32, 3]
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Output:32
+
+<Tue Nov  8 15:28:16 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 32, 32, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 30, 30, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 28800)             0         
+                                                                 
+ dense (Dense)               (None, 128)               3686528   
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 32)                1056      
+                                                                 
+=================================================================
+Total params: 3,698,240
+Trainable params: 3,698,240
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 15:28:16 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 15:28:16 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 15:28:26 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 15:28:53 2022>	[Info]:	Epoch finished, LOSS = 0.039.
+<Tue Nov  8 15:29:06 2022>	[Info]:	Epoch finished, LOSS = 0.028.
+<Tue Nov  8 15:29:18 2022>	[Info]:	Epoch finished, LOSS = 0.027.
+<Tue Nov  8 15:29:31 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Tue Nov  8 15:29:36 2022>	[Info]:	Training stopped.
+<Tue Nov  8 15:29:36 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 15:29:40 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Tue Nov  8 15:29:40 2022>	[Info]:	Last epoch finished, training stopped.
+<Tue Nov  8 15:30:06 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_32_conv2d.
+<Tue Nov  8 15:34:48 2022>	[Info]:	Removed ('Conv2D [32, 3]', ('', [])) from the layer list.
+<Tue Nov  8 15:35:01 2022>	[Info]:	Compiling the current model:
+		Input:32
+		Flatten 
+		Dense [128]
+		Dense [64]
+		Dense [32]
+		Output:32
+
+<Tue Nov  8 15:35:01 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 32, 32, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 30, 30, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 28800)             0         
+                                                                 
+ dense (Dense)               (None, 128)               3686528   
+                                                                 
+ dense_1 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_2 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 32)                1056      
+                                                                 
+=================================================================
+Total params: 3,698,240
+Trainable params: 3,698,240
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 32, 32, 1)]       0         
+                                                                 
+ flatten_1 (Flatten)         (None, 1024)              0         
+                                                                 
+ dense_3 (Dense)             (None, 128)               131200    
+                                                                 
+ dense_4 (Dense)             (None, 64)                8256      
+                                                                 
+ dense_5 (Dense)             (None, 32)                2080      
+                                                                 
+ output (Dense)              (None, 32)                1056      
+                                                                 
+=================================================================
+Total params: 142,592
+Trainable params: 142,592
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 15:35:01 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 15:35:01 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 15:35:03 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 15:35:25 2022>	[Info]:	Epoch finished, LOSS = 0.041.
+<Tue Nov  8 15:35:34 2022>	[Info]:	Epoch finished, LOSS = 0.028.
+<Tue Nov  8 15:35:43 2022>	[Info]:	Epoch finished, LOSS = 0.026.
+<Tue Nov  8 15:35:52 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 15:36:05 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 15:36:11 2022>	[Info]:	Training stopped.
+<Tue Nov  8 15:36:11 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 15:36:14 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Tue Nov  8 15:36:14 2022>	[Info]:	Last epoch finished, training stopped.
+<Tue Nov  8 15:36:41 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_32_2nprog.[Tue Nov  8 16:57:43 2022]		Welcome to CORNET!
+<Tue Nov  8 16:57:43 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 16:57:51 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 16:57:57 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Nov  8 16:57:58 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Nov  8 16:57:59 2022>	[Info]:	Device /device:GPU:3 set up for Train.
+<Tue Nov  8 16:58:00 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Train
+	Device 3:	/device:GPU:2		Role: Train
+	Device 4:	/device:GPU:3		Role: Train
+
+<Tue Nov  8 16:58:15 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [64, 3]
+<Tue Nov  8 16:58:19 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 16:58:48 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 16:58:53 2022>	[Info]:	Adding new layer to the model:
+		Dense [1024]
+<Tue Nov  8 16:59:00 2022>	[Info]:	Adding new layer to the model:
+		Dense [512]
+<Tue Nov  8 16:59:06 2022>	[Info]:	Adding new layer to the model:
+		Dense [256]
+<Tue Nov  8 16:59:10 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 16:59:14 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [64, 3]
+		Flatten 
+		Dense [2048]
+		Dense [1024]
+		Dense [512]
+		Dense [256]
+		Dense [128]
+		Output:64
+[Tue Nov  8 16:59:46 2022]		Welcome to CORNET!
+<Tue Nov  8 16:59:46 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 16:59:50 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 16:59:54 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Nov  8 16:59:56 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Nov  8 17:00:04 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:00:07 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:00:17 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 17:00:19 2022>	[Info]:	Adding new layer to the model:
+		Dense [1024]
+<Tue Nov  8 17:00:23 2022>	[Info]:	Adding new layer to the model:
+		Dense [512]
+<Tue Nov  8 17:00:26 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 17:00:28 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Dense [1024]
+		Dense [512]
+		Dense [128]
+		Output:64
+[Tue Nov  8 17:02:24 2022]		Welcome to CORNET!
+<Tue Nov  8 17:02:24 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 17:02:29 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Tue Nov  8 17:02:32 2022>	[Info]:	Device /device:GPU:2 set up for Train.
+<Tue Nov  8 17:02:41 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:02:43 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:02:57 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 17:03:01 2022>	[Info]:	Adding new layer to the model:
+		Dense [512]
+<Tue Nov  8 17:03:05 2022>	[Info]:	Adding new layer to the model:
+		Dense [256]
+<Tue Nov  8 17:03:12 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:03:21 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Dense [512]
+		Dense [256]
+		Output:64
+
+<Tue Nov  8 17:03:27 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 2048)              251922432 
+                                                                 
+ dense_1 (Dense)             (None, 512)               1049088   
+                                                                 
+ dense_2 (Dense)             (None, 256)               131328    
+                                                                 
+ output (Dense)              (None, 64)                16448     
+                                                                 
+=================================================================
+Total params: 253,119,616
+Trainable params: 253,119,616
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:03:27 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:03:28 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:03:30 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 17:04:33 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:04:33 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:04:59 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:04:59 2022>	[Info]:	Training the current model. Batch size: 16.[Tue Nov  8 17:05:12 2022]		Welcome to CORNET!
+<Tue Nov  8 17:05:12 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 17:05:23 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:05:29 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:05:34 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 17:05:37 2022>	[Info]:	Adding new layer to the model:
+		Dense [512]
+<Tue Nov  8 17:05:43 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 17:05:47 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:05:48 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Dense [512]
+		Dense [128]
+		Output:64
+
+<Tue Nov  8 17:05:49 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 2048)              251922432 
+                                                                 
+ dense_1 (Dense)             (None, 512)               1049088   
+                                                                 
+ dense_2 (Dense)             (None, 128)               65664     
+                                                                 
+ output (Dense)              (None, 64)                8256      
+                                                                 
+=================================================================
+Total params: 253,045,760
+Trainable params: 253,045,760
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:05:49 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:05:49 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:05:50 2022>	[Info]:	Training the current model. Batch size: 16.[Tue Nov  8 17:10:26 2022]		Welcome to CORNET!
+<Tue Nov  8 17:10:26 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 17:10:37 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:10:46 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:10:51 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:10:59 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 17:11:01 2022>	[Info]:	Adding new layer to the model:
+		Dense [512]
+<Tue Nov  8 17:11:13 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 17:11:16 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Dense [512]
+		Dense [128]
+		Output:64
+
+<Tue Nov  8 17:11:16 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 2048)              251922432 
+                                                                 
+ dense_1 (Dense)             (None, 512)               1049088   
+                                                                 
+ dense_2 (Dense)             (None, 128)               65664     
+                                                                 
+ output (Dense)              (None, 64)                8256      
+                                                                 
+=================================================================
+Total params: 253,045,760
+Trainable params: 253,045,760
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:11:16 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:11:17 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:11:18 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 17:14:18 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:16:20 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:16:22 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:16:23 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Dense [512]
+		Dense [128]
+		Conv2D [32, 3]
+		Flatten 
+		Output:64
+
+<Tue Nov  8 17:16:23 2022>	[Info]:	Model summary:
+Input 0 of layer "conv2d_2" is incompatible with the layer: expected min_ndim=4, found ndim=2. Full shape received: (None, 128)
+<Tue Nov  8 17:16:23 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:16:23 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:16:25 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:25 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:16:28 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:28 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:16:29 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:29 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:16:30 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:30 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:16:32 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:32 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:16:34 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:16:34 2022>	[Info]:	Stopping training, waiting for last epoch.[Tue Nov  8 17:16:53 2022]		Welcome to CORNET!
+<Tue Nov  8 17:16:53 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 17:17:08 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:17:15 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:17:17 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:17:18 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Output:64
+
+<Tue Nov  8 17:17:18 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ output (Dense)              (None, 64)                7872576   
+                                                                 
+=================================================================
+Total params: 7,872,896
+Trainable params: 7,872,896
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:17:18 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:17:18 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:17:20 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 17:17:46 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:17:51 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:17:56 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:18:02 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:18:07 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:18:12 2022>	[Info]:	Epoch finished, LOSS = 0.059.
+<Tue Nov  8 17:18:13 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:18:13 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:18:17 2022>	[Info]:	Epoch finished, LOSS = 0.057.
+<Tue Nov  8 17:18:17 2022>	[Info]:	Last epoch finished, training stopped.
+<Tue Nov  8 17:18:33 2022>	[Info]:	Model exported to C:/Users/ialve/CorNet/model_lists/wk_64_conv2d_test.
+<Tue Nov  8 17:19:31 2022>	[Info]:	Adding new layer to the model:
+		Dense [2048]
+<Tue Nov  8 17:19:31 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [2048]
+		Output:64
+
+<Tue Nov  8 17:19:31 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ output (Dense)              (None, 64)                7872576   
+                                                                 
+=================================================================
+Total params: 7,872,896
+Trainable params: 7,872,896
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 62, 62, 32)        320       
+                                                                 
+ flatten_1 (Flatten)         (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 2048)              251922432 
+                                                                 
+ output (Dense)              (None, 64)                131136    
+                                                                 
+=================================================================
+Total params: 252,053,888
+Trainable params: 252,053,888
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:19:31 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:19:32 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:19:33 2022>	[Info]:	Training the current model. Batch size: 16.[Tue Nov  8 17:20:31 2022]		Welcome to CORNET!
+<Tue Nov  8 17:20:31 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Tue Nov  8 17:20:36 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Tue Nov  8 17:20:49 2022>	[Info]:	Adding new layer to the model:
+		wk_64_conv2d_test []
+<Tue Nov  8 17:21:01 2022>	[Info]:	Adding new layer to the model:
+		Dense [1024]
+<Tue Nov  8 17:21:02 2022>	[Info]:	Compiling the current model:
+		Input:64
+		wk_64_conv2d_test 
+		Dense [1024]
+		Output:64
+
+<Tue Nov  8 17:21:02 2022>	[Info]:	Model summary:
+module 'keras.api._v2.keras.layers' has no attribute 'wk_64_conv2d_test'
+<Tue Nov  8 17:21:02 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:21:03 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:21:29 2022>	[Info]:	Adding new layer to the model:
+		Dense []
+<Tue Nov  8 17:21:29 2022>	[Info]:	Replaced ('wk_64_conv2d_test ', ('', [])) from the layer list.
+<Tue Nov  8 17:21:30 2022>	[Info]:	Removed ('wk_64_conv2d_test ', ('', [])) from the layer list.
+<Tue Nov  8 17:21:30 2022>	[Info]:	Removed ('Dense ', ('', [])) from the layer list.
+<Tue Nov  8 17:21:30 2022>	[Info]:	Removed ('Dense [1024]', ('', [])) from the layer list.
+<Tue Nov  8 17:21:37 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Tue Nov  8 17:21:39 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Tue Nov  8 17:21:43 2022>	[Info]:	Adding new layer to the model:
+		Dense [1024]
+<Tue Nov  8 17:21:45 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [1024]
+		Output:64
+
+<Tue Nov  8 17:21:45 2022>	[Info]:	Model summary:
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 1024)              125961216 
+                                                                 
+ output (Dense)              (None, 64)                65600     
+                                                                 
+=================================================================
+Total params: 126,027,136
+Trainable params: 126,027,136
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:21:45 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:21:45 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:21:46 2022>	[Info]:	Training the current model. Batch size: 16.
+<Tue Nov  8 17:22:18 2022>	[Info]:	Removed ('Dense [1024]', ('', [])) from the layer list.
+<Tue Nov  8 17:22:23 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Tue Nov  8 17:22:23 2022>	[Info]:	Compiling the current model:
+		Input:64
+		Conv2D [32, 3]
+		Flatten 
+		Dense [128]
+		Output:64
+
+<Tue Nov  8 17:22:23 2022>	[Info]:	Model summary:
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 62, 62, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 123008)            0         
+                                                                 
+ dense (Dense)               (None, 1024)              125961216 
+                                                                 
+ output (Dense)              (None, 64)                65600     
+                                                                 
+=================================================================
+Total params: 126,027,136
+Trainable params: 126,027,136
+Non-trainable params: 0
+_________________________________________________________________
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 64, 64, 1)]       0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 62, 62, 32)        320       
+                                                                 
+ flatten_1 (Flatten)         (None, 123008)            0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               15745152  
+                                                                 
+ output (Dense)              (None, 64)                8256      
+                                                                 
+=================================================================
+Total params: 15,753,728
+Trainable params: 15,753,728
+Non-trainable params: 0
+_________________________________________________________________
+
+<Tue Nov  8 17:22:23 2022>	[Info]:	The model compiled sucessfuly.
+<Tue Nov  8 17:22:23 2022>	[Info]:	Scheme drawn sucessfuly.
+<Tue Nov  8 17:22:25 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:22:25 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Tue Nov  8 17:22:25 2022>	[Info]:	Training stopped.
+<Tue Nov  8 17:22:25 2022>	[Info]:	Stopping training, waiting for last epoch.[Wed Nov  9 12:31:07 2022]		Welcome to CORNET!
+<Wed Nov  9 12:31:07 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Idle
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Wed Nov  9 12:31:17 2022>	[Info]:	Database wikipedia_dataset loaded. Batch size: 16.
+<Wed Nov  9 12:31:22 2022>	[Info]:	Adding new layer to the model:
+		Conv2D [32, 3]
+<Wed Nov  9 12:31:24 2022>	[Info]:	Adding new layer to the model:
+		Flatten []
+<Wed Nov  9 12:31:28 2022>	[Info]:	Adding new layer to the model:
+		Dense [128]
+<Wed Nov  9 12:31:32 2022>	[Info]:	Device /device:GPU:1 set up for Train.
+<Wed Nov  9 12:31:32 2022>	[Info]:	Current available devices:
+	Device 0:	/device:CPU:0		Role: Idle
+	Device 1:	/device:GPU:0		Role: Train
+	Device 2:	/device:GPU:1		Role: Train
+	Device 3:	/device:GPU:2		Role: Idle
+	Device 4:	/device:GPU:3		Role: Idle
+
+<Wed Nov  9 12:31:37 2022>	[Info]:	Compiling the current model:
+		Input:16
+		Conv2D [32, 3]
+		Flatten 
+		Dense [128]
+		Output:16
+
+<Wed Nov  9 12:31:38 2022>	[Info]:	Model summary:
+Model: "model_0"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 16, 16, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 14, 14, 32)        320       
+                                                                 
+ flatten (Flatten)           (None, 6272)              0         
+                                                                 
+ dense (Dense)               (None, 128)               802944    
+                                                                 
+ output (Dense)              (None, 16)                2064      
+                                                                 
+=================================================================
+Total params: 805,328
+Trainable params: 805,328
+Non-trainable params: 0
+_________________________________________________________________
+
+<Wed Nov  9 12:31:38 2022>	[Info]:	The model compiled sucessfuly.
+<Wed Nov  9 12:31:38 2022>	[Info]:	Scheme drawn sucessfuly.
+<Wed Nov  9 12:31:40 2022>	[Info]:	Training the current model. Batch size: 16.
+<Wed Nov  9 12:32:24 2022>	[Info]:	Epoch finished, LOSS = 0.027.
+<Wed Nov  9 12:32:55 2022>	[Info]:	Epoch finished, LOSS = 0.024.
+<Wed Nov  9 12:33:21 2022>	[Info]:	Training stopped.
+<Wed Nov  9 12:33:21 2022>	[Info]:	Stopping training, waiting for last epoch.
+<Wed Nov  9 12:33:26 2022>	[Info]:	Epoch finished, LOSS = 0.023.
+<Wed Nov  9 12:33:27 2022>	[Info]:	Last epoch finished, training stopped.

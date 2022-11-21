@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  7 NOV 2022 14:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  8 NOV 2022 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,11 +250,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 31.
 
 Article: 
-<imgs/model.png, id=1, 332.24126pt x 629.35126pt>
+<imgs/model.png, id=1, 350.30875pt x 406.51875pt>
 File: imgs/model.png Graphic file (type png)
 <use imgs/model.png>
 Package pdftex.def Info: imgs/model.png  used on input line 37.
-(pdftex.def)             Requested size: 240.32881pt x 455.24408pt.
+(pdftex.def)             Requested size: 392.31105pt x 455.24408pt.
 [1
 
 
@@ -266,32 +266,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 48.
- [2]
-<imgs/learning.png, id=20, 350.5095pt x 216.81pt>
+<imgs/learning.png, id=11, 350.5095pt x 216.81pt>
 File: imgs/learning.png Graphic file (type png)
 <use imgs/learning.png>
 Package pdftex.def Info: imgs/learning.png  used on input line 78.
 (pdftex.def)             Requested size: 433.62pt x 268.22296pt.
- [3 <./imgs/learning.png>] (./main.aux) ) 
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <./imgs/learning.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  2679 strings out of 475071
  42914 string characters out of 5782907
- 401008 words of memory out of 5000000
+ 399976 words of memory out of 5000000
  24078 multiletter control sequences out of 15000+600000
  476800 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,8n,62p,237b,253s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx1
-0.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c
-:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (3 pages, 133925 bytes).
+<c:/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmss10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+bx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb
+><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (3 pages, 127270 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
